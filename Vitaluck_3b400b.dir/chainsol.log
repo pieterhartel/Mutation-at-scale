@@ -1,0 +1,7 @@
+{"page":419,"address":"0xef7c7254c290df3d167182356255cdfd8d3b400b","name":"Vitaluck","version":"0.4.19","ether":"0.045 Ether","transactions":27,"optimiser":false,"registration_date":"1/26/2018"}
+            parsedParam = param.map(val => new Web3().toBigNumber(val).toString( 10, 85 ));
+            parsedParam = new Web3().toBigNumber(param).toString( 10, 85 );
+          decodedP.value = padZeros(new Web3().toBigNumber(decodedP.value).toString(16));
+          decodedP.value = new Web3().toBigNumber(decodedP.value).toString( 10, 85 );
+chainsol:info: contractName = Vitaluck, contractAddress = 0xef7c7254c290df3d167182356255cdfd8d3b400b, maxTx = 27, maxAddress = 1000, version = 0.4.19
+1516973359

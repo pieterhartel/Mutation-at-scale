@@ -1,0 +1,73 @@
+Mutation:
++ diff contracts/Vitaluck.sol.original contracts/Vitaluck.sol_12.mut
+163c163
+<             NewPlay(msg.sender, _finalRandomNumber, false);
+---
+>             NewPlay(msg.sender, _finalRandomNumber,  /*mutation*/ true /*noitatum*/ );
+
+Killed:
+  38 /tmp/Diff_91970/Vitaluck.sol_12.log.eventResult.diff
+   4 /tmp/Diff_91970/Vitaluck.sol_12.log.fromBalance.diff
+   0 /tmp/Diff_91970/Vitaluck.sol_12.log.methodResult.diff
+   0 /tmp/Diff_91970/Vitaluck.sol_12.log.toBalance.diff
+   4 /tmp/Diff_91970/Vitaluck.sol_12.log.txGasUsed.diff
+   0 /tmp/Diff_91970/Vitaluck.sol_12.log.txResult.diff
+   6 /tmp/Diff_91970/Vitaluck.sol_12.log.txTime.diff
+  52 total
+
+/tmp/Diff_91970/Vitaluck.sol_12.log.eventResult.diff
+8,9c8,9
+< eventResult[9,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"number","type":"uint256","value":"467"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[10,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"number","type":"uint256","value":"609"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+---
+> eventResult[9,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"number","type":"uint256","value":"467"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+> eventResult[10,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"number","type":"uint256","value":"609"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+11,25c11,25
+< eventResult[12,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"number","type":"uint256","value":"267"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[13,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"number","type":"uint256","value":"409"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[14,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"number","type":"uint256","value":"27"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[15,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"},{"name":"number","type":"uint256","value":"605"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[16,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x95cED938F7991cd0dFcb48F0a06a40FA1aF46EBC"},{"name":"number","type":"uint256","value":"805"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[17,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"},{"name":"number","type":"uint256","value":"151"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[18,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"},{"name":"number","type":"uint256","value":"431"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[19,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"},{"name":"number","type":"uint256","value":"135"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[20,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"},{"name":"number","type":"uint256","value":"349"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[21,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"},{"name":"number","type":"uint256","value":"543"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[22,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"},{"name":"number","type":"uint256","value":"887"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[23,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x3E5e9111Ae8eB78Fe1CC3bb8915d5D461F3Ef9A9"},{"name":"number","type":"uint256","value":"193"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[24,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x28a8746e75304c0780E011BEd21C72cD78cd535E"},{"name":"number","type":"uint256","value":"241"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[25,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xACa94ef8bD5ffEE41947b4585a84BdA5a3d3DA6E"},{"name":"number","type":"uint256","value":"897"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[26,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x1dF62f291b2E969fB0849d99D9Ce41e2F137006e"},{"name":"number","type":"uint256","value":"29"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+---
+> eventResult[12,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"number","type":"uint256","value":"267"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+> eventResult[13,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"number","type":"uint256","value":"409"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+> eventResult[14,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"number","type":"uint256","value":"27"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+> eventResult[15,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"},{"name":"number","type":"uint256","value":"605"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+> eventResult[16,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x95cED938F7991cd0dFcb48F0a06a40FA1aF46EBC"},{"name":"number","type":"uint256","value":"805"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+> eventResult[17,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"},{"name":"number","type":"uint256","value":"151"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+> eventResult[18,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"},{"name":"number","type":"uint256","value":"431"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+> eventResult[19,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"},{"name":"number","type":"uint256","value":"135"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+> eventResult[20,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"},{"name":"number","type":"uint256","value":"349"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+> eventResult[21,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"},{"name":"number","type":"uint256","value":"543"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+> eventResult[22,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"},{"name":"number","type":"uint256","value":"887"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+> eventResult[23,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x3E5e9111Ae8eB78Fe1CC3bb8915d5D461F3Ef9A9"},{"name":"number","type":"uint256","value":"193"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+> eventResult[24,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x28a8746e75304c0780E011BEd21C72cD78cd535E"},{"name":"number","type":"uint256","value":"241"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+> eventResult[25,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xACa94ef8bD5ffEE41947b4585a84BdA5a3d3DA6E"},{"name":"number","type":"uint256","value":"897"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+> eventResult[26,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x1dF62f291b2E969fB0849d99D9Ce41e2F137006e"},{"name":"number","type":"uint256","value":"29"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+/tmp/Diff_91970/Vitaluck.sol_12.log.fromBalance.diff
+1c1
+< fromBalance[0] = {"address":"0x22d491Bde2303f2f43325b2108D26f1eAbA1e32b","balance":"999999971791560000000000"}
+---
+> fromBalance[0] = {"address":"0x22d491Bde2303f2f43325b2108D26f1eAbA1e32b","balance":"999999971790280000000000"}
+/tmp/Diff_91970/Vitaluck.sol_12.log.txGasUsed.diff
+1c1
+< txGasUsed[0] = 1410422
+---
+> txGasUsed[0] = 1410486
+/tmp/Diff_91970/Vitaluck.sol_12.log.txTime.diff
+2,3c2,3
+< txTime[1] = 30
+< txTime[2] = 30
+---
+> txTime[1] = 29
+> txTime[2] = 29

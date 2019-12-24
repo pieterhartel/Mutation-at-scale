@@ -1,0 +1,62 @@
+Mutation:
++ diff contracts/Vitaluck.sol.original contracts/Vitaluck.sol_5.mut
+96c96
+<             currentJackpot = currentJackpot + msg.value;
+---
+>             currentJackpot /*mutation*/ += /*noitatum*/ currentJackpot + msg.value;
+
+Killed:
+   0 /tmp/Diff_91970/Vitaluck.sol_5.log.eventResult.diff
+  30 /tmp/Diff_91970/Vitaluck.sol_5.log.fromBalance.diff
+   0 /tmp/Diff_91970/Vitaluck.sol_5.log.methodResult.diff
+   0 /tmp/Diff_91970/Vitaluck.sol_5.log.toBalance.diff
+   6 /tmp/Diff_91970/Vitaluck.sol_5.log.txGasUsed.diff
+   0 /tmp/Diff_91970/Vitaluck.sol_5.log.txResult.diff
+   6 /tmp/Diff_91970/Vitaluck.sol_5.log.txTime.diff
+  42 total
+
+/tmp/Diff_91970/Vitaluck.sol_5.log.fromBalance.diff
+1,9c1,9
+< fromBalance[0] = {"address":"0x22d491Bde2303f2f43325b2108D26f1eAbA1e32b","balance":"999999971791560000000000"}
+< fromBalance[1] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999942521300000000000"}
+< fromBalance[2] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999936945360000000000"}
+< fromBalance[3] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999928469420000000000"}
+< fromBalance[4] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999919993480000000000"}
+< fromBalance[5] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999911311940000000000"}
+< fromBalance[6] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999902836000000000000"}
+< fromBalance[7] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999894360060000000000"}
+< fromBalance[8] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999885884120000000000"}
+---
+> fromBalance[0] = {"address":"0x22d491Bde2303f2f43325b2108D26f1eAbA1e32b","balance":"999999971744600000000000"}
+> fromBalance[1] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999942516920000000000"}
+> fromBalance[2] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999936940980000000000"}
+> fromBalance[3] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999928465040000000000"}
+> fromBalance[4] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999919989100000000000"}
+> fromBalance[5] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999911307560000000000"}
+> fromBalance[6] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999902831620000000000"}
+> fromBalance[7] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999894355680000000000"}
+> fromBalance[8] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999885879740000000000"}
+12,15c12,15
+< fromBalance[11] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999967408180000000000"}
+< fromBalance[12] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999919642820000000000"}
+< fromBalance[13] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999871877460000000000"}
+< fromBalance[14] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999824112100000000000"}
+---
+> fromBalance[11] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999967403800000000000"}
+> fromBalance[12] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999919638440000000000"}
+> fromBalance[13] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999871873080000000000"}
+> fromBalance[14] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999824107720000000000"}
+/tmp/Diff_91970/Vitaluck.sol_5.log.txGasUsed.diff
+1,2c1,2
+< txGasUsed[0] = 1410422
+< txGasUsed[1] = 62347
+---
+> txGasUsed[0] = 1412770
+> txGasUsed[1] = 62566
+/tmp/Diff_91970/Vitaluck.sol_5.log.txTime.diff
+2,3c2,3
+< txTime[1] = 30
+< txTime[2] = 30
+---
+> txTime[1] = 29
+> txTime[2] = 29

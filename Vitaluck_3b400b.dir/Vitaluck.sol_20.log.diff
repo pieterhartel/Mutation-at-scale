@@ -1,0 +1,34 @@
+Mutation:
++ diff contracts/Vitaluck.sol.original contracts/Vitaluck.sol_20.mut
+245c245
+<             result[counter] = i;
+---
+>             result[ /*mutation*/ i /*noitatum*/ ] = i;
+
+Killed:
+  0 /tmp/Diff_91970/Vitaluck.sol_20.log.eventResult.diff
+  4 /tmp/Diff_91970/Vitaluck.sol_20.log.fromBalance.diff
+  0 /tmp/Diff_91970/Vitaluck.sol_20.log.methodResult.diff
+  0 /tmp/Diff_91970/Vitaluck.sol_20.log.toBalance.diff
+  4 /tmp/Diff_91970/Vitaluck.sol_20.log.txGasUsed.diff
+  0 /tmp/Diff_91970/Vitaluck.sol_20.log.txResult.diff
+  6 /tmp/Diff_91970/Vitaluck.sol_20.log.txTime.diff
+ 14 total
+
+/tmp/Diff_91970/Vitaluck.sol_20.log.fromBalance.diff
+1c1
+< fromBalance[0] = {"address":"0x22d491Bde2303f2f43325b2108D26f1eAbA1e32b","balance":"999999971791560000000000"}
+---
+> fromBalance[0] = {"address":"0x22d491Bde2303f2f43325b2108D26f1eAbA1e32b","balance":"999999971792840000000000"}
+/tmp/Diff_91970/Vitaluck.sol_20.log.txGasUsed.diff
+1c1
+< txGasUsed[0] = 1410422
+---
+> txGasUsed[0] = 1410358
+/tmp/Diff_91970/Vitaluck.sol_20.log.txTime.diff
+2,3c2,3
+< txTime[1] = 30
+< txTime[2] = 30
+---
+> txTime[1] = 29
+> txTime[2] = 29

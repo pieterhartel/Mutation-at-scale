@@ -1,0 +1,17 @@
+Mutation:
++ diff contracts/Vitaluck.sol.original contracts/Vitaluck.sol_35.mut
+244c244
+<           if (bets[i].player == _owner) {
+---
+>           if (bets[ /*mutation*/ counter /*noitatum*/ ].player == _owner) {
+
+Killed:
+0 /tmp/Diff_91970/Vitaluck.sol_35.log.eventResult.diff
+0 /tmp/Diff_91970/Vitaluck.sol_35.log.fromBalance.diff
+0 /tmp/Diff_91970/Vitaluck.sol_35.log.methodResult.diff
+0 /tmp/Diff_91970/Vitaluck.sol_35.log.toBalance.diff
+0 /tmp/Diff_91970/Vitaluck.sol_35.log.txGasUsed.diff
+0 /tmp/Diff_91970/Vitaluck.sol_35.log.txResult.diff
+0 /tmp/Diff_91970/Vitaluck.sol_35.log.txTime.diff
+0 total
+

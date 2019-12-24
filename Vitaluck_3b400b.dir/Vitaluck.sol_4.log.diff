@@ -1,0 +1,135 @@
+Mutation:
++ diff contracts/Vitaluck.sol.original contracts/Vitaluck.sol_4.mut
+232c232
+<           if (bets[i].player == _owner) {
+---
+>           if (bets[i].player /*mutation*/ != /*noitatum*/ _owner) {
+
+Killed:
+    0 /tmp/Diff_91970/Vitaluck.sol_4.log.eventResult.diff
+    4 /tmp/Diff_91970/Vitaluck.sol_4.log.fromBalance.diff
+  100 /tmp/Diff_91970/Vitaluck.sol_4.log.methodResult.diff
+    0 /tmp/Diff_91970/Vitaluck.sol_4.log.toBalance.diff
+    4 /tmp/Diff_91970/Vitaluck.sol_4.log.txGasUsed.diff
+    0 /tmp/Diff_91970/Vitaluck.sol_4.log.txResult.diff
+    6 /tmp/Diff_91970/Vitaluck.sol_4.log.txTime.diff
+  114 total
+
+/tmp/Diff_91970/Vitaluck.sol_4.log.fromBalance.diff
+1c1
+< fromBalance[0] = {"address":"0x22d491Bde2303f2f43325b2108D26f1eAbA1e32b","balance":"999999971791560000000000"}
+---
+> fromBalance[0] = {"address":"0x22d491Bde2303f2f43325b2108D26f1eAbA1e32b","balance":"999999971786200000000000"}
+/tmp/Diff_91970/Vitaluck.sol_4.log.methodResult.diff
+19c19
+< methodResult[2,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x0b56E634d9F69D4349DE54b5aAfe7AF342B5f528"}],"name":"GetUserBets","outputs":[{"name":"","type":"uint256[]","value":""}],"type":"function"}
+---
+> methodResult[2,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x0b56E634d9F69D4349DE54b5aAfe7AF342B5f528"}],"name":"GetUserBets","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+26c26
+< methodResult[3,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x3299C8C69825ee4ba28f6A9A6e57713416986565"}],"name":"GetUserBets","outputs":[{"name":"","type":"uint256[]","value":""}],"type":"function"}
+---
+> methodResult[3,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x3299C8C69825ee4ba28f6A9A6e57713416986565"}],"name":"GetUserBets","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+33c33
+< methodResult[4,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x67CB0EF5665e79d60bD5313B3e568357fa79849c"}],"name":"GetUserBets","outputs":[{"name":"","type":"uint256[]","value":""}],"type":"function"}
+---
+> methodResult[4,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x67CB0EF5665e79d60bD5313B3e568357fa79849c"}],"name":"GetUserBets","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+40c40
+< methodResult[5,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x36a92B388313E35ae07F2095F73e1D31Bab286D2"}],"name":"GetUserBets","outputs":[{"name":"","type":"uint256[]","value":""}],"type":"function"}
+---
+> methodResult[5,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x36a92B388313E35ae07F2095F73e1D31Bab286D2"}],"name":"GetUserBets","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+47c47
+< methodResult[6,4] = {"inputs":[{"type":"address","name":"_owner","value":"0xE1eb74dB714A3b63bB6691B8fd654a4619EC34A9"}],"name":"GetUserBets","outputs":[{"name":"","type":"uint256[]","value":""}],"type":"function"}
+---
+> methodResult[6,4] = {"inputs":[{"type":"address","name":"_owner","value":"0xE1eb74dB714A3b63bB6691B8fd654a4619EC34A9"}],"name":"GetUserBets","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+54c54
+< methodResult[7,4] = {"inputs":[{"type":"address","name":"_owner","value":"0xB596129cb3b6CF16fFd2fB36062d4abc28c090f7"}],"name":"GetUserBets","outputs":[{"name":"","type":"uint256[]","value":""}],"type":"function"}
+---
+> methodResult[7,4] = {"inputs":[{"type":"address","name":"_owner","value":"0xB596129cb3b6CF16fFd2fB36062d4abc28c090f7"}],"name":"GetUserBets","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+61c61
+< methodResult[8,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x2ec6E26850c7cb768249f61f2ff3c6438e060887"}],"name":"GetUserBets","outputs":[{"name":"","type":"uint256[]","value":""}],"type":"function"}
+---
+> methodResult[8,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x2ec6E26850c7cb768249f61f2ff3c6438e060887"}],"name":"GetUserBets","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+68c68
+< methodResult[9,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x0B7744197a52F08881391BF9e2ec21EF466Bc23D"}],"name":"GetUserBets","outputs":[{"name":"","type":"uint256[]","value":""}],"type":"function"}
+---
+> methodResult[9,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x0B7744197a52F08881391BF9e2ec21EF466Bc23D"}],"name":"GetUserBets","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+75c75
+< methodResult[10,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x1D4E1B854DAA4F5f3Cd6931489A5BB52B75250fF"}],"name":"GetUserBets","outputs":[{"name":"","type":"uint256[]","value":""}],"type":"function"}
+---
+> methodResult[10,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x1D4E1B854DAA4F5f3Cd6931489A5BB52B75250fF"}],"name":"GetUserBets","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+82c82
+< methodResult[11,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x6E3FE87b67f43598EFF411cc52f45CCf79B75109"}],"name":"GetUserBets","outputs":[{"name":"","type":"uint256[]","value":""}],"type":"function"}
+---
+> methodResult[11,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x6E3FE87b67f43598EFF411cc52f45CCf79B75109"}],"name":"GetUserBets","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+89c89
+< methodResult[12,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x75c2f00AB3E3e6f130C83948A21861E306EC75c9"}],"name":"GetUserBets","outputs":[{"name":"","type":"uint256[]","value":""}],"type":"function"}
+---
+> methodResult[12,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x75c2f00AB3E3e6f130C83948A21861E306EC75c9"}],"name":"GetUserBets","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+96c96
+< methodResult[13,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x130A42885Fe4B045b0BBEe3dA74BB2D97939eb8d"}],"name":"GetUserBets","outputs":[{"name":"","type":"uint256[]","value":""}],"type":"function"}
+---
+> methodResult[13,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x130A42885Fe4B045b0BBEe3dA74BB2D97939eb8d"}],"name":"GetUserBets","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+103c103
+< methodResult[14,4] = {"inputs":[{"type":"address","name":"_owner","value":"0xdd52e4C2477B21E7D3eDeA8c92a80197fBFC9ec8"}],"name":"GetUserBets","outputs":[{"name":"","type":"uint256[]","value":""}],"type":"function"}
+---
+> methodResult[14,4] = {"inputs":[{"type":"address","name":"_owner","value":"0xdd52e4C2477B21E7D3eDeA8c92a80197fBFC9ec8"}],"name":"GetUserBets","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+110c110
+< methodResult[15,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x8cBe48c195a5D7Ba9CC91aB2786205401a6E284c"}],"name":"GetUserBets","outputs":[{"name":"","type":"uint256[]","value":""}],"type":"function"}
+---
+> methodResult[15,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x8cBe48c195a5D7Ba9CC91aB2786205401a6E284c"}],"name":"GetUserBets","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+117c117
+< methodResult[16,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x65B8A4C4C31475726884e2398fEa2681aBEdf09e"}],"name":"GetUserBets","outputs":[{"name":"","type":"uint256[]","value":""}],"type":"function"}
+---
+> methodResult[16,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x65B8A4C4C31475726884e2398fEa2681aBEdf09e"}],"name":"GetUserBets","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+124c124
+< methodResult[17,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x8661cFBbE637dA57D39C54ee2537418e35380fe7"}],"name":"GetUserBets","outputs":[{"name":"","type":"uint256[]","value":""}],"type":"function"}
+---
+> methodResult[17,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x8661cFBbE637dA57D39C54ee2537418e35380fe7"}],"name":"GetUserBets","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+131c131
+< methodResult[18,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x1A138E427089d5aAcc4ca095c56BbE229f8C14D7"}],"name":"GetUserBets","outputs":[{"name":"","type":"uint256[]","value":""}],"type":"function"}
+---
+> methodResult[18,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x1A138E427089d5aAcc4ca095c56BbE229f8C14D7"}],"name":"GetUserBets","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+138c138
+< methodResult[19,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x3c9F4df98170A8F3B85EeB53f163Ace9927259D5"}],"name":"GetUserBets","outputs":[{"name":"","type":"uint256[]","value":""}],"type":"function"}
+---
+> methodResult[19,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x3c9F4df98170A8F3B85EeB53f163Ace9927259D5"}],"name":"GetUserBets","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+145c145
+< methodResult[20,4] = {"inputs":[{"type":"address","name":"_owner","value":"0xc00c25DF497C3705C0dbdAec7CD872dDA3d7F8EA"}],"name":"GetUserBets","outputs":[{"name":"","type":"uint256[]","value":""}],"type":"function"}
+---
+> methodResult[20,4] = {"inputs":[{"type":"address","name":"_owner","value":"0xc00c25DF497C3705C0dbdAec7CD872dDA3d7F8EA"}],"name":"GetUserBets","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+152c152
+< methodResult[21,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x99bb6aB61dA0B2Fead1395c930BCAC4d91bF101d"}],"name":"GetUserBets","outputs":[{"name":"","type":"uint256[]","value":""}],"type":"function"}
+---
+> methodResult[21,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x99bb6aB61dA0B2Fead1395c930BCAC4d91bF101d"}],"name":"GetUserBets","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+159c159
+< methodResult[22,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x66FC63C2572bF3ADD0Fe5d44b97c2E614E35e9a3"}],"name":"GetUserBets","outputs":[{"name":"","type":"uint256[]","value":""}],"type":"function"}
+---
+> methodResult[22,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x66FC63C2572bF3ADD0Fe5d44b97c2E614E35e9a3"}],"name":"GetUserBets","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+166c166
+< methodResult[23,4] = {"inputs":[{"type":"address","name":"_owner","value":"0xec08aE21a4799b3C2B973a21E0e03d228392C674"}],"name":"GetUserBets","outputs":[{"name":"","type":"uint256[]","value":""}],"type":"function"}
+---
+> methodResult[23,4] = {"inputs":[{"type":"address","name":"_owner","value":"0xec08aE21a4799b3C2B973a21E0e03d228392C674"}],"name":"GetUserBets","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+173c173
+< methodResult[24,4] = {"inputs":[{"type":"address","name":"_owner","value":"0xA1a87CFEbaDcd9B8e3C4F6450fCDb6BF7D552b86"}],"name":"GetUserBets","outputs":[{"name":"","type":"uint256[]","value":""}],"type":"function"}
+---
+> methodResult[24,4] = {"inputs":[{"type":"address","name":"_owner","value":"0xA1a87CFEbaDcd9B8e3C4F6450fCDb6BF7D552b86"}],"name":"GetUserBets","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+180c180
+< methodResult[25,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x3E5e9111Ae8eB78Fe1CC3bb8915d5D461F3Ef9A9"}],"name":"GetUserBets","outputs":[{"name":"","type":"uint256[]","value":"21"}],"type":"function"}
+---
+> methodResult[25,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x3E5e9111Ae8eB78Fe1CC3bb8915d5D461F3Ef9A9"}],"name":"GetUserBets","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+187c187
+< methodResult[26,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x3E83CFb54E82b9d1CBb131F909a0D1258cF3cc5D"}],"name":"GetUserBets","outputs":[{"name":"","type":"uint256[]","value":""}],"type":"function"}
+---
+> methodResult[26,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x3E83CFb54E82b9d1CBb131F909a0D1258cF3cc5D"}],"name":"GetUserBets","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+/tmp/Diff_91970/Vitaluck.sol_4.log.txGasUsed.diff
+1c1
+< txGasUsed[0] = 1410422
+---
+> txGasUsed[0] = 1410690
+/tmp/Diff_91970/Vitaluck.sol_4.log.txTime.diff
+2,3c2,3
+< txTime[1] = 30
+< txTime[2] = 30
+---
+> txTime[1] = 29
+> txTime[2] = 29

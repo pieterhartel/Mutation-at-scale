@@ -1,0 +1,17 @@
+Mutation:
++ diff contracts/Vitaluck.sol.original contracts/Vitaluck.sol_0.mut
+1516973359
+Compiling ./contracts/Migrations.sol...
+Compiling ./contracts/Vitaluck.sol...
+contractName = "Vitaluck"
+
+Killed:
+0 /tmp/Diff_91970/Vitaluck.sol_0.log.eventResult.diff
+0 /tmp/Diff_91970/Vitaluck.sol_0.log.fromBalance.diff
+0 /tmp/Diff_91970/Vitaluck.sol_0.log.methodResult.diff
+0 /tmp/Diff_91970/Vitaluck.sol_0.log.toBalance.diff
+0 /tmp/Diff_91970/Vitaluck.sol_0.log.txGasUsed.diff
+0 /tmp/Diff_91970/Vitaluck.sol_0.log.txResult.diff
+0 /tmp/Diff_91970/Vitaluck.sol_0.log.txTime.diff
+0 total
+

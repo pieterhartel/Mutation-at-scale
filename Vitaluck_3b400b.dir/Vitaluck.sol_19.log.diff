@@ -1,0 +1,548 @@
+Mutation:
++ diff contracts/Vitaluck.sol.original contracts/Vitaluck.sol_19.mut
+88c88
+<     function Play() public payable {
+---
+>     function Play() public  /*mutation*/   /*noitatum*/  {
+
+Killed:
+   26 /tmp/Diff_91970/Vitaluck.sol_19.log.eventResult.diff
+   56 /tmp/Diff_91970/Vitaluck.sol_19.log.fromBalance.diff
+  300 /tmp/Diff_91970/Vitaluck.sol_19.log.methodResult.diff
+   54 /tmp/Diff_91970/Vitaluck.sol_19.log.toBalance.diff
+   30 /tmp/Diff_91970/Vitaluck.sol_19.log.txGasUsed.diff
+   54 /tmp/Diff_91970/Vitaluck.sol_19.log.txResult.diff
+    4 /tmp/Diff_91970/Vitaluck.sol_19.log.txTime.diff
+  524 total
+
+/tmp/Diff_91970/Vitaluck.sol_19.log.eventResult.diff
+1,25d0
+< eventResult[2,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"number","type":"uint256","value":"287"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+< eventResult[3,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"number","type":"uint256","value":"543"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+< eventResult[4,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"number","type":"uint256","value":"811"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+< eventResult[5,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"number","type":"uint256","value":"907"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+< eventResult[6,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"number","type":"uint256","value":"19"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+< eventResult[7,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"number","type":"uint256","value":"85"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+< eventResult[8,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"number","type":"uint256","value":"807"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+< eventResult[9,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"number","type":"uint256","value":"467"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[10,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"number","type":"uint256","value":"609"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[11,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"number","type":"uint256","value":"899"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+< eventResult[12,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"number","type":"uint256","value":"267"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[13,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"number","type":"uint256","value":"409"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[14,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"number","type":"uint256","value":"27"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[15,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"},{"name":"number","type":"uint256","value":"605"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[16,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x95cED938F7991cd0dFcb48F0a06a40FA1aF46EBC"},{"name":"number","type":"uint256","value":"805"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[17,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"},{"name":"number","type":"uint256","value":"151"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[18,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"},{"name":"number","type":"uint256","value":"431"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[19,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"},{"name":"number","type":"uint256","value":"135"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[20,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"},{"name":"number","type":"uint256","value":"349"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[21,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"},{"name":"number","type":"uint256","value":"543"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[22,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"},{"name":"number","type":"uint256","value":"887"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[23,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x3E5e9111Ae8eB78Fe1CC3bb8915d5D461F3Ef9A9"},{"name":"number","type":"uint256","value":"193"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[24,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x28a8746e75304c0780E011BEd21C72cD78cd535E"},{"name":"number","type":"uint256","value":"241"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[25,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xACa94ef8bD5ffEE41947b4585a84BdA5a3d3DA6E"},{"name":"number","type":"uint256","value":"897"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[26,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x1dF62f291b2E969fB0849d99D9Ce41e2F137006e"},{"name":"number","type":"uint256","value":"29"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+/tmp/Diff_91970/Vitaluck.sol_19.log.fromBalance.diff
+1,27c1,27
+< fromBalance[0] = {"address":"0x22d491Bde2303f2f43325b2108D26f1eAbA1e32b","balance":"999999971791560000000000"}
+< fromBalance[1] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999942521300000000000"}
+< fromBalance[2] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999936945360000000000"}
+< fromBalance[3] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999928469420000000000"}
+< fromBalance[4] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999919993480000000000"}
+< fromBalance[5] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999911311940000000000"}
+< fromBalance[6] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999902836000000000000"}
+< fromBalance[7] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999894360060000000000"}
+< fromBalance[8] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999885884120000000000"}
+< fromBalance[9] = {"address":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d","balance":"999999946934640000000000"}
+< fromBalance[10] = {"address":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d","balance":"999999894169280000000000"}
+< fromBalance[11] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999967408180000000000"}
+< fromBalance[12] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999919642820000000000"}
+< fromBalance[13] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999871877460000000000"}
+< fromBalance[14] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999824112100000000000"}
+< fromBalance[15] = {"address":"0xd03ea8624C8C5987235048901fB614fDcA89b117","balance":"999999946934640000000000"}
+< fromBalance[16] = {"address":"0x95cED938F7991cd0dFcb48F0a06a40FA1aF46EBC","balance":"999999946934640000000000"}
+< fromBalance[17] = {"address":"0xd03ea8624C8C5987235048901fB614fDcA89b117","balance":"999999894169280000000000"}
+< fromBalance[18] = {"address":"0xd03ea8624C8C5987235048901fB614fDcA89b117","balance":"999999841403920000000000"}
+< fromBalance[19] = {"address":"0xd03ea8624C8C5987235048901fB614fDcA89b117","balance":"999999788638560000000000"}
+< fromBalance[20] = {"address":"0xd03ea8624C8C5987235048901fB614fDcA89b117","balance":"999999735873200000000000"}
+< fromBalance[21] = {"address":"0xd03ea8624C8C5987235048901fB614fDcA89b117","balance":"999999683107840000000000"}
+< fromBalance[22] = {"address":"0xd03ea8624C8C5987235048901fB614fDcA89b117","balance":"999999630342480000000000"}
+< fromBalance[23] = {"address":"0x3E5e9111Ae8eB78Fe1CC3bb8915d5D461F3Ef9A9","balance":"999999946934640000000000"}
+< fromBalance[24] = {"address":"0x28a8746e75304c0780E011BEd21C72cD78cd535E","balance":"999999946934640000000000"}
+< fromBalance[25] = {"address":"0xACa94ef8bD5ffEE41947b4585a84BdA5a3d3DA6E","balance":"999999946934640000000000"}
+< fromBalance[26] = {"address":"0x1dF62f291b2E969fB0849d99D9Ce41e2F137006e","balance":"999999946934640000000000"}
+---
+> fromBalance[0] = {"address":"0x22d491Bde2303f2f43325b2108D26f1eAbA1e32b","balance":"999999971733880000000000"}
+> fromBalance[1] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999993340180000000000"}
+> fromBalance[2] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999992912120000000000"}
+> fromBalance[3] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999992484060000000000"}
+> fromBalance[4] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999992056000000000000"}
+> fromBalance[5] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999991627940000000000"}
+> fromBalance[6] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999991199880000000000"}
+> fromBalance[7] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999990771820000000000"}
+> fromBalance[8] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999990343760000000000"}
+> fromBalance[9] = {"address":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d","balance":"999999999571940000000000"}
+> fromBalance[10] = {"address":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d","balance":"999999999143880000000000"}
+> fromBalance[11] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999989915700000000000"}
+> fromBalance[12] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999989487640000000000"}
+> fromBalance[13] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999989059580000000000"}
+> fromBalance[14] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999988631520000000000"}
+> fromBalance[15] = {"address":"0xd03ea8624C8C5987235048901fB614fDcA89b117","balance":"999999999571940000000000"}
+> fromBalance[16] = {"address":"0x95cED938F7991cd0dFcb48F0a06a40FA1aF46EBC","balance":"999999999571940000000000"}
+> fromBalance[17] = {"address":"0xd03ea8624C8C5987235048901fB614fDcA89b117","balance":"999999999143880000000000"}
+> fromBalance[18] = {"address":"0xd03ea8624C8C5987235048901fB614fDcA89b117","balance":"999999998715820000000000"}
+> fromBalance[19] = {"address":"0xd03ea8624C8C5987235048901fB614fDcA89b117","balance":"999999998287760000000000"}
+> fromBalance[20] = {"address":"0xd03ea8624C8C5987235048901fB614fDcA89b117","balance":"999999997859700000000000"}
+> fromBalance[21] = {"address":"0xd03ea8624C8C5987235048901fB614fDcA89b117","balance":"999999997431640000000000"}
+> fromBalance[22] = {"address":"0xd03ea8624C8C5987235048901fB614fDcA89b117","balance":"999999997003580000000000"}
+> fromBalance[23] = {"address":"0x3E5e9111Ae8eB78Fe1CC3bb8915d5D461F3Ef9A9","balance":"999999999571940000000000"}
+> fromBalance[24] = {"address":"0x28a8746e75304c0780E011BEd21C72cD78cd535E","balance":"999999999571940000000000"}
+> fromBalance[25] = {"address":"0xACa94ef8bD5ffEE41947b4585a84BdA5a3d3DA6E","balance":"999999999571940000000000"}
+> fromBalance[26] = {"address":"0x1dF62f291b2E969fB0849d99D9Ce41e2F137006e","balance":"999999999571940000000000"}
+/tmp/Diff_91970/Vitaluck.sol_19.log.methodResult.diff
+8c8
+< methodResult[1,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"1"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+---
+> methodResult[1,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+14,15c14,15
+< methodResult[1,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"50000000000000000"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+< methodResult[2,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"2"},{"name":"","type":"uint256","value":"50000000000000000"},{"name":"","type":"uint256","value":"50000000000000000"}],"type":"function"}
+---
+> methodResult[1,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+> methodResult[2,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+17c17
+< methodResult[2,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"}],"type":"function"}
+---
+> methodResult[2,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x0000000000000000000000000000000000000000"}],"type":"function"}
+21,22c21,22
+< methodResult[2,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"287"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"1"}],"type":"function"}
+< methodResult[3,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"3"},{"name":"","type":"uint256","value":"100000000000000000"},{"name":"","type":"uint256","value":"95000000000000000"}],"type":"function"}
+---
+> methodResult[2,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+> methodResult[3,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+24c24
+< methodResult[3,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"}],"type":"function"}
+---
+> methodResult[3,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x0000000000000000000000000000000000000000"}],"type":"function"}
+28,29c28,29
+< methodResult[3,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"543"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"2"}],"type":"function"}
+< methodResult[4,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"4"},{"name":"","type":"uint256","value":"150000000000000000"},{"name":"","type":"uint256","value":"140000000000000000"}],"type":"function"}
+---
+> methodResult[3,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+> methodResult[4,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+31c31
+< methodResult[4,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"}],"type":"function"}
+---
+> methodResult[4,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x0000000000000000000000000000000000000000"}],"type":"function"}
+35,36c35,36
+< methodResult[4,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"811"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"3"}],"type":"function"}
+< methodResult[5,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"5"},{"name":"","type":"uint256","value":"200000000000000000"},{"name":"","type":"uint256","value":"185000000000000000"}],"type":"function"}
+---
+> methodResult[4,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+> methodResult[5,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+38c38
+< methodResult[5,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352"}],"type":"function"}
+---
+> methodResult[5,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x0000000000000000000000000000000000000000"}],"type":"function"}
+42,43c42,43
+< methodResult[5,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"1"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"4"}],"type":"function"}
+< methodResult[6,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"6"},{"name":"","type":"uint256","value":"250000000000000000"},{"name":"","type":"uint256","value":"230000000000000000"}],"type":"function"}
+---
+> methodResult[5,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+> methodResult[6,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+45c45
+< methodResult[6,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"}],"type":"function"}
+---
+> methodResult[6,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x0000000000000000000000000000000000000000"}],"type":"function"}
+49,50c49,50
+< methodResult[6,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"19"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"5"}],"type":"function"}
+< methodResult[7,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"7"},{"name":"","type":"uint256","value":"300000000000000000"},{"name":"","type":"uint256","value":"275000000000000000"}],"type":"function"}
+---
+> methodResult[6,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+> methodResult[7,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+52c52
+< methodResult[7,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"}],"type":"function"}
+---
+> methodResult[7,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x0000000000000000000000000000000000000000"}],"type":"function"}
+55,57c55,57
+< methodResult[7,5] = {"inputs":[{"type":"uint256","name":"_betId","value":3}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"907"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516975453"},{"name":"JackpotWon","type":"uint256","value":"45000000000000000"}],"type":"function"}
+< methodResult[7,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"85"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"6"}],"type":"function"}
+< methodResult[8,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"8"},{"name":"","type":"uint256","value":"350000000000000000"},{"name":"","type":"uint256","value":"320000000000000000"}],"type":"function"}
+---
+> methodResult[7,5] = {"inputs":[{"type":"uint256","name":"_betId","value":3}],"name":"GetBet","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+> methodResult[7,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+> methodResult[8,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+59c59
+< methodResult[8,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"}],"type":"function"}
+---
+> methodResult[8,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x0000000000000000000000000000000000000000"}],"type":"function"}
+62,64c62,64
+< methodResult[8,5] = {"inputs":[{"type":"uint256","name":"_betId","value":2}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"811"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516975405"},{"name":"JackpotWon","type":"uint256","value":"45000000000000000"}],"type":"function"}
+< methodResult[8,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"807"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"7"}],"type":"function"}
+< methodResult[9,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"9"},{"name":"","type":"uint256","value":"400000000000000000"},{"name":"","type":"uint256","value":"320000000000000000"}],"type":"function"}
+---
+> methodResult[8,5] = {"inputs":[{"type":"uint256","name":"_betId","value":2}],"name":"GetBet","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+> methodResult[8,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+> methodResult[9,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+66c66
+< methodResult[9,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"}],"type":"function"}
+---
+> methodResult[9,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x0000000000000000000000000000000000000000"}],"type":"function"}
+69,71c69,71
+< methodResult[9,5] = {"inputs":[{"type":"uint256","name":"_betId","value":4}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"19"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516975509"},{"name":"JackpotWon","type":"uint256","value":"45000000000000000"}],"type":"function"}
+< methodResult[9,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"807"},{"name":"","type":"uint256","value":"85000000000000000"},{"name":"","type":"uint256","value":"8"}],"type":"function"}
+< methodResult[10,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"10"},{"name":"","type":"uint256","value":"450000000000000000"},{"name":"","type":"uint256","value":"320000000000000000"}],"type":"function"}
+---
+> methodResult[9,5] = {"inputs":[{"type":"uint256","name":"_betId","value":4}],"name":"GetBet","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+> methodResult[9,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+> methodResult[10,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+73c73
+< methodResult[10,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"}],"type":"function"}
+---
+> methodResult[10,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x0000000000000000000000000000000000000000"}],"type":"function"}
+76,78c76,78
+< methodResult[10,5] = {"inputs":[{"type":"uint256","name":"_betId","value":7}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"467"},{"name":"isWinner","type":"bool","value":"false"},{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"timestamp","type":"uint32","value":"1516978233"},{"name":"JackpotWon","type":"uint256","value":"0"}],"type":"function"}
+< methodResult[10,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"807"},{"name":"","type":"uint256","value":"125000000000000000"},{"name":"","type":"uint256","value":"9"}],"type":"function"}
+< methodResult[11,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"11"},{"name":"","type":"uint256","value":"500000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[10,5] = {"inputs":[{"type":"uint256","name":"_betId","value":7}],"name":"GetBet","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+> methodResult[10,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+> methodResult[11,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+80c80
+< methodResult[11,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"}],"type":"function"}
+---
+> methodResult[11,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x0000000000000000000000000000000000000000"}],"type":"function"}
+83,85c83,85
+< methodResult[11,5] = {"inputs":[{"type":"uint256","name":"_betId","value":3}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"907"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516975453"},{"name":"JackpotWon","type":"uint256","value":"45000000000000000"}],"type":"function"}
+< methodResult[11,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"10"}],"type":"function"}
+< methodResult[12,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"12"},{"name":"","type":"uint256","value":"550000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[11,5] = {"inputs":[{"type":"uint256","name":"_betId","value":3}],"name":"GetBet","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+> methodResult[11,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+> methodResult[12,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+87c87
+< methodResult[12,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"}],"type":"function"}
+---
+> methodResult[12,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x0000000000000000000000000000000000000000"}],"type":"function"}
+90,92c90,92
+< methodResult[12,5] = {"inputs":[{"type":"uint256","name":"_betId","value":8}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"609"},{"name":"isWinner","type":"bool","value":"false"},{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"timestamp","type":"uint32","value":"1516978304"},{"name":"JackpotWon","type":"uint256","value":"0"}],"type":"function"}
+< methodResult[12,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"85000000000000000"},{"name":"","type":"uint256","value":"11"}],"type":"function"}
+< methodResult[13,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"13"},{"name":"","type":"uint256","value":"600000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[12,5] = {"inputs":[{"type":"uint256","name":"_betId","value":8}],"name":"GetBet","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+> methodResult[12,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+> methodResult[13,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+94c94
+< methodResult[13,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"}],"type":"function"}
+---
+> methodResult[13,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x0000000000000000000000000000000000000000"}],"type":"function"}
+97,99c97,99
+< methodResult[13,5] = {"inputs":[{"type":"uint256","name":"_betId","value":4}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"19"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516975509"},{"name":"JackpotWon","type":"uint256","value":"45000000000000000"}],"type":"function"}
+< methodResult[13,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"125000000000000000"},{"name":"","type":"uint256","value":"12"}],"type":"function"}
+< methodResult[14,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"14"},{"name":"","type":"uint256","value":"650000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[13,5] = {"inputs":[{"type":"uint256","name":"_betId","value":4}],"name":"GetBet","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+> methodResult[13,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+> methodResult[14,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+101c101
+< methodResult[14,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"}],"type":"function"}
+---
+> methodResult[14,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x0000000000000000000000000000000000000000"}],"type":"function"}
+104,106c104,106
+< methodResult[14,5] = {"inputs":[{"type":"uint256","name":"_betId","value":1}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"543"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516975271"},{"name":"JackpotWon","type":"uint256","value":"45000000000000000"}],"type":"function"}
+< methodResult[14,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"165000000000000000"},{"name":"","type":"uint256","value":"13"}],"type":"function"}
+< methodResult[15,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"15"},{"name":"","type":"uint256","value":"700000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[14,5] = {"inputs":[{"type":"uint256","name":"_betId","value":1}],"name":"GetBet","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+> methodResult[14,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+> methodResult[15,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+108c108
+< methodResult[15,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"}],"type":"function"}
+---
+> methodResult[15,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x0000000000000000000000000000000000000000"}],"type":"function"}
+111,113c111,113
+< methodResult[15,5] = {"inputs":[{"type":"uint256","name":"_betId","value":7}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"467"},{"name":"isWinner","type":"bool","value":"false"},{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"timestamp","type":"uint32","value":"1516978233"},{"name":"JackpotWon","type":"uint256","value":"0"}],"type":"function"}
+< methodResult[15,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"205000000000000000"},{"name":"","type":"uint256","value":"14"}],"type":"function"}
+< methodResult[16,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"16"},{"name":"","type":"uint256","value":"750000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[15,5] = {"inputs":[{"type":"uint256","name":"_betId","value":7}],"name":"GetBet","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+> methodResult[15,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+> methodResult[16,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+115c115
+< methodResult[16,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"}],"type":"function"}
+---
+> methodResult[16,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x0000000000000000000000000000000000000000"}],"type":"function"}
+118,120c118,120
+< methodResult[16,5] = {"inputs":[{"type":"uint256","name":"_betId","value":8}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"609"},{"name":"isWinner","type":"bool","value":"false"},{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"timestamp","type":"uint32","value":"1516978304"},{"name":"JackpotWon","type":"uint256","value":"0"}],"type":"function"}
+< methodResult[16,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"245000000000000000"},{"name":"","type":"uint256","value":"15"}],"type":"function"}
+< methodResult[17,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"17"},{"name":"","type":"uint256","value":"800000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[16,5] = {"inputs":[{"type":"uint256","name":"_betId","value":8}],"name":"GetBet","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+> methodResult[16,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+> methodResult[17,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+122c122
+< methodResult[17,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"}],"type":"function"}
+---
+> methodResult[17,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x0000000000000000000000000000000000000000"}],"type":"function"}
+125,127c125,127
+< methodResult[17,5] = {"inputs":[{"type":"uint256","name":"_betId","value":7}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"467"},{"name":"isWinner","type":"bool","value":"false"},{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"timestamp","type":"uint32","value":"1516978233"},{"name":"JackpotWon","type":"uint256","value":"0"}],"type":"function"}
+< methodResult[17,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"285000000000000000"},{"name":"","type":"uint256","value":"16"}],"type":"function"}
+< methodResult[18,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"18"},{"name":"","type":"uint256","value":"850000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[17,5] = {"inputs":[{"type":"uint256","name":"_betId","value":7}],"name":"GetBet","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+> methodResult[17,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+> methodResult[18,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+129c129
+< methodResult[18,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"}],"type":"function"}
+---
+> methodResult[18,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x0000000000000000000000000000000000000000"}],"type":"function"}
+132,134c132,134
+< methodResult[18,5] = {"inputs":[{"type":"uint256","name":"_betId","value":9}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"899"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516979949"},{"name":"JackpotWon","type":"uint256","value":"125000000000000000"}],"type":"function"}
+< methodResult[18,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"325000000000000000"},{"name":"","type":"uint256","value":"17"}],"type":"function"}
+< methodResult[19,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"19"},{"name":"","type":"uint256","value":"900000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[18,5] = {"inputs":[{"type":"uint256","name":"_betId","value":9}],"name":"GetBet","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+> methodResult[18,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+> methodResult[19,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+136c136
+< methodResult[19,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"}],"type":"function"}
+---
+> methodResult[19,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x0000000000000000000000000000000000000000"}],"type":"function"}
+139,141c139,141
+< methodResult[19,5] = {"inputs":[{"type":"uint256","name":"_betId","value":0}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"287"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516974143"},{"name":"JackpotWon","type":"uint256","value":"50000000000000000"}],"type":"function"}
+< methodResult[19,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"365000000000000000"},{"name":"","type":"uint256","value":"18"}],"type":"function"}
+< methodResult[20,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"20"},{"name":"","type":"uint256","value":"950000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[19,5] = {"inputs":[{"type":"uint256","name":"_betId","value":0}],"name":"GetBet","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+> methodResult[19,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+> methodResult[20,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+143c143
+< methodResult[20,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"}],"type":"function"}
+---
+> methodResult[20,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x0000000000000000000000000000000000000000"}],"type":"function"}
+146,148c146,148
+< methodResult[20,5] = {"inputs":[{"type":"uint256","name":"_betId","value":6}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"807"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516976403"},{"name":"JackpotWon","type":"uint256","value":"45000000000000000"}],"type":"function"}
+< methodResult[20,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"405000000000000000"},{"name":"","type":"uint256","value":"19"}],"type":"function"}
+< methodResult[21,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"21"},{"name":"","type":"uint256","value":"1000000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[20,5] = {"inputs":[{"type":"uint256","name":"_betId","value":6}],"name":"GetBet","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+> methodResult[20,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+> methodResult[21,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+150c150
+< methodResult[21,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"}],"type":"function"}
+---
+> methodResult[21,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x0000000000000000000000000000000000000000"}],"type":"function"}
+153,155c153,155
+< methodResult[21,5] = {"inputs":[{"type":"uint256","name":"_betId","value":8}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"609"},{"name":"isWinner","type":"bool","value":"false"},{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"timestamp","type":"uint32","value":"1516978304"},{"name":"JackpotWon","type":"uint256","value":"0"}],"type":"function"}
+< methodResult[21,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"445000000000000000"},{"name":"","type":"uint256","value":"20"}],"type":"function"}
+< methodResult[22,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"22"},{"name":"","type":"uint256","value":"1050000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[21,5] = {"inputs":[{"type":"uint256","name":"_betId","value":8}],"name":"GetBet","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+> methodResult[21,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+> methodResult[22,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+157c157
+< methodResult[22,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"}],"type":"function"}
+---
+> methodResult[22,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x0000000000000000000000000000000000000000"}],"type":"function"}
+160,162c160,162
+< methodResult[22,5] = {"inputs":[{"type":"uint256","name":"_betId","value":5}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"85"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516975542"},{"name":"JackpotWon","type":"uint256","value":"45000000000000000"}],"type":"function"}
+< methodResult[22,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"485000000000000000"},{"name":"","type":"uint256","value":"21"}],"type":"function"}
+< methodResult[23,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"23"},{"name":"","type":"uint256","value":"1100000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[22,5] = {"inputs":[{"type":"uint256","name":"_betId","value":5}],"name":"GetBet","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+> methodResult[22,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+> methodResult[23,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+164c164
+< methodResult[23,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"}],"type":"function"}
+---
+> methodResult[23,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x0000000000000000000000000000000000000000"}],"type":"function"}
+167,169c167,169
+< methodResult[23,5] = {"inputs":[{"type":"uint256","name":"_betId","value":6}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"807"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516976403"},{"name":"JackpotWon","type":"uint256","value":"45000000000000000"}],"type":"function"}
+< methodResult[23,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"525000000000000000"},{"name":"","type":"uint256","value":"22"}],"type":"function"}
+< methodResult[24,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"24"},{"name":"","type":"uint256","value":"1150000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[23,5] = {"inputs":[{"type":"uint256","name":"_betId","value":6}],"name":"GetBet","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+> methodResult[23,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+> methodResult[24,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+171c171
+< methodResult[24,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"}],"type":"function"}
+---
+> methodResult[24,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x0000000000000000000000000000000000000000"}],"type":"function"}
+174,176c174,176
+< methodResult[24,5] = {"inputs":[{"type":"uint256","name":"_betId","value":4}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"19"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516975509"},{"name":"JackpotWon","type":"uint256","value":"45000000000000000"}],"type":"function"}
+< methodResult[24,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"565000000000000000"},{"name":"","type":"uint256","value":"23"}],"type":"function"}
+< methodResult[25,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"25"},{"name":"","type":"uint256","value":"1200000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[24,5] = {"inputs":[{"type":"uint256","name":"_betId","value":4}],"name":"GetBet","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+> methodResult[24,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+> methodResult[25,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+178c178
+< methodResult[25,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"}],"type":"function"}
+---
+> methodResult[25,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x0000000000000000000000000000000000000000"}],"type":"function"}
+180,183c180,183
+< methodResult[25,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x3E5e9111Ae8eB78Fe1CC3bb8915d5D461F3Ef9A9"}],"name":"GetUserBets","outputs":[{"name":"","type":"uint256[]","value":"21"}],"type":"function"}
+< methodResult[25,5] = {"inputs":[{"type":"uint256","name":"_betId","value":6}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"807"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516976403"},{"name":"JackpotWon","type":"uint256","value":"45000000000000000"}],"type":"function"}
+< methodResult[25,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"605000000000000000"},{"name":"","type":"uint256","value":"24"}],"type":"function"}
+< methodResult[26,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"26"},{"name":"","type":"uint256","value":"1250000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[25,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x3E5e9111Ae8eB78Fe1CC3bb8915d5D461F3Ef9A9"}],"name":"GetUserBets","outputs":[{"name":"","type":"uint256[]","value":""}],"type":"function"}
+> methodResult[25,5] = {"inputs":[{"type":"uint256","name":"_betId","value":6}],"name":"GetBet","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+> methodResult[25,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+> methodResult[26,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+185c185
+< methodResult[26,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"}],"type":"function"}
+---
+> methodResult[26,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x0000000000000000000000000000000000000000"}],"type":"function"}
+188,189c188,189
+< methodResult[26,5] = {"inputs":[{"type":"uint256","name":"_betId","value":9}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"899"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516979949"},{"name":"JackpotWon","type":"uint256","value":"125000000000000000"}],"type":"function"}
+< methodResult[26,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"645000000000000000"},{"name":"","type":"uint256","value":"25"}],"type":"function"}
+---
+> methodResult[26,5] = {"inputs":[{"type":"uint256","name":"_betId","value":9}],"name":"GetBet","outputs":[],"type":"function","isError":1,"message":"Returned error: VM Exception while processing transaction: invalid opcode"}
+> methodResult[26,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+/tmp/Diff_91970/Vitaluck.sol_19.log.toBalance.diff
+1,26c1,26
+< toBalance[1] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"50000000000000000"}
+< toBalance[2] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"45000000000000000"}
+< toBalance[3] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"45000000000000000"}
+< toBalance[4] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"45000000000000000"}
+< toBalance[5] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"45000000000000000"}
+< toBalance[6] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"45000000000000000"}
+< toBalance[7] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"45000000000000000"}
+< toBalance[8] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"45000000000000000"}
+< toBalance[9] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"85000000000000000"}
+< toBalance[10] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"125000000000000000"}
+< toBalance[11] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"45000000000000000"}
+< toBalance[12] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"85000000000000000"}
+< toBalance[13] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"125000000000000000"}
+< toBalance[14] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"165000000000000000"}
+< toBalance[15] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"205000000000000000"}
+< toBalance[16] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"245000000000000000"}
+< toBalance[17] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"285000000000000000"}
+< toBalance[18] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"325000000000000000"}
+< toBalance[19] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"365000000000000000"}
+< toBalance[20] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"405000000000000000"}
+< toBalance[21] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"445000000000000000"}
+< toBalance[22] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"485000000000000000"}
+< toBalance[23] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"525000000000000000"}
+< toBalance[24] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"565000000000000000"}
+< toBalance[25] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"605000000000000000"}
+< toBalance[26] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"645000000000000000"}
+---
+> toBalance[1] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"0"}
+> toBalance[2] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"0"}
+> toBalance[3] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"0"}
+> toBalance[4] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"0"}
+> toBalance[5] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"0"}
+> toBalance[6] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"0"}
+> toBalance[7] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"0"}
+> toBalance[8] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"0"}
+> toBalance[9] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"0"}
+> toBalance[10] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"0"}
+> toBalance[11] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"0"}
+> toBalance[12] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"0"}
+> toBalance[13] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"0"}
+> toBalance[14] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"0"}
+> toBalance[15] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"0"}
+> toBalance[16] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"0"}
+> toBalance[17] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"0"}
+> toBalance[18] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"0"}
+> toBalance[19] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"0"}
+> toBalance[20] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"0"}
+> toBalance[21] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"0"}
+> toBalance[22] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"0"}
+> toBalance[23] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"0"}
+> toBalance[24] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"0"}
+> toBalance[25] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"0"}
+> toBalance[26] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"0"}
+/tmp/Diff_91970/Vitaluck.sol_19.log.txGasUsed.diff
+1,27c1
+< txGasUsed[0] = 1410422
+< txGasUsed[1] = 62347
+< txGasUsed[2] = 278797
+< txGasUsed[3] = 173797
+< txGasUsed[4] = 173797
+< txGasUsed[5] = 184077
+< txGasUsed[6] = 173797
+< txGasUsed[7] = 173797
+< txGasUsed[8] = 173797
+< txGasUsed[9] = 153268
+< txGasUsed[10] = 138268
+< txGasUsed[11] = 173797
+< txGasUsed[12] = 138268
+< txGasUsed[13] = 138268
+< txGasUsed[14] = 138268
+< txGasUsed[15] = 153268
+< txGasUsed[16] = 153268
+< txGasUsed[17] = 138268
+< txGasUsed[18] = 138268
+< txGasUsed[19] = 138268
+< txGasUsed[20] = 138268
+< txGasUsed[21] = 138268
+< txGasUsed[22] = 138268
+< txGasUsed[23] = 153268
+< txGasUsed[24] = 153268
+< txGasUsed[25] = 153268
+< txGasUsed[26] = 153268
+---
+> txGasUsed[0] = 1413306
+/tmp/Diff_91970/Vitaluck.sol_19.log.txResult.diff
+2,27c2,27
+< txResult[1] = {"transactionHash":<hash>,"transactionIndex":0,"blockHash":<hash>,"blockNumber":4,"from":"0x90f8bf6a479f320ead074411a4b0e7944ea8c9c1","to":"0x17e91224c30c5b0b13ba2ef1e84fe880cb902352","gasUsed":<gas>,"cumulativeGasUsed":<gas>,"contractAddress":null}
+< txResult[2] = {"transactionHash":<hash>,"transactionIndex":0,"blockHash":<hash>,"blockNumber":5,"from":"0x90f8bf6a479f320ead074411a4b0e7944ea8c9c1","to":"0x17e91224c30c5b0b13ba2ef1e84fe880cb902352","gasUsed":<gas>,"cumulativeGasUsed":<gas>,"contractAddress":null}
+< txResult[3] = {"transactionHash":<hash>,"transactionIndex":0,"blockHash":<hash>,"blockNumber":6,"from":"0x90f8bf6a479f320ead074411a4b0e7944ea8c9c1","to":"0x17e91224c30c5b0b13ba2ef1e84fe880cb902352","gasUsed":<gas>,"cumulativeGasUsed":<gas>,"contractAddress":null}
+< txResult[4] = {"transactionHash":<hash>,"transactionIndex":0,"blockHash":<hash>,"blockNumber":7,"from":"0x90f8bf6a479f320ead074411a4b0e7944ea8c9c1","to":"0x17e91224c30c5b0b13ba2ef1e84fe880cb902352","gasUsed":<gas>,"cumulativeGasUsed":<gas>,"contractAddress":null}
+< txResult[5] = {"transactionHash":<hash>,"transactionIndex":0,"blockHash":<hash>,"blockNumber":8,"from":"0x90f8bf6a479f320ead074411a4b0e7944ea8c9c1","to":"0x17e91224c30c5b0b13ba2ef1e84fe880cb902352","gasUsed":<gas>,"cumulativeGasUsed":<gas>,"contractAddress":null}
+< txResult[6] = {"transactionHash":<hash>,"transactionIndex":0,"blockHash":<hash>,"blockNumber":9,"from":"0x90f8bf6a479f320ead074411a4b0e7944ea8c9c1","to":"0x17e91224c30c5b0b13ba2ef1e84fe880cb902352","gasUsed":<gas>,"cumulativeGasUsed":<gas>,"contractAddress":null}
+< txResult[7] = {"transactionHash":<hash>,"transactionIndex":0,"blockHash":<hash>,"blockNumber":10,"from":"0x90f8bf6a479f320ead074411a4b0e7944ea8c9c1","to":"0x17e91224c30c5b0b13ba2ef1e84fe880cb902352","gasUsed":<gas>,"cumulativeGasUsed":<gas>,"contractAddress":null}
+< txResult[8] = {"transactionHash":<hash>,"transactionIndex":0,"blockHash":<hash>,"blockNumber":11,"from":"0x90f8bf6a479f320ead074411a4b0e7944ea8c9c1","to":"0x17e91224c30c5b0b13ba2ef1e84fe880cb902352","gasUsed":<gas>,"cumulativeGasUsed":<gas>,"contractAddress":null}
+< txResult[9] = {"transactionHash":<hash>,"transactionIndex":0,"blockHash":<hash>,"blockNumber":12,"from":"0xe11ba2b4d45eaed5996cd0823791e0c93114882d","to":"0x17e91224c30c5b0b13ba2ef1e84fe880cb902352","gasUsed":<gas>,"cumulativeGasUsed":<gas>,"contractAddress":null}
+< txResult[10] = {"transactionHash":<hash>,"transactionIndex":0,"blockHash":<hash>,"blockNumber":13,"from":"0xe11ba2b4d45eaed5996cd0823791e0c93114882d","to":"0x17e91224c30c5b0b13ba2ef1e84fe880cb902352","gasUsed":<gas>,"cumulativeGasUsed":<gas>,"contractAddress":null}
+< txResult[11] = {"transactionHash":<hash>,"transactionIndex":0,"blockHash":<hash>,"blockNumber":14,"from":"0x90f8bf6a479f320ead074411a4b0e7944ea8c9c1","to":"0x17e91224c30c5b0b13ba2ef1e84fe880cb902352","gasUsed":<gas>,"cumulativeGasUsed":<gas>,"contractAddress":null}
+< txResult[12] = {"transactionHash":<hash>,"transactionIndex":0,"blockHash":<hash>,"blockNumber":15,"from":"0x90f8bf6a479f320ead074411a4b0e7944ea8c9c1","to":"0x17e91224c30c5b0b13ba2ef1e84fe880cb902352","gasUsed":<gas>,"cumulativeGasUsed":<gas>,"contractAddress":null}
+< txResult[13] = {"transactionHash":<hash>,"transactionIndex":0,"blockHash":<hash>,"blockNumber":16,"from":"0x90f8bf6a479f320ead074411a4b0e7944ea8c9c1","to":"0x17e91224c30c5b0b13ba2ef1e84fe880cb902352","gasUsed":<gas>,"cumulativeGasUsed":<gas>,"contractAddress":null}
+< txResult[14] = {"transactionHash":<hash>,"transactionIndex":0,"blockHash":<hash>,"blockNumber":17,"from":"0x90f8bf6a479f320ead074411a4b0e7944ea8c9c1","to":"0x17e91224c30c5b0b13ba2ef1e84fe880cb902352","gasUsed":<gas>,"cumulativeGasUsed":<gas>,"contractAddress":null}
+< txResult[15] = {"transactionHash":<hash>,"transactionIndex":0,"blockHash":<hash>,"blockNumber":18,"from":"0xd03ea8624c8c5987235048901fb614fdca89b117","to":"0x17e91224c30c5b0b13ba2ef1e84fe880cb902352","gasUsed":<gas>,"cumulativeGasUsed":<gas>,"contractAddress":null}
+< txResult[16] = {"transactionHash":<hash>,"transactionIndex":0,"blockHash":<hash>,"blockNumber":19,"from":"0x95ced938f7991cd0dfcb48f0a06a40fa1af46ebc","to":"0x17e91224c30c5b0b13ba2ef1e84fe880cb902352","gasUsed":<gas>,"cumulativeGasUsed":<gas>,"contractAddress":null}
+< txResult[17] = {"transactionHash":<hash>,"transactionIndex":0,"blockHash":<hash>,"blockNumber":20,"from":"0xd03ea8624c8c5987235048901fb614fdca89b117","to":"0x17e91224c30c5b0b13ba2ef1e84fe880cb902352","gasUsed":<gas>,"cumulativeGasUsed":<gas>,"contractAddress":null}
+< txResult[18] = {"transactionHash":<hash>,"transactionIndex":0,"blockHash":<hash>,"blockNumber":21,"from":"0xd03ea8624c8c5987235048901fb614fdca89b117","to":"0x17e91224c30c5b0b13ba2ef1e84fe880cb902352","gasUsed":<gas>,"cumulativeGasUsed":<gas>,"contractAddress":null}
+< txResult[19] = {"transactionHash":<hash>,"transactionIndex":0,"blockHash":<hash>,"blockNumber":22,"from":"0xd03ea8624c8c5987235048901fb614fdca89b117","to":"0x17e91224c30c5b0b13ba2ef1e84fe880cb902352","gasUsed":<gas>,"cumulativeGasUsed":<gas>,"contractAddress":null}
+< txResult[20] = {"transactionHash":<hash>,"transactionIndex":0,"blockHash":<hash>,"blockNumber":23,"from":"0xd03ea8624c8c5987235048901fb614fdca89b117","to":"0x17e91224c30c5b0b13ba2ef1e84fe880cb902352","gasUsed":<gas>,"cumulativeGasUsed":<gas>,"contractAddress":null}
+< txResult[21] = {"transactionHash":<hash>,"transactionIndex":0,"blockHash":<hash>,"blockNumber":24,"from":"0xd03ea8624c8c5987235048901fb614fdca89b117","to":"0x17e91224c30c5b0b13ba2ef1e84fe880cb902352","gasUsed":<gas>,"cumulativeGasUsed":<gas>,"contractAddress":null}
+< txResult[22] = {"transactionHash":<hash>,"transactionIndex":0,"blockHash":<hash>,"blockNumber":25,"from":"0xd03ea8624c8c5987235048901fb614fdca89b117","to":"0x17e91224c30c5b0b13ba2ef1e84fe880cb902352","gasUsed":<gas>,"cumulativeGasUsed":<gas>,"contractAddress":null}
+< txResult[23] = {"transactionHash":<hash>,"transactionIndex":0,"blockHash":<hash>,"blockNumber":26,"from":"0x3e5e9111ae8eb78fe1cc3bb8915d5d461f3ef9a9","to":"0x17e91224c30c5b0b13ba2ef1e84fe880cb902352","gasUsed":<gas>,"cumulativeGasUsed":<gas>,"contractAddress":null}
+< txResult[24] = {"transactionHash":<hash>,"transactionIndex":0,"blockHash":<hash>,"blockNumber":27,"from":"0x28a8746e75304c0780e011bed21c72cd78cd535e","to":"0x17e91224c30c5b0b13ba2ef1e84fe880cb902352","gasUsed":<gas>,"cumulativeGasUsed":<gas>,"contractAddress":null}
+< txResult[25] = {"transactionHash":<hash>,"transactionIndex":0,"blockHash":<hash>,"blockNumber":28,"from":"0xaca94ef8bd5ffee41947b4585a84bda5a3d3da6e","to":"0x17e91224c30c5b0b13ba2ef1e84fe880cb902352","gasUsed":<gas>,"cumulativeGasUsed":<gas>,"contractAddress":null}
+< txResult[26] = {"transactionHash":<hash>,"transactionIndex":0,"blockHash":<hash>,"blockNumber":29,"from":"0x1df62f291b2e969fb0849d99d9ce41e2f137006e","to":"0x17e91224c30c5b0b13ba2ef1e84fe880cb902352","gasUsed":<gas>,"cumulativeGasUsed":<gas>,"contractAddress":null}
+---
+> txResult[1] = {"isError":1,"message":"Transaction: <hash> exited with an error  (status 0). \n     Please check that the transaction:\n     - satisfies all conditions set by Solidity `require` statements.\n     - does not trigger a Solidity `revert` statement.\n"}
+> txResult[2] = {"isError":1,"message":"Transaction: <hash> exited with an error  (status 0). \n     Please check that the transaction:\n     - satisfies all conditions set by Solidity `require` statements.\n     - does not trigger a Solidity `revert` statement.\n"}
+> txResult[3] = {"isError":1,"message":"Transaction: <hash> exited with an error  (status 0). \n     Please check that the transaction:\n     - satisfies all conditions set by Solidity `require` statements.\n     - does not trigger a Solidity `revert` statement.\n"}
+> txResult[4] = {"isError":1,"message":"Transaction: <hash> exited with an error  (status 0). \n     Please check that the transaction:\n     - satisfies all conditions set by Solidity `require` statements.\n     - does not trigger a Solidity `revert` statement.\n"}
+> txResult[5] = {"isError":1,"message":"Transaction: <hash> exited with an error  (status 0). \n     Please check that the transaction:\n     - satisfies all conditions set by Solidity `require` statements.\n     - does not trigger a Solidity `revert` statement.\n"}
+> txResult[6] = {"isError":1,"message":"Transaction: <hash> exited with an error  (status 0). \n     Please check that the transaction:\n     - satisfies all conditions set by Solidity `require` statements.\n     - does not trigger a Solidity `revert` statement.\n"}
+> txResult[7] = {"isError":1,"message":"Transaction: <hash> exited with an error  (status 0). \n     Please check that the transaction:\n     - satisfies all conditions set by Solidity `require` statements.\n     - does not trigger a Solidity `revert` statement.\n"}
+> txResult[8] = {"isError":1,"message":"Transaction: <hash> exited with an error  (status 0). \n     Please check that the transaction:\n     - satisfies all conditions set by Solidity `require` statements.\n     - does not trigger a Solidity `revert` statement.\n"}
+> txResult[9] = {"isError":1,"message":"Transaction: <hash> exited with an error  (status 0). \n     Please check that the transaction:\n     - satisfies all conditions set by Solidity `require` statements.\n     - does not trigger a Solidity `revert` statement.\n"}
+> txResult[10] = {"isError":1,"message":"Transaction: <hash> exited with an error  (status 0). \n     Please check that the transaction:\n     - satisfies all conditions set by Solidity `require` statements.\n     - does not trigger a Solidity `revert` statement.\n"}
+> txResult[11] = {"isError":1,"message":"Transaction: <hash> exited with an error  (status 0). \n     Please check that the transaction:\n     - satisfies all conditions set by Solidity `require` statements.\n     - does not trigger a Solidity `revert` statement.\n"}
+> txResult[12] = {"isError":1,"message":"Transaction: <hash> exited with an error  (status 0). \n     Please check that the transaction:\n     - satisfies all conditions set by Solidity `require` statements.\n     - does not trigger a Solidity `revert` statement.\n"}
+> txResult[13] = {"isError":1,"message":"Transaction: <hash> exited with an error  (status 0). \n     Please check that the transaction:\n     - satisfies all conditions set by Solidity `require` statements.\n     - does not trigger a Solidity `revert` statement.\n"}
+> txResult[14] = {"isError":1,"message":"Transaction: <hash> exited with an error  (status 0). \n     Please check that the transaction:\n     - satisfies all conditions set by Solidity `require` statements.\n     - does not trigger a Solidity `revert` statement.\n"}
+> txResult[15] = {"isError":1,"message":"Transaction: <hash> exited with an error  (status 0). \n     Please check that the transaction:\n     - satisfies all conditions set by Solidity `require` statements.\n     - does not trigger a Solidity `revert` statement.\n"}
+> txResult[16] = {"isError":1,"message":"Transaction: <hash> exited with an error  (status 0). \n     Please check that the transaction:\n     - satisfies all conditions set by Solidity `require` statements.\n     - does not trigger a Solidity `revert` statement.\n"}
+> txResult[17] = {"isError":1,"message":"Transaction: <hash> exited with an error  (status 0). \n     Please check that the transaction:\n     - satisfies all conditions set by Solidity `require` statements.\n     - does not trigger a Solidity `revert` statement.\n"}
+> txResult[18] = {"isError":1,"message":"Transaction: <hash> exited with an error  (status 0). \n     Please check that the transaction:\n     - satisfies all conditions set by Solidity `require` statements.\n     - does not trigger a Solidity `revert` statement.\n"}
+> txResult[19] = {"isError":1,"message":"Transaction: <hash> exited with an error  (status 0). \n     Please check that the transaction:\n     - satisfies all conditions set by Solidity `require` statements.\n     - does not trigger a Solidity `revert` statement.\n"}
+> txResult[20] = {"isError":1,"message":"Transaction: <hash> exited with an error  (status 0). \n     Please check that the transaction:\n     - satisfies all conditions set by Solidity `require` statements.\n     - does not trigger a Solidity `revert` statement.\n"}
+> txResult[21] = {"isError":1,"message":"Transaction: <hash> exited with an error  (status 0). \n     Please check that the transaction:\n     - satisfies all conditions set by Solidity `require` statements.\n     - does not trigger a Solidity `revert` statement.\n"}
+> txResult[22] = {"isError":1,"message":"Transaction: <hash> exited with an error  (status 0). \n     Please check that the transaction:\n     - satisfies all conditions set by Solidity `require` statements.\n     - does not trigger a Solidity `revert` statement.\n"}
+> txResult[23] = {"isError":1,"message":"Transaction: <hash> exited with an error  (status 0). \n     Please check that the transaction:\n     - satisfies all conditions set by Solidity `require` statements.\n     - does not trigger a Solidity `revert` statement.\n"}
+> txResult[24] = {"isError":1,"message":"Transaction: <hash> exited with an error  (status 0). \n     Please check that the transaction:\n     - satisfies all conditions set by Solidity `require` statements.\n     - does not trigger a Solidity `revert` statement.\n"}
+> txResult[25] = {"isError":1,"message":"Transaction: <hash> exited with an error  (status 0). \n     Please check that the transaction:\n     - satisfies all conditions set by Solidity `require` statements.\n     - does not trigger a Solidity `revert` statement.\n"}
+> txResult[26] = {"isError":1,"message":"Transaction: <hash> exited with an error  (status 0). \n     Please check that the transaction:\n     - satisfies all conditions set by Solidity `require` statements.\n     - does not trigger a Solidity `revert` statement.\n"}
+/tmp/Diff_91970/Vitaluck.sol_19.log.txTime.diff
+2c2
+< txTime[1] = 30
+---
+> txTime[1] = 29

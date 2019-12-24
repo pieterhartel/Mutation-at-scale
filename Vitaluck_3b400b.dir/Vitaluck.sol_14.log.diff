@@ -1,0 +1,80 @@
+Mutation:
++ diff contracts/Vitaluck.sol.original contracts/Vitaluck.sol_14.mut
+129c129
+<             currentResetTimer = now + cooldownTime;
+---
+>              /*mutation*/ true /*noitatum*/ ;
+
+Killed:
+   0 /tmp/Diff_91970/Vitaluck.sol_14.log.eventResult.diff
+  30 /tmp/Diff_91970/Vitaluck.sol_14.log.fromBalance.diff
+   0 /tmp/Diff_91970/Vitaluck.sol_14.log.methodResult.diff
+   0 /tmp/Diff_91970/Vitaluck.sol_14.log.toBalance.diff
+  24 /tmp/Diff_91970/Vitaluck.sol_14.log.txGasUsed.diff
+   0 /tmp/Diff_91970/Vitaluck.sol_14.log.txResult.diff
+   6 /tmp/Diff_91970/Vitaluck.sol_14.log.txTime.diff
+  60 total
+
+/tmp/Diff_91970/Vitaluck.sol_14.log.fromBalance.diff
+1c1
+< fromBalance[0] = {"address":"0x22d491Bde2303f2f43325b2108D26f1eAbA1e32b","balance":"999999971791560000000000"}
+---
+> fromBalance[0] = {"address":"0x22d491Bde2303f2f43325b2108D26f1eAbA1e32b","balance":"999999971851940000000000"}
+3,9c3,9
+< fromBalance[2] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999936945360000000000"}
+< fromBalance[3] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999928469420000000000"}
+< fromBalance[4] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999919993480000000000"}
+< fromBalance[5] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999911311940000000000"}
+< fromBalance[6] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999902836000000000000"}
+< fromBalance[7] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999894360060000000000"}
+< fromBalance[8] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999885884120000000000"}
+---
+> fromBalance[2] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999937349740000000000"}
+> fromBalance[3] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999928978180000000000"}
+> fromBalance[4] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999920606620000000000"}
+> fromBalance[5] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999912029460000000000"}
+> fromBalance[6] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999903657900000000000"}
+> fromBalance[7] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999895286340000000000"}
+> fromBalance[8] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999886914780000000000"}
+12,15c12,15
+< fromBalance[11] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999967408180000000000"}
+< fromBalance[12] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999919642820000000000"}
+< fromBalance[13] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999871877460000000000"}
+< fromBalance[14] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999824112100000000000"}
+---
+> fromBalance[11] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999968543220000000000"}
+> fromBalance[12] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999920777860000000000"}
+> fromBalance[13] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999873012500000000000"}
+> fromBalance[14] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999825247140000000000"}
+/tmp/Diff_91970/Vitaluck.sol_14.log.txGasUsed.diff
+1c1
+< txGasUsed[0] = 1410422
+---
+> txGasUsed[0] = 1407403
+3,9c3,9
+< txGasUsed[2] = 278797
+< txGasUsed[3] = 173797
+< txGasUsed[4] = 173797
+< txGasUsed[5] = 184077
+< txGasUsed[6] = 173797
+< txGasUsed[7] = 173797
+< txGasUsed[8] = 173797
+---
+> txGasUsed[2] = 258578
+> txGasUsed[3] = 168578
+> txGasUsed[4] = 168578
+> txGasUsed[5] = 178858
+> txGasUsed[6] = 168578
+> txGasUsed[7] = 168578
+> txGasUsed[8] = 168578
+12c12
+< txGasUsed[11] = 173797
+---
+> txGasUsed[11] = 168578
+/tmp/Diff_91970/Vitaluck.sol_14.log.txTime.diff
+2,3c2,3
+< txTime[1] = 30
+< txTime[2] = 30
+---
+> txTime[1] = 29
+> txTime[2] = 29

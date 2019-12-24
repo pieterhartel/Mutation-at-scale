@@ -1,0 +1,414 @@
+Mutation:
++ diff contracts/Vitaluck.sol.original contracts/Vitaluck.sol_21.mut
+141c141
+<             currentWinningNumber = _finalRandomNumber;
+---
+>              /*mutation*/ true /*noitatum*/ ;
+
+Killed:
+   38 /tmp/Diff_91970/Vitaluck.sol_21.log.eventResult.diff
+   56 /tmp/Diff_91970/Vitaluck.sol_21.log.fromBalance.diff
+  204 /tmp/Diff_91970/Vitaluck.sol_21.log.methodResult.diff
+   38 /tmp/Diff_91970/Vitaluck.sol_21.log.toBalance.diff
+   56 /tmp/Diff_91970/Vitaluck.sol_21.log.txGasUsed.diff
+    0 /tmp/Diff_91970/Vitaluck.sol_21.log.txResult.diff
+    0 /tmp/Diff_91970/Vitaluck.sol_21.log.txTime.diff
+  392 total
+
+/tmp/Diff_91970/Vitaluck.sol_21.log.eventResult.diff
+8,9c8,9
+< eventResult[9,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"number","type":"uint256","value":"467"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[10,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"number","type":"uint256","value":"609"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+---
+> eventResult[9,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"number","type":"uint256","value":"467"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+> eventResult[10,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"number","type":"uint256","value":"609"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+11,25c11,25
+< eventResult[12,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"number","type":"uint256","value":"267"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[13,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"number","type":"uint256","value":"409"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[14,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"number","type":"uint256","value":"27"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[15,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"},{"name":"number","type":"uint256","value":"605"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[16,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x95cED938F7991cd0dFcb48F0a06a40FA1aF46EBC"},{"name":"number","type":"uint256","value":"805"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[17,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"},{"name":"number","type":"uint256","value":"151"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[18,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"},{"name":"number","type":"uint256","value":"431"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[19,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"},{"name":"number","type":"uint256","value":"135"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[20,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"},{"name":"number","type":"uint256","value":"349"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[21,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"},{"name":"number","type":"uint256","value":"543"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[22,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"},{"name":"number","type":"uint256","value":"887"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[23,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x3E5e9111Ae8eB78Fe1CC3bb8915d5D461F3Ef9A9"},{"name":"number","type":"uint256","value":"193"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[24,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x28a8746e75304c0780E011BEd21C72cD78cd535E"},{"name":"number","type":"uint256","value":"241"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[25,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xACa94ef8bD5ffEE41947b4585a84BdA5a3d3DA6E"},{"name":"number","type":"uint256","value":"897"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+< eventResult[26,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x1dF62f291b2E969fB0849d99D9Ce41e2F137006e"},{"name":"number","type":"uint256","value":"29"},{"name":"won","type":"bool","value":"false"}],"type":"event"}]
+---
+> eventResult[12,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"number","type":"uint256","value":"267"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+> eventResult[13,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"number","type":"uint256","value":"409"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+> eventResult[14,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"number","type":"uint256","value":"27"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+> eventResult[15,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"},{"name":"number","type":"uint256","value":"605"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+> eventResult[16,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x95cED938F7991cd0dFcb48F0a06a40FA1aF46EBC"},{"name":"number","type":"uint256","value":"805"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+> eventResult[17,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"},{"name":"number","type":"uint256","value":"151"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+> eventResult[18,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"},{"name":"number","type":"uint256","value":"431"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+> eventResult[19,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"},{"name":"number","type":"uint256","value":"135"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+> eventResult[20,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"},{"name":"number","type":"uint256","value":"349"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+> eventResult[21,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"},{"name":"number","type":"uint256","value":"543"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+> eventResult[22,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"},{"name":"number","type":"uint256","value":"887"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+> eventResult[23,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x3E5e9111Ae8eB78Fe1CC3bb8915d5D461F3Ef9A9"},{"name":"number","type":"uint256","value":"193"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+> eventResult[24,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x28a8746e75304c0780E011BEd21C72cD78cd535E"},{"name":"number","type":"uint256","value":"241"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+> eventResult[25,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0xACa94ef8bD5ffEE41947b4585a84BdA5a3d3DA6E"},{"name":"number","type":"uint256","value":"897"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+> eventResult[26,0] = [{"inputs":[],"name":"NewPlay","outputs":[{"name":"player","type":"address","value":"0x1dF62f291b2E969fB0849d99D9Ce41e2F137006e"},{"name":"number","type":"uint256","value":"29"},{"name":"won","type":"bool","value":"true"}],"type":"event"}]
+/tmp/Diff_91970/Vitaluck.sol_21.log.fromBalance.diff
+1c1
+< fromBalance[0] = {"address":"0x22d491Bde2303f2f43325b2108D26f1eAbA1e32b","balance":"999999971791560000000000"}
+---
+> fromBalance[0] = {"address":"0x22d491Bde2303f2f43325b2108D26f1eAbA1e32b","balance":"999999971829220000000000"}
+3,27c3,27
+< fromBalance[2] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999936945360000000000"}
+< fromBalance[3] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999928469420000000000"}
+< fromBalance[4] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999919993480000000000"}
+< fromBalance[5] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999911311940000000000"}
+< fromBalance[6] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999902836000000000000"}
+< fromBalance[7] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999894360060000000000"}
+< fromBalance[8] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999885884120000000000"}
+< fromBalance[9] = {"address":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d","balance":"999999946934640000000000"}
+< fromBalance[10] = {"address":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d","balance":"999999894169280000000000"}
+< fromBalance[11] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999967408180000000000"}
+< fromBalance[12] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999919642820000000000"}
+< fromBalance[13] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999871877460000000000"}
+< fromBalance[14] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999824112100000000000"}
+< fromBalance[15] = {"address":"0xd03ea8624C8C5987235048901fB614fDcA89b117","balance":"999999946934640000000000"}
+< fromBalance[16] = {"address":"0x95cED938F7991cd0dFcb48F0a06a40FA1aF46EBC","balance":"999999946934640000000000"}
+< fromBalance[17] = {"address":"0xd03ea8624C8C5987235048901fB614fDcA89b117","balance":"999999894169280000000000"}
+< fromBalance[18] = {"address":"0xd03ea8624C8C5987235048901fB614fDcA89b117","balance":"999999841403920000000000"}
+< fromBalance[19] = {"address":"0xd03ea8624C8C5987235048901fB614fDcA89b117","balance":"999999788638560000000000"}
+< fromBalance[20] = {"address":"0xd03ea8624C8C5987235048901fB614fDcA89b117","balance":"999999735873200000000000"}
+< fromBalance[21] = {"address":"0xd03ea8624C8C5987235048901fB614fDcA89b117","balance":"999999683107840000000000"}
+< fromBalance[22] = {"address":"0xd03ea8624C8C5987235048901fB614fDcA89b117","balance":"999999630342480000000000"}
+< fromBalance[23] = {"address":"0x3E5e9111Ae8eB78Fe1CC3bb8915d5D461F3Ef9A9","balance":"999999946934640000000000"}
+< fromBalance[24] = {"address":"0x28a8746e75304c0780E011BEd21C72cD78cd535E","balance":"999999946934640000000000"}
+< fromBalance[25] = {"address":"0xACa94ef8bD5ffEE41947b4585a84BdA5a3d3DA6E","balance":"999999946934640000000000"}
+< fromBalance[26] = {"address":"0x1dF62f291b2E969fB0849d99D9Ce41e2F137006e","balance":"999999946934640000000000"}
+---
+> fromBalance[2] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999937345640000000000"}
+> fromBalance[3] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999928969980000000000"}
+> fromBalance[4] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999920594320000000000"}
+> fromBalance[5] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999911713060000000000"}
+> fromBalance[6] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999903337400000000000"}
+> fromBalance[7] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999894961740000000000"}
+> fromBalance[8] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999886586080000000000"}
+> fromBalance[9] = {"address":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d","balance":"999999991324340000000000"}
+> fromBalance[10] = {"address":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d","balance":"999999982948680000000000"}
+> fromBalance[11] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999878210420000000000"}
+> fromBalance[12] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999869834760000000000"}
+> fromBalance[13] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999861459100000000000"}
+> fromBalance[14] = {"address":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1","balance":"999999853083440000000000"}
+> fromBalance[15] = {"address":"0xd03ea8624C8C5987235048901fB614fDcA89b117","balance":"999999991324340000000000"}
+> fromBalance[16] = {"address":"0x95cED938F7991cd0dFcb48F0a06a40FA1aF46EBC","balance":"999999991324340000000000"}
+> fromBalance[17] = {"address":"0xd03ea8624C8C5987235048901fB614fDcA89b117","balance":"999999982948680000000000"}
+> fromBalance[18] = {"address":"0xd03ea8624C8C5987235048901fB614fDcA89b117","balance":"999999974573020000000000"}
+> fromBalance[19] = {"address":"0xd03ea8624C8C5987235048901fB614fDcA89b117","balance":"999999966197360000000000"}
+> fromBalance[20] = {"address":"0xd03ea8624C8C5987235048901fB614fDcA89b117","balance":"999999957821700000000000"}
+> fromBalance[21] = {"address":"0xd03ea8624C8C5987235048901fB614fDcA89b117","balance":"999999949446040000000000"}
+> fromBalance[22] = {"address":"0xd03ea8624C8C5987235048901fB614fDcA89b117","balance":"999999941070380000000000"}
+> fromBalance[23] = {"address":"0x3E5e9111Ae8eB78Fe1CC3bb8915d5D461F3Ef9A9","balance":"999999991324340000000000"}
+> fromBalance[24] = {"address":"0x28a8746e75304c0780E011BEd21C72cD78cd535E","balance":"999999991324340000000000"}
+> fromBalance[25] = {"address":"0xACa94ef8bD5ffEE41947b4585a84BdA5a3d3DA6E","balance":"999999991324340000000000"}
+> fromBalance[26] = {"address":"0x1dF62f291b2E969fB0849d99D9Ce41e2F137006e","balance":"999999991324340000000000"}
+/tmp/Diff_91970/Vitaluck.sol_21.log.methodResult.diff
+21c21
+< methodResult[2,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"287"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"1"}],"type":"function"}
+---
+> methodResult[2,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"1"}],"type":"function"}
+28c28
+< methodResult[3,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"543"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"2"}],"type":"function"}
+---
+> methodResult[3,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"2"}],"type":"function"}
+35c35
+< methodResult[4,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"811"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"3"}],"type":"function"}
+---
+> methodResult[4,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"3"}],"type":"function"}
+49c49
+< methodResult[6,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"19"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"5"}],"type":"function"}
+---
+> methodResult[6,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"1"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"5"}],"type":"function"}
+56c56
+< methodResult[7,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"85"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"6"}],"type":"function"}
+---
+> methodResult[7,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"1"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"6"}],"type":"function"}
+63,64c63,64
+< methodResult[8,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"807"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"7"}],"type":"function"}
+< methodResult[9,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"9"},{"name":"","type":"uint256","value":"400000000000000000"},{"name":"","type":"uint256","value":"320000000000000000"}],"type":"function"}
+---
+> methodResult[8,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"1"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"7"}],"type":"function"}
+> methodResult[9,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"9"},{"name":"","type":"uint256","value":"400000000000000000"},{"name":"","type":"uint256","value":"365000000000000000"}],"type":"function"}
+66c66
+< methodResult[9,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"}],"type":"function"}
+---
+> methodResult[9,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"}],"type":"function"}
+70,71c70,71
+< methodResult[9,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"807"},{"name":"","type":"uint256","value":"85000000000000000"},{"name":"","type":"uint256","value":"8"}],"type":"function"}
+< methodResult[10,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"10"},{"name":"","type":"uint256","value":"450000000000000000"},{"name":"","type":"uint256","value":"320000000000000000"}],"type":"function"}
+---
+> methodResult[9,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"1"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"8"}],"type":"function"}
+> methodResult[10,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"10"},{"name":"","type":"uint256","value":"450000000000000000"},{"name":"","type":"uint256","value":"410000000000000000"}],"type":"function"}
+73c73
+< methodResult[10,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"}],"type":"function"}
+---
+> methodResult[10,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"}],"type":"function"}
+76,78c76,78
+< methodResult[10,5] = {"inputs":[{"type":"uint256","name":"_betId","value":7}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"467"},{"name":"isWinner","type":"bool","value":"false"},{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"timestamp","type":"uint32","value":"1516978233"},{"name":"JackpotWon","type":"uint256","value":"0"}],"type":"function"}
+< methodResult[10,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"807"},{"name":"","type":"uint256","value":"125000000000000000"},{"name":"","type":"uint256","value":"9"}],"type":"function"}
+< methodResult[11,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"11"},{"name":"","type":"uint256","value":"500000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[10,5] = {"inputs":[{"type":"uint256","name":"_betId","value":7}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"467"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"timestamp","type":"uint32","value":"1516978233"},{"name":"JackpotWon","type":"uint256","value":"45000000000000000"}],"type":"function"}
+> methodResult[10,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"1"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"9"}],"type":"function"}
+> methodResult[11,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"11"},{"name":"","type":"uint256","value":"500000000000000000"},{"name":"","type":"uint256","value":"455000000000000000"}],"type":"function"}
+84,85c84,85
+< methodResult[11,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"10"}],"type":"function"}
+< methodResult[12,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"12"},{"name":"","type":"uint256","value":"550000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[11,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"1"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"10"}],"type":"function"}
+> methodResult[12,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"12"},{"name":"","type":"uint256","value":"550000000000000000"},{"name":"","type":"uint256","value":"500000000000000000"}],"type":"function"}
+90,92c90,92
+< methodResult[12,5] = {"inputs":[{"type":"uint256","name":"_betId","value":8}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"609"},{"name":"isWinner","type":"bool","value":"false"},{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"timestamp","type":"uint32","value":"1516978304"},{"name":"JackpotWon","type":"uint256","value":"0"}],"type":"function"}
+< methodResult[12,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"85000000000000000"},{"name":"","type":"uint256","value":"11"}],"type":"function"}
+< methodResult[13,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"13"},{"name":"","type":"uint256","value":"600000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[12,5] = {"inputs":[{"type":"uint256","name":"_betId","value":8}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"609"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"timestamp","type":"uint32","value":"1516978304"},{"name":"JackpotWon","type":"uint256","value":"45000000000000000"}],"type":"function"}
+> methodResult[12,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"1"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"11"}],"type":"function"}
+> methodResult[13,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"13"},{"name":"","type":"uint256","value":"600000000000000000"},{"name":"","type":"uint256","value":"545000000000000000"}],"type":"function"}
+98,99c98,99
+< methodResult[13,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"125000000000000000"},{"name":"","type":"uint256","value":"12"}],"type":"function"}
+< methodResult[14,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"14"},{"name":"","type":"uint256","value":"650000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[13,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"1"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"12"}],"type":"function"}
+> methodResult[14,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"14"},{"name":"","type":"uint256","value":"650000000000000000"},{"name":"","type":"uint256","value":"590000000000000000"}],"type":"function"}
+105,106c105,106
+< methodResult[14,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"165000000000000000"},{"name":"","type":"uint256","value":"13"}],"type":"function"}
+< methodResult[15,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"15"},{"name":"","type":"uint256","value":"700000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[14,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"1"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"13"}],"type":"function"}
+> methodResult[15,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"15"},{"name":"","type":"uint256","value":"700000000000000000"},{"name":"","type":"uint256","value":"635000000000000000"}],"type":"function"}
+108c108
+< methodResult[15,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"}],"type":"function"}
+---
+> methodResult[15,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"}],"type":"function"}
+111,113c111,113
+< methodResult[15,5] = {"inputs":[{"type":"uint256","name":"_betId","value":7}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"467"},{"name":"isWinner","type":"bool","value":"false"},{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"timestamp","type":"uint32","value":"1516978233"},{"name":"JackpotWon","type":"uint256","value":"0"}],"type":"function"}
+< methodResult[15,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"205000000000000000"},{"name":"","type":"uint256","value":"14"}],"type":"function"}
+< methodResult[16,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"16"},{"name":"","type":"uint256","value":"750000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[15,5] = {"inputs":[{"type":"uint256","name":"_betId","value":7}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"467"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"timestamp","type":"uint32","value":"1516978233"},{"name":"JackpotWon","type":"uint256","value":"45000000000000000"}],"type":"function"}
+> methodResult[15,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"1"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"14"}],"type":"function"}
+> methodResult[16,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"16"},{"name":"","type":"uint256","value":"750000000000000000"},{"name":"","type":"uint256","value":"680000000000000000"}],"type":"function"}
+115c115
+< methodResult[16,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"}],"type":"function"}
+---
+> methodResult[16,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x95cED938F7991cd0dFcb48F0a06a40FA1aF46EBC"}],"type":"function"}
+118,120c118,120
+< methodResult[16,5] = {"inputs":[{"type":"uint256","name":"_betId","value":8}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"609"},{"name":"isWinner","type":"bool","value":"false"},{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"timestamp","type":"uint32","value":"1516978304"},{"name":"JackpotWon","type":"uint256","value":"0"}],"type":"function"}
+< methodResult[16,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"245000000000000000"},{"name":"","type":"uint256","value":"15"}],"type":"function"}
+< methodResult[17,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"17"},{"name":"","type":"uint256","value":"800000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[16,5] = {"inputs":[{"type":"uint256","name":"_betId","value":8}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"609"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"timestamp","type":"uint32","value":"1516978304"},{"name":"JackpotWon","type":"uint256","value":"45000000000000000"}],"type":"function"}
+> methodResult[16,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"1"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"15"}],"type":"function"}
+> methodResult[17,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"17"},{"name":"","type":"uint256","value":"800000000000000000"},{"name":"","type":"uint256","value":"725000000000000000"}],"type":"function"}
+122c122
+< methodResult[17,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"}],"type":"function"}
+---
+> methodResult[17,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"}],"type":"function"}
+125,127c125,127
+< methodResult[17,5] = {"inputs":[{"type":"uint256","name":"_betId","value":7}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"467"},{"name":"isWinner","type":"bool","value":"false"},{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"timestamp","type":"uint32","value":"1516978233"},{"name":"JackpotWon","type":"uint256","value":"0"}],"type":"function"}
+< methodResult[17,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"285000000000000000"},{"name":"","type":"uint256","value":"16"}],"type":"function"}
+< methodResult[18,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"18"},{"name":"","type":"uint256","value":"850000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[17,5] = {"inputs":[{"type":"uint256","name":"_betId","value":7}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"467"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"timestamp","type":"uint32","value":"1516978233"},{"name":"JackpotWon","type":"uint256","value":"45000000000000000"}],"type":"function"}
+> methodResult[17,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"1"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"16"}],"type":"function"}
+> methodResult[18,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"18"},{"name":"","type":"uint256","value":"850000000000000000"},{"name":"","type":"uint256","value":"770000000000000000"}],"type":"function"}
+129c129
+< methodResult[18,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"}],"type":"function"}
+---
+> methodResult[18,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"}],"type":"function"}
+132,134c132,134
+< methodResult[18,5] = {"inputs":[{"type":"uint256","name":"_betId","value":9}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"899"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516979949"},{"name":"JackpotWon","type":"uint256","value":"125000000000000000"}],"type":"function"}
+< methodResult[18,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"325000000000000000"},{"name":"","type":"uint256","value":"17"}],"type":"function"}
+< methodResult[19,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"19"},{"name":"","type":"uint256","value":"900000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[18,5] = {"inputs":[{"type":"uint256","name":"_betId","value":9}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"899"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516979949"},{"name":"JackpotWon","type":"uint256","value":"45000000000000000"}],"type":"function"}
+> methodResult[18,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"1"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"17"}],"type":"function"}
+> methodResult[19,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"19"},{"name":"","type":"uint256","value":"900000000000000000"},{"name":"","type":"uint256","value":"815000000000000000"}],"type":"function"}
+136c136
+< methodResult[19,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"}],"type":"function"}
+---
+> methodResult[19,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"}],"type":"function"}
+140,141c140,141
+< methodResult[19,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"365000000000000000"},{"name":"","type":"uint256","value":"18"}],"type":"function"}
+< methodResult[20,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"20"},{"name":"","type":"uint256","value":"950000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[19,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"1"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"18"}],"type":"function"}
+> methodResult[20,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"20"},{"name":"","type":"uint256","value":"950000000000000000"},{"name":"","type":"uint256","value":"860000000000000000"}],"type":"function"}
+143c143
+< methodResult[20,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"}],"type":"function"}
+---
+> methodResult[20,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"}],"type":"function"}
+147,148c147,148
+< methodResult[20,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"405000000000000000"},{"name":"","type":"uint256","value":"19"}],"type":"function"}
+< methodResult[21,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"21"},{"name":"","type":"uint256","value":"1000000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[20,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"1"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"19"}],"type":"function"}
+> methodResult[21,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"21"},{"name":"","type":"uint256","value":"1000000000000000000"},{"name":"","type":"uint256","value":"905000000000000000"}],"type":"function"}
+150c150
+< methodResult[21,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"}],"type":"function"}
+---
+> methodResult[21,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"}],"type":"function"}
+153,155c153,155
+< methodResult[21,5] = {"inputs":[{"type":"uint256","name":"_betId","value":8}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"609"},{"name":"isWinner","type":"bool","value":"false"},{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"timestamp","type":"uint32","value":"1516978304"},{"name":"JackpotWon","type":"uint256","value":"0"}],"type":"function"}
+< methodResult[21,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"445000000000000000"},{"name":"","type":"uint256","value":"20"}],"type":"function"}
+< methodResult[22,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"22"},{"name":"","type":"uint256","value":"1050000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[21,5] = {"inputs":[{"type":"uint256","name":"_betId","value":8}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"609"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"timestamp","type":"uint32","value":"1516978304"},{"name":"JackpotWon","type":"uint256","value":"45000000000000000"}],"type":"function"}
+> methodResult[21,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"1"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"20"}],"type":"function"}
+> methodResult[22,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"22"},{"name":"","type":"uint256","value":"1050000000000000000"},{"name":"","type":"uint256","value":"950000000000000000"}],"type":"function"}
+157c157
+< methodResult[22,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"}],"type":"function"}
+---
+> methodResult[22,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0xd03ea8624C8C5987235048901fB614fDcA89b117"}],"type":"function"}
+161,162c161,162
+< methodResult[22,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"485000000000000000"},{"name":"","type":"uint256","value":"21"}],"type":"function"}
+< methodResult[23,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"23"},{"name":"","type":"uint256","value":"1100000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[22,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"1"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"21"}],"type":"function"}
+> methodResult[23,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"23"},{"name":"","type":"uint256","value":"1100000000000000000"},{"name":"","type":"uint256","value":"995000000000000000"}],"type":"function"}
+164c164
+< methodResult[23,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"}],"type":"function"}
+---
+> methodResult[23,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x3E5e9111Ae8eB78Fe1CC3bb8915d5D461F3Ef9A9"}],"type":"function"}
+168,169c168,169
+< methodResult[23,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"525000000000000000"},{"name":"","type":"uint256","value":"22"}],"type":"function"}
+< methodResult[24,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"24"},{"name":"","type":"uint256","value":"1150000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[23,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"1"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"22"}],"type":"function"}
+> methodResult[24,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"24"},{"name":"","type":"uint256","value":"1150000000000000000"},{"name":"","type":"uint256","value":"1040000000000000000"}],"type":"function"}
+171c171
+< methodResult[24,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"}],"type":"function"}
+---
+> methodResult[24,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x28a8746e75304c0780E011BEd21C72cD78cd535E"}],"type":"function"}
+175,176c175,176
+< methodResult[24,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"565000000000000000"},{"name":"","type":"uint256","value":"23"}],"type":"function"}
+< methodResult[25,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"25"},{"name":"","type":"uint256","value":"1200000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[24,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"1"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"23"}],"type":"function"}
+> methodResult[25,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"25"},{"name":"","type":"uint256","value":"1200000000000000000"},{"name":"","type":"uint256","value":"1085000000000000000"}],"type":"function"}
+178c178
+< methodResult[25,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"}],"type":"function"}
+---
+> methodResult[25,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0xACa94ef8bD5ffEE41947b4585a84BdA5a3d3DA6E"}],"type":"function"}
+182,183c182,183
+< methodResult[25,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"605000000000000000"},{"name":"","type":"uint256","value":"24"}],"type":"function"}
+< methodResult[26,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"26"},{"name":"","type":"uint256","value":"1250000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[25,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"1"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"24"}],"type":"function"}
+> methodResult[26,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"26"},{"name":"","type":"uint256","value":"1250000000000000000"},{"name":"","type":"uint256","value":"1130000000000000000"}],"type":"function"}
+185c185
+< methodResult[26,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"}],"type":"function"}
+---
+> methodResult[26,2] = {"inputs":[],"name":"GetWinningAddress","outputs":[{"name":"","type":"address","value":"0x1dF62f291b2E969fB0849d99D9Ce41e2F137006e"}],"type":"function"}
+188,189c188,189
+< methodResult[26,5] = {"inputs":[{"type":"uint256","name":"_betId","value":9}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"899"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516979949"},{"name":"JackpotWon","type":"uint256","value":"125000000000000000"}],"type":"function"}
+< methodResult[26,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"645000000000000000"},{"name":"","type":"uint256","value":"25"}],"type":"function"}
+---
+> methodResult[26,5] = {"inputs":[{"type":"uint256","name":"_betId","value":9}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"899"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516979949"},{"name":"JackpotWon","type":"uint256","value":"45000000000000000"}],"type":"function"}
+> methodResult[26,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"1"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"25"}],"type":"function"}
+/tmp/Diff_91970/Vitaluck.sol_21.log.toBalance.diff
+9,10c9,10
+< toBalance[9] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"85000000000000000"}
+< toBalance[10] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"125000000000000000"}
+---
+> toBalance[9] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"45000000000000000"}
+> toBalance[10] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"45000000000000000"}
+12,26c12,26
+< toBalance[12] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"85000000000000000"}
+< toBalance[13] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"125000000000000000"}
+< toBalance[14] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"165000000000000000"}
+< toBalance[15] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"205000000000000000"}
+< toBalance[16] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"245000000000000000"}
+< toBalance[17] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"285000000000000000"}
+< toBalance[18] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"325000000000000000"}
+< toBalance[19] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"365000000000000000"}
+< toBalance[20] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"405000000000000000"}
+< toBalance[21] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"445000000000000000"}
+< toBalance[22] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"485000000000000000"}
+< toBalance[23] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"525000000000000000"}
+< toBalance[24] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"565000000000000000"}
+< toBalance[25] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"605000000000000000"}
+< toBalance[26] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"645000000000000000"}
+---
+> toBalance[12] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"45000000000000000"}
+> toBalance[13] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"45000000000000000"}
+> toBalance[14] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"45000000000000000"}
+> toBalance[15] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"45000000000000000"}
+> toBalance[16] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"45000000000000000"}
+> toBalance[17] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"45000000000000000"}
+> toBalance[18] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"45000000000000000"}
+> toBalance[19] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"45000000000000000"}
+> toBalance[20] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"45000000000000000"}
+> toBalance[21] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"45000000000000000"}
+> toBalance[22] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"45000000000000000"}
+> toBalance[23] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"45000000000000000"}
+> toBalance[24] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"45000000000000000"}
+> toBalance[25] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"45000000000000000"}
+> toBalance[26] = {"address":"0x17e91224c30c5b0B13ba2ef1E84FE880Cb902352","balance":"45000000000000000"}
+/tmp/Diff_91970/Vitaluck.sol_21.log.txGasUsed.diff
+1c1
+< txGasUsed[0] = 1410422
+---
+> txGasUsed[0] = 1408539
+3,27c3,27
+< txGasUsed[2] = 278797
+< txGasUsed[3] = 173797
+< txGasUsed[4] = 173797
+< txGasUsed[5] = 184077
+< txGasUsed[6] = 173797
+< txGasUsed[7] = 173797
+< txGasUsed[8] = 173797
+< txGasUsed[9] = 153268
+< txGasUsed[10] = 138268
+< txGasUsed[11] = 173797
+< txGasUsed[12] = 138268
+< txGasUsed[13] = 138268
+< txGasUsed[14] = 138268
+< txGasUsed[15] = 153268
+< txGasUsed[16] = 153268
+< txGasUsed[17] = 138268
+< txGasUsed[18] = 138268
+< txGasUsed[19] = 138268
+< txGasUsed[20] = 138268
+< txGasUsed[21] = 138268
+< txGasUsed[22] = 138268
+< txGasUsed[23] = 153268
+< txGasUsed[24] = 153268
+< txGasUsed[25] = 153268
+< txGasUsed[26] = 153268
+---
+> txGasUsed[2] = 258783
+> txGasUsed[3] = 168783
+> txGasUsed[4] = 168783
+> txGasUsed[5] = 194063
+> txGasUsed[6] = 168783
+> txGasUsed[7] = 168783
+> txGasUsed[8] = 168783
+> txGasUsed[9] = 183783
+> txGasUsed[10] = 168783
+> txGasUsed[11] = 168783
+> txGasUsed[12] = 168783
+> txGasUsed[13] = 168783
+> txGasUsed[14] = 168783
+> txGasUsed[15] = 183783
+> txGasUsed[16] = 183783
+> txGasUsed[17] = 168783
+> txGasUsed[18] = 168783
+> txGasUsed[19] = 168783
+> txGasUsed[20] = 168783
+> txGasUsed[21] = 168783
+> txGasUsed[22] = 168783
+> txGasUsed[23] = 183783
+> txGasUsed[24] = 183783
+> txGasUsed[25] = 183783
+> txGasUsed[26] = 183783

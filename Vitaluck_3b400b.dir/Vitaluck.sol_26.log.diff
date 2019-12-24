@@ -1,0 +1,24 @@
+Mutation:
++ diff contracts/Vitaluck.sol.original contracts/Vitaluck.sol_26.mut
+230,231c230,231
+<         uint counter = 0;
+<         for (uint i = 0; i < bets.length; i++) {
+---
+
+Killed:
+ 0 /tmp/Diff_91970/Vitaluck.sol_26.log.eventResult.diff
+ 0 /tmp/Diff_91970/Vitaluck.sol_26.log.fromBalance.diff
+ 0 /tmp/Diff_91970/Vitaluck.sol_26.log.methodResult.diff
+ 0 /tmp/Diff_91970/Vitaluck.sol_26.log.toBalance.diff
+ 0 /tmp/Diff_91970/Vitaluck.sol_26.log.txGasUsed.diff
+ 0 /tmp/Diff_91970/Vitaluck.sol_26.log.txResult.diff
+ 6 /tmp/Diff_91970/Vitaluck.sol_26.log.txTime.diff
+ 6 total
+
+/tmp/Diff_91970/Vitaluck.sol_26.log.txTime.diff
+2,3c2,3
+< txTime[1] = 30
+< txTime[2] = 30
+---
+> txTime[1] = 29
+> txTime[2] = 29

@@ -1,0 +1,139 @@
+Mutation:
++ diff contracts/Vitaluck.sol.original contracts/Vitaluck.sol_23.mut
+200c200
+<         return(currentWinningNumber, _currentJackpot, bets.length);
+---
+>          /*mutation*/ true /*noitatum*/ ;
+
+Killed:
+    0 /tmp/Diff_91970/Vitaluck.sol_23.log.eventResult.diff
+    4 /tmp/Diff_91970/Vitaluck.sol_23.log.fromBalance.diff
+  104 /tmp/Diff_91970/Vitaluck.sol_23.log.methodResult.diff
+    0 /tmp/Diff_91970/Vitaluck.sol_23.log.toBalance.diff
+    4 /tmp/Diff_91970/Vitaluck.sol_23.log.txGasUsed.diff
+    0 /tmp/Diff_91970/Vitaluck.sol_23.log.txResult.diff
+    6 /tmp/Diff_91970/Vitaluck.sol_23.log.txTime.diff
+  118 total
+
+/tmp/Diff_91970/Vitaluck.sol_23.log.fromBalance.diff
+1c1
+< fromBalance[0] = {"address":"0x22d491Bde2303f2f43325b2108D26f1eAbA1e32b","balance":"999999971791560000000000"}
+---
+> fromBalance[0] = {"address":"0x22d491Bde2303f2f43325b2108D26f1eAbA1e32b","balance":"999999971878740000000000"}
+/tmp/Diff_91970/Vitaluck.sol_23.log.methodResult.diff
+14c14
+< methodResult[1,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"50000000000000000"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+---
+> methodResult[1,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+21c21
+< methodResult[2,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"287"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"1"}],"type":"function"}
+---
+> methodResult[2,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+28c28
+< methodResult[3,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"543"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"2"}],"type":"function"}
+---
+> methodResult[3,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+35c35
+< methodResult[4,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"811"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"3"}],"type":"function"}
+---
+> methodResult[4,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+42c42
+< methodResult[5,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"1"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"4"}],"type":"function"}
+---
+> methodResult[5,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+49c49
+< methodResult[6,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"19"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"5"}],"type":"function"}
+---
+> methodResult[6,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+56c56
+< methodResult[7,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"85"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"6"}],"type":"function"}
+---
+> methodResult[7,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+63c63
+< methodResult[8,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"807"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"7"}],"type":"function"}
+---
+> methodResult[8,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+70c70
+< methodResult[9,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"807"},{"name":"","type":"uint256","value":"85000000000000000"},{"name":"","type":"uint256","value":"8"}],"type":"function"}
+---
+> methodResult[9,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+77c77
+< methodResult[10,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"807"},{"name":"","type":"uint256","value":"125000000000000000"},{"name":"","type":"uint256","value":"9"}],"type":"function"}
+---
+> methodResult[10,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+84c84
+< methodResult[11,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"45000000000000000"},{"name":"","type":"uint256","value":"10"}],"type":"function"}
+---
+> methodResult[11,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+91c91
+< methodResult[12,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"85000000000000000"},{"name":"","type":"uint256","value":"11"}],"type":"function"}
+---
+> methodResult[12,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+98c98
+< methodResult[13,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"125000000000000000"},{"name":"","type":"uint256","value":"12"}],"type":"function"}
+---
+> methodResult[13,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+105c105
+< methodResult[14,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"165000000000000000"},{"name":"","type":"uint256","value":"13"}],"type":"function"}
+---
+> methodResult[14,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+112c112
+< methodResult[15,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"205000000000000000"},{"name":"","type":"uint256","value":"14"}],"type":"function"}
+---
+> methodResult[15,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+119c119
+< methodResult[16,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"245000000000000000"},{"name":"","type":"uint256","value":"15"}],"type":"function"}
+---
+> methodResult[16,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+126c126
+< methodResult[17,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"285000000000000000"},{"name":"","type":"uint256","value":"16"}],"type":"function"}
+---
+> methodResult[17,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+133c133
+< methodResult[18,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"325000000000000000"},{"name":"","type":"uint256","value":"17"}],"type":"function"}
+---
+> methodResult[18,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+140c140
+< methodResult[19,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"365000000000000000"},{"name":"","type":"uint256","value":"18"}],"type":"function"}
+---
+> methodResult[19,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+147c147
+< methodResult[20,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"405000000000000000"},{"name":"","type":"uint256","value":"19"}],"type":"function"}
+---
+> methodResult[20,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+154c154
+< methodResult[21,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"445000000000000000"},{"name":"","type":"uint256","value":"20"}],"type":"function"}
+---
+> methodResult[21,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+161c161
+< methodResult[22,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"485000000000000000"},{"name":"","type":"uint256","value":"21"}],"type":"function"}
+---
+> methodResult[22,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+168c168
+< methodResult[23,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"525000000000000000"},{"name":"","type":"uint256","value":"22"}],"type":"function"}
+---
+> methodResult[23,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+175c175
+< methodResult[24,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"565000000000000000"},{"name":"","type":"uint256","value":"23"}],"type":"function"}
+---
+> methodResult[24,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+182c182
+< methodResult[25,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"605000000000000000"},{"name":"","type":"uint256","value":"24"}],"type":"function"}
+---
+> methodResult[25,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+189c189
+< methodResult[26,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"899"},{"name":"","type":"uint256","value":"645000000000000000"},{"name":"","type":"uint256","value":"25"}],"type":"function"}
+---
+> methodResult[26,6] = {"inputs":[],"name":"GetCurrentNumbers","outputs":[{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"},{"name":"","type":"uint256","value":"0"}],"type":"function"}
+/tmp/Diff_91970/Vitaluck.sol_23.log.txGasUsed.diff
+1c1
+< txGasUsed[0] = 1410422
+---
+> txGasUsed[0] = 1406063
+/tmp/Diff_91970/Vitaluck.sol_23.log.txTime.diff
+2,3c2,3
+< txTime[1] = 30
+< txTime[2] = 30
+---
+> txTime[1] = 29
+> txTime[2] = 29

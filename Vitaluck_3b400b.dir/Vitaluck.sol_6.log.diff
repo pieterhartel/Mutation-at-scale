@@ -1,0 +1,34 @@
+Mutation:
++ diff contracts/Vitaluck.sol.original contracts/Vitaluck.sol_6.mut
+185c185
+<         currentJackpot = currentJackpot - JackpotWon;
+---
+>          /*mutation*/ true /*noitatum*/ ;
+
+Killed:
+  0 /tmp/Diff_91970/Vitaluck.sol_6.log.eventResult.diff
+  4 /tmp/Diff_91970/Vitaluck.sol_6.log.fromBalance.diff
+  0 /tmp/Diff_91970/Vitaluck.sol_6.log.methodResult.diff
+  0 /tmp/Diff_91970/Vitaluck.sol_6.log.toBalance.diff
+  4 /tmp/Diff_91970/Vitaluck.sol_6.log.txGasUsed.diff
+  0 /tmp/Diff_91970/Vitaluck.sol_6.log.txResult.diff
+  6 /tmp/Diff_91970/Vitaluck.sol_6.log.txTime.diff
+ 14 total
+
+/tmp/Diff_91970/Vitaluck.sol_6.log.fromBalance.diff
+1c1
+< fromBalance[0] = {"address":"0x22d491Bde2303f2f43325b2108D26f1eAbA1e32b","balance":"999999971791560000000000"}
+---
+> fromBalance[0] = {"address":"0x22d491Bde2303f2f43325b2108D26f1eAbA1e32b","balance":"999999971850660000000000"}
+/tmp/Diff_91970/Vitaluck.sol_6.log.txGasUsed.diff
+1c1
+< txGasUsed[0] = 1410422
+---
+> txGasUsed[0] = 1407467
+/tmp/Diff_91970/Vitaluck.sol_6.log.txTime.diff
+2,3c2,3
+< txTime[1] = 30
+< txTime[2] = 30
+---
+> txTime[1] = 29
+> txTime[2] = 29

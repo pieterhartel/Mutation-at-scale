@@ -1,0 +1,27 @@
+Mutation:
++ diff contracts/Vitaluck.sol.original contracts/Vitaluck.sol_2.mut
+182c182
+<         currentWinningAddress.transfer(JackpotWon);
+---
+>          /*mutation*/ cfoAddress /*noitatum*/ .transfer(JackpotWon);
+
+Killed:
+  0 /tmp/Diff_91970/Vitaluck.sol_2.log.eventResult.diff
+  4 /tmp/Diff_91970/Vitaluck.sol_2.log.fromBalance.diff
+  0 /tmp/Diff_91970/Vitaluck.sol_2.log.methodResult.diff
+  0 /tmp/Diff_91970/Vitaluck.sol_2.log.toBalance.diff
+  4 /tmp/Diff_91970/Vitaluck.sol_2.log.txGasUsed.diff
+  0 /tmp/Diff_91970/Vitaluck.sol_2.log.txResult.diff
+  0 /tmp/Diff_91970/Vitaluck.sol_2.log.txTime.diff
+  8 total
+
+/tmp/Diff_91970/Vitaluck.sol_2.log.fromBalance.diff
+1c1
+< fromBalance[0] = {"address":"0x22d491Bde2303f2f43325b2108D26f1eAbA1e32b","balance":"999999971791560000000000"}
+---
+> fromBalance[0] = {"address":"0x22d491Bde2303f2f43325b2108D26f1eAbA1e32b","balance":"999999971792840000000000"}
+/tmp/Diff_91970/Vitaluck.sol_2.log.txGasUsed.diff
+1c1
+< txGasUsed[0] = 1410422
+---
+> txGasUsed[0] = 1410358

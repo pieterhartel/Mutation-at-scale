@@ -1,0 +1,17 @@
+Mutation:
++ diff contracts/Vitaluck.sol.original contracts/Vitaluck.sol_37.mut
+181c181
+<         uint256 JackpotWon = currentJackpot - minBetValue;
+---
+>         uint256 JackpotWon = currentJackpot -  /*mutation*/ amountWon /*noitatum*/ ;
+
+Killed:
+0 /tmp/Diff_91970/Vitaluck.sol_37.log.eventResult.diff
+0 /tmp/Diff_91970/Vitaluck.sol_37.log.fromBalance.diff
+0 /tmp/Diff_91970/Vitaluck.sol_37.log.methodResult.diff
+0 /tmp/Diff_91970/Vitaluck.sol_37.log.toBalance.diff
+0 /tmp/Diff_91970/Vitaluck.sol_37.log.txGasUsed.diff
+0 /tmp/Diff_91970/Vitaluck.sol_37.log.txResult.diff
+0 /tmp/Diff_91970/Vitaluck.sol_37.log.txTime.diff
+0 total
+

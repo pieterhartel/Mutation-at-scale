@@ -1,0 +1,22 @@
+Mutation:
++ diff contracts/Vitaluck.sol.original contracts/Vitaluck.sol_42.mut
+30c30
+<     address cfoAddress = 0xFFcf8FDEE72ac11b5c542428B35EEF5769C409f0;
+---
+>      /*mutation*/ address currentWinningAddress;
+
+Killed:
+ 0 /tmp/Diff_91970/Vitaluck.sol_42.log.eventResult.diff
+ 0 /tmp/Diff_91970/Vitaluck.sol_42.log.fromBalance.diff
+ 0 /tmp/Diff_91970/Vitaluck.sol_42.log.methodResult.diff
+ 0 /tmp/Diff_91970/Vitaluck.sol_42.log.toBalance.diff
+ 0 /tmp/Diff_91970/Vitaluck.sol_42.log.txGasUsed.diff
+ 0 /tmp/Diff_91970/Vitaluck.sol_42.log.txResult.diff
+ 4 /tmp/Diff_91970/Vitaluck.sol_42.log.txTime.diff
+ 4 total
+
+/tmp/Diff_91970/Vitaluck.sol_42.log.txTime.diff
+2c2
+< txTime[1] = 30
+---
+> txTime[1] = 29

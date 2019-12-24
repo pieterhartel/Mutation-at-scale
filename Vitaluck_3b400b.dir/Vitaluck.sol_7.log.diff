@@ -1,0 +1,32 @@
+Mutation:
++ diff contracts/Vitaluck.sol.original contracts/Vitaluck.sol_7.mut
+233c233
+<             result[counter] = i;
+---
+>              /*mutation*/ true /*noitatum*/ ;
+
+Killed:
+  0 /tmp/Diff_91970/Vitaluck.sol_7.log.eventResult.diff
+  4 /tmp/Diff_91970/Vitaluck.sol_7.log.fromBalance.diff
+  4 /tmp/Diff_91970/Vitaluck.sol_7.log.methodResult.diff
+  0 /tmp/Diff_91970/Vitaluck.sol_7.log.toBalance.diff
+  4 /tmp/Diff_91970/Vitaluck.sol_7.log.txGasUsed.diff
+  0 /tmp/Diff_91970/Vitaluck.sol_7.log.txResult.diff
+  0 /tmp/Diff_91970/Vitaluck.sol_7.log.txTime.diff
+ 12 total
+
+/tmp/Diff_91970/Vitaluck.sol_7.log.fromBalance.diff
+1c1
+< fromBalance[0] = {"address":"0x22d491Bde2303f2f43325b2108D26f1eAbA1e32b","balance":"999999971791560000000000"}
+---
+> fromBalance[0] = {"address":"0x22d491Bde2303f2f43325b2108D26f1eAbA1e32b","balance":"999999971947140000000000"}
+/tmp/Diff_91970/Vitaluck.sol_7.log.methodResult.diff
+180c180
+< methodResult[25,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x3E5e9111Ae8eB78Fe1CC3bb8915d5D461F3Ef9A9"}],"name":"GetUserBets","outputs":[{"name":"","type":"uint256[]","value":"21"}],"type":"function"}
+---
+> methodResult[25,4] = {"inputs":[{"type":"address","name":"_owner","value":"0x3E5e9111Ae8eB78Fe1CC3bb8915d5D461F3Ef9A9"}],"name":"GetUserBets","outputs":[{"name":"","type":"uint256[]","value":"0"}],"type":"function"}
+/tmp/Diff_91970/Vitaluck.sol_7.log.txGasUsed.diff
+1c1
+< txGasUsed[0] = 1410422
+---
+> txGasUsed[0] = 1402643

@@ -1,0 +1,27 @@
+Mutation:
++ diff contracts/Vitaluck.sol.original contracts/Vitaluck.sol_47.mut
+30c30
+<     address cfoAddress = 0xFFcf8FDEE72ac11b5c542428B35EEF5769C409f0;
+---
+>     address cfoAddress =  /*mutation*/ address(0) /*noitatum*/ ;
+
+Killed:
+  0 /tmp/Diff_91970/Vitaluck.sol_47.log.eventResult.diff
+  4 /tmp/Diff_91970/Vitaluck.sol_47.log.fromBalance.diff
+  0 /tmp/Diff_91970/Vitaluck.sol_47.log.methodResult.diff
+  0 /tmp/Diff_91970/Vitaluck.sol_47.log.toBalance.diff
+  4 /tmp/Diff_91970/Vitaluck.sol_47.log.txGasUsed.diff
+  0 /tmp/Diff_91970/Vitaluck.sol_47.log.txResult.diff
+  0 /tmp/Diff_91970/Vitaluck.sol_47.log.txTime.diff
+  8 total
+
+/tmp/Diff_91970/Vitaluck.sol_47.log.fromBalance.diff
+1c1
+< fromBalance[0] = {"address":"0x22d491Bde2303f2f43325b2108D26f1eAbA1e32b","balance":"999999971791560000000000"}
+---
+> fromBalance[0] = {"address":"0x22d491Bde2303f2f43325b2108D26f1eAbA1e32b","balance":"999999972118680000000000"}
+/tmp/Diff_91970/Vitaluck.sol_47.log.txGasUsed.diff
+1c1
+< txGasUsed[0] = 1410422
+---
+> txGasUsed[0] = 1394066

@@ -1,0 +1,125 @@
+Mutation:
++ diff contracts/Vitaluck.sol.original contracts/Vitaluck.sol_22.mut
+140c140
+<             amountWon = amountWon + JackpotWon;
+---
+>             amountWon = amountWon +  /*mutation*/ _finalRandomNumber /*noitatum*/ ;
+
+Killed:
+    0 /tmp/Diff_91970/Vitaluck.sol_22.log.eventResult.diff
+    0 /tmp/Diff_91970/Vitaluck.sol_22.log.fromBalance.diff
+  100 /tmp/Diff_91970/Vitaluck.sol_22.log.methodResult.diff
+    0 /tmp/Diff_91970/Vitaluck.sol_22.log.toBalance.diff
+    0 /tmp/Diff_91970/Vitaluck.sol_22.log.txGasUsed.diff
+    0 /tmp/Diff_91970/Vitaluck.sol_22.log.txResult.diff
+    6 /tmp/Diff_91970/Vitaluck.sol_22.log.txTime.diff
+  106 total
+
+/tmp/Diff_91970/Vitaluck.sol_22.log.methodResult.diff
+15c15
+< methodResult[2,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"2"},{"name":"","type":"uint256","value":"50000000000000000"},{"name":"","type":"uint256","value":"50000000000000000"}],"type":"function"}
+---
+> methodResult[2,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"2"},{"name":"","type":"uint256","value":"50000000000000000"},{"name":"","type":"uint256","value":"287"}],"type":"function"}
+22c22
+< methodResult[3,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"3"},{"name":"","type":"uint256","value":"100000000000000000"},{"name":"","type":"uint256","value":"95000000000000000"}],"type":"function"}
+---
+> methodResult[3,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"3"},{"name":"","type":"uint256","value":"100000000000000000"},{"name":"","type":"uint256","value":"830"}],"type":"function"}
+29c29
+< methodResult[4,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"4"},{"name":"","type":"uint256","value":"150000000000000000"},{"name":"","type":"uint256","value":"140000000000000000"}],"type":"function"}
+---
+> methodResult[4,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"4"},{"name":"","type":"uint256","value":"150000000000000000"},{"name":"","type":"uint256","value":"1641"}],"type":"function"}
+36c36
+< methodResult[5,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"5"},{"name":"","type":"uint256","value":"200000000000000000"},{"name":"","type":"uint256","value":"185000000000000000"}],"type":"function"}
+---
+> methodResult[5,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"5"},{"name":"","type":"uint256","value":"200000000000000000"},{"name":"","type":"uint256","value":"2548"}],"type":"function"}
+43c43
+< methodResult[6,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"6"},{"name":"","type":"uint256","value":"250000000000000000"},{"name":"","type":"uint256","value":"230000000000000000"}],"type":"function"}
+---
+> methodResult[6,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"6"},{"name":"","type":"uint256","value":"250000000000000000"},{"name":"","type":"uint256","value":"2567"}],"type":"function"}
+50c50
+< methodResult[7,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"7"},{"name":"","type":"uint256","value":"300000000000000000"},{"name":"","type":"uint256","value":"275000000000000000"}],"type":"function"}
+---
+> methodResult[7,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"7"},{"name":"","type":"uint256","value":"300000000000000000"},{"name":"","type":"uint256","value":"2652"}],"type":"function"}
+57c57
+< methodResult[8,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"8"},{"name":"","type":"uint256","value":"350000000000000000"},{"name":"","type":"uint256","value":"320000000000000000"}],"type":"function"}
+---
+> methodResult[8,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"8"},{"name":"","type":"uint256","value":"350000000000000000"},{"name":"","type":"uint256","value":"3459"}],"type":"function"}
+64c64
+< methodResult[9,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"9"},{"name":"","type":"uint256","value":"400000000000000000"},{"name":"","type":"uint256","value":"320000000000000000"}],"type":"function"}
+---
+> methodResult[9,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"9"},{"name":"","type":"uint256","value":"400000000000000000"},{"name":"","type":"uint256","value":"3459"}],"type":"function"}
+71c71
+< methodResult[10,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"10"},{"name":"","type":"uint256","value":"450000000000000000"},{"name":"","type":"uint256","value":"320000000000000000"}],"type":"function"}
+---
+> methodResult[10,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"10"},{"name":"","type":"uint256","value":"450000000000000000"},{"name":"","type":"uint256","value":"3459"}],"type":"function"}
+78c78
+< methodResult[11,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"11"},{"name":"","type":"uint256","value":"500000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[11,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"11"},{"name":"","type":"uint256","value":"500000000000000000"},{"name":"","type":"uint256","value":"4358"}],"type":"function"}
+85c85
+< methodResult[12,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"12"},{"name":"","type":"uint256","value":"550000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[12,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"12"},{"name":"","type":"uint256","value":"550000000000000000"},{"name":"","type":"uint256","value":"4358"}],"type":"function"}
+92c92
+< methodResult[13,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"13"},{"name":"","type":"uint256","value":"600000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[13,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"13"},{"name":"","type":"uint256","value":"600000000000000000"},{"name":"","type":"uint256","value":"4358"}],"type":"function"}
+99c99
+< methodResult[14,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"14"},{"name":"","type":"uint256","value":"650000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[14,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"14"},{"name":"","type":"uint256","value":"650000000000000000"},{"name":"","type":"uint256","value":"4358"}],"type":"function"}
+106c106
+< methodResult[15,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"15"},{"name":"","type":"uint256","value":"700000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[15,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"15"},{"name":"","type":"uint256","value":"700000000000000000"},{"name":"","type":"uint256","value":"4358"}],"type":"function"}
+113c113
+< methodResult[16,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"16"},{"name":"","type":"uint256","value":"750000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[16,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"16"},{"name":"","type":"uint256","value":"750000000000000000"},{"name":"","type":"uint256","value":"4358"}],"type":"function"}
+120c120
+< methodResult[17,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"17"},{"name":"","type":"uint256","value":"800000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[17,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"17"},{"name":"","type":"uint256","value":"800000000000000000"},{"name":"","type":"uint256","value":"4358"}],"type":"function"}
+127c127
+< methodResult[18,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"18"},{"name":"","type":"uint256","value":"850000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[18,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"18"},{"name":"","type":"uint256","value":"850000000000000000"},{"name":"","type":"uint256","value":"4358"}],"type":"function"}
+134c134
+< methodResult[19,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"19"},{"name":"","type":"uint256","value":"900000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[19,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"19"},{"name":"","type":"uint256","value":"900000000000000000"},{"name":"","type":"uint256","value":"4358"}],"type":"function"}
+141c141
+< methodResult[20,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"20"},{"name":"","type":"uint256","value":"950000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[20,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"20"},{"name":"","type":"uint256","value":"950000000000000000"},{"name":"","type":"uint256","value":"4358"}],"type":"function"}
+148c148
+< methodResult[21,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"21"},{"name":"","type":"uint256","value":"1000000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[21,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"21"},{"name":"","type":"uint256","value":"1000000000000000000"},{"name":"","type":"uint256","value":"4358"}],"type":"function"}
+155c155
+< methodResult[22,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"22"},{"name":"","type":"uint256","value":"1050000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[22,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"22"},{"name":"","type":"uint256","value":"1050000000000000000"},{"name":"","type":"uint256","value":"4358"}],"type":"function"}
+162c162
+< methodResult[23,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"23"},{"name":"","type":"uint256","value":"1100000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[23,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"23"},{"name":"","type":"uint256","value":"1100000000000000000"},{"name":"","type":"uint256","value":"4358"}],"type":"function"}
+169c169
+< methodResult[24,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"24"},{"name":"","type":"uint256","value":"1150000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[24,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"24"},{"name":"","type":"uint256","value":"1150000000000000000"},{"name":"","type":"uint256","value":"4358"}],"type":"function"}
+176c176
+< methodResult[25,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"25"},{"name":"","type":"uint256","value":"1200000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[25,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"25"},{"name":"","type":"uint256","value":"1200000000000000000"},{"name":"","type":"uint256","value":"4358"}],"type":"function"}
+183c183
+< methodResult[26,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"26"},{"name":"","type":"uint256","value":"1250000000000000000"},{"name":"","type":"uint256","value":"445000000000000000"}],"type":"function"}
+---
+> methodResult[26,0] = {"inputs":[],"name":"GetStats","outputs":[{"name":"","type":"uint256","value":"26"},{"name":"","type":"uint256","value":"1250000000000000000"},{"name":"","type":"uint256","value":"4358"}],"type":"function"}
+/tmp/Diff_91970/Vitaluck.sol_22.log.txTime.diff
+2,3c2,3
+< txTime[1] = 30
+< txTime[2] = 30
+---
+> txTime[1] = 29
+> txTime[2] = 29

@@ -1,0 +1,17 @@
+Mutation:
++ diff contracts/Vitaluck.sol.original contracts/Vitaluck.sol_50.mut
+245c245
+<             result[counter] = i;
+---
+>             result[counter] =  /*mutation*/ counter /*noitatum*/ ;
+
+Killed:
+0 /tmp/Diff_91970/Vitaluck.sol_50.log.eventResult.diff
+0 /tmp/Diff_91970/Vitaluck.sol_50.log.fromBalance.diff
+0 /tmp/Diff_91970/Vitaluck.sol_50.log.methodResult.diff
+0 /tmp/Diff_91970/Vitaluck.sol_50.log.toBalance.diff
+0 /tmp/Diff_91970/Vitaluck.sol_50.log.txGasUsed.diff
+0 /tmp/Diff_91970/Vitaluck.sol_50.log.txResult.diff
+0 /tmp/Diff_91970/Vitaluck.sol_50.log.txTime.diff
+0 total
+

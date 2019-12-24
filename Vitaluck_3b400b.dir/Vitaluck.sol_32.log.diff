@@ -1,0 +1,98 @@
+Mutation:
++ diff contracts/Vitaluck.sol.original contracts/Vitaluck.sol_32.mut
+51c51
+<         uint number;            // The number given to the user
+---
+>          /*mutation*/ uint256 JackpotWon;            // The number given to the user
+
+Killed:
+    0 /tmp/Diff_91970/Vitaluck.sol_32.log.eventResult.diff
+    0 /tmp/Diff_91970/Vitaluck.sol_32.log.fromBalance.diff
+   80 /tmp/Diff_91970/Vitaluck.sol_32.log.methodResult.diff
+    0 /tmp/Diff_91970/Vitaluck.sol_32.log.toBalance.diff
+    0 /tmp/Diff_91970/Vitaluck.sol_32.log.txGasUsed.diff
+    0 /tmp/Diff_91970/Vitaluck.sol_32.log.txResult.diff
+    0 /tmp/Diff_91970/Vitaluck.sol_32.log.txTime.diff
+   80 total
+
+/tmp/Diff_91970/Vitaluck.sol_32.log.methodResult.diff
+55c55
+< methodResult[7,5] = {"inputs":[{"type":"uint256","name":"_betId","value":3}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"907"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516975453"},{"name":"JackpotWon","type":"uint256","value":"45000000000000000"}],"type":"function"}
+---
+> methodResult[7,5] = {"inputs":[{"type":"uint256","name":"_betId","value":3}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"45000000000000000"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516975453"},{"name":"JackpotWon","type":"uint256","value":"907"}],"type":"function"}
+62c62
+< methodResult[8,5] = {"inputs":[{"type":"uint256","name":"_betId","value":2}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"811"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516975405"},{"name":"JackpotWon","type":"uint256","value":"45000000000000000"}],"type":"function"}
+---
+> methodResult[8,5] = {"inputs":[{"type":"uint256","name":"_betId","value":2}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"45000000000000000"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516975405"},{"name":"JackpotWon","type":"uint256","value":"811"}],"type":"function"}
+69c69
+< methodResult[9,5] = {"inputs":[{"type":"uint256","name":"_betId","value":4}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"19"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516975509"},{"name":"JackpotWon","type":"uint256","value":"45000000000000000"}],"type":"function"}
+---
+> methodResult[9,5] = {"inputs":[{"type":"uint256","name":"_betId","value":4}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"45000000000000000"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516975509"},{"name":"JackpotWon","type":"uint256","value":"19"}],"type":"function"}
+76c76
+< methodResult[10,5] = {"inputs":[{"type":"uint256","name":"_betId","value":7}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"467"},{"name":"isWinner","type":"bool","value":"false"},{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"timestamp","type":"uint32","value":"1516978233"},{"name":"JackpotWon","type":"uint256","value":"0"}],"type":"function"}
+---
+> methodResult[10,5] = {"inputs":[{"type":"uint256","name":"_betId","value":7}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"0"},{"name":"isWinner","type":"bool","value":"false"},{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"timestamp","type":"uint32","value":"1516978233"},{"name":"JackpotWon","type":"uint256","value":"467"}],"type":"function"}
+83c83
+< methodResult[11,5] = {"inputs":[{"type":"uint256","name":"_betId","value":3}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"907"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516975453"},{"name":"JackpotWon","type":"uint256","value":"45000000000000000"}],"type":"function"}
+---
+> methodResult[11,5] = {"inputs":[{"type":"uint256","name":"_betId","value":3}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"45000000000000000"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516975453"},{"name":"JackpotWon","type":"uint256","value":"907"}],"type":"function"}
+90c90
+< methodResult[12,5] = {"inputs":[{"type":"uint256","name":"_betId","value":8}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"609"},{"name":"isWinner","type":"bool","value":"false"},{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"timestamp","type":"uint32","value":"1516978304"},{"name":"JackpotWon","type":"uint256","value":"0"}],"type":"function"}
+---
+> methodResult[12,5] = {"inputs":[{"type":"uint256","name":"_betId","value":8}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"0"},{"name":"isWinner","type":"bool","value":"false"},{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"timestamp","type":"uint32","value":"1516978304"},{"name":"JackpotWon","type":"uint256","value":"609"}],"type":"function"}
+97c97
+< methodResult[13,5] = {"inputs":[{"type":"uint256","name":"_betId","value":4}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"19"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516975509"},{"name":"JackpotWon","type":"uint256","value":"45000000000000000"}],"type":"function"}
+---
+> methodResult[13,5] = {"inputs":[{"type":"uint256","name":"_betId","value":4}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"45000000000000000"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516975509"},{"name":"JackpotWon","type":"uint256","value":"19"}],"type":"function"}
+104c104
+< methodResult[14,5] = {"inputs":[{"type":"uint256","name":"_betId","value":1}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"543"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516975271"},{"name":"JackpotWon","type":"uint256","value":"45000000000000000"}],"type":"function"}
+---
+> methodResult[14,5] = {"inputs":[{"type":"uint256","name":"_betId","value":1}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"45000000000000000"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516975271"},{"name":"JackpotWon","type":"uint256","value":"543"}],"type":"function"}
+111c111
+< methodResult[15,5] = {"inputs":[{"type":"uint256","name":"_betId","value":7}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"467"},{"name":"isWinner","type":"bool","value":"false"},{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"timestamp","type":"uint32","value":"1516978233"},{"name":"JackpotWon","type":"uint256","value":"0"}],"type":"function"}
+---
+> methodResult[15,5] = {"inputs":[{"type":"uint256","name":"_betId","value":7}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"0"},{"name":"isWinner","type":"bool","value":"false"},{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"timestamp","type":"uint32","value":"1516978233"},{"name":"JackpotWon","type":"uint256","value":"467"}],"type":"function"}
+118c118
+< methodResult[16,5] = {"inputs":[{"type":"uint256","name":"_betId","value":8}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"609"},{"name":"isWinner","type":"bool","value":"false"},{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"timestamp","type":"uint32","value":"1516978304"},{"name":"JackpotWon","type":"uint256","value":"0"}],"type":"function"}
+---
+> methodResult[16,5] = {"inputs":[{"type":"uint256","name":"_betId","value":8}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"0"},{"name":"isWinner","type":"bool","value":"false"},{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"timestamp","type":"uint32","value":"1516978304"},{"name":"JackpotWon","type":"uint256","value":"609"}],"type":"function"}
+125c125
+< methodResult[17,5] = {"inputs":[{"type":"uint256","name":"_betId","value":7}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"467"},{"name":"isWinner","type":"bool","value":"false"},{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"timestamp","type":"uint32","value":"1516978233"},{"name":"JackpotWon","type":"uint256","value":"0"}],"type":"function"}
+---
+> methodResult[17,5] = {"inputs":[{"type":"uint256","name":"_betId","value":7}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"0"},{"name":"isWinner","type":"bool","value":"false"},{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"timestamp","type":"uint32","value":"1516978233"},{"name":"JackpotWon","type":"uint256","value":"467"}],"type":"function"}
+132c132
+< methodResult[18,5] = {"inputs":[{"type":"uint256","name":"_betId","value":9}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"899"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516979949"},{"name":"JackpotWon","type":"uint256","value":"125000000000000000"}],"type":"function"}
+---
+> methodResult[18,5] = {"inputs":[{"type":"uint256","name":"_betId","value":9}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"125000000000000000"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516979949"},{"name":"JackpotWon","type":"uint256","value":"899"}],"type":"function"}
+139c139
+< methodResult[19,5] = {"inputs":[{"type":"uint256","name":"_betId","value":0}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"287"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516974143"},{"name":"JackpotWon","type":"uint256","value":"50000000000000000"}],"type":"function"}
+---
+> methodResult[19,5] = {"inputs":[{"type":"uint256","name":"_betId","value":0}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"50000000000000000"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516974143"},{"name":"JackpotWon","type":"uint256","value":"287"}],"type":"function"}
+146c146
+< methodResult[20,5] = {"inputs":[{"type":"uint256","name":"_betId","value":6}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"807"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516976403"},{"name":"JackpotWon","type":"uint256","value":"45000000000000000"}],"type":"function"}
+---
+> methodResult[20,5] = {"inputs":[{"type":"uint256","name":"_betId","value":6}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"45000000000000000"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516976403"},{"name":"JackpotWon","type":"uint256","value":"807"}],"type":"function"}
+153c153
+< methodResult[21,5] = {"inputs":[{"type":"uint256","name":"_betId","value":8}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"609"},{"name":"isWinner","type":"bool","value":"false"},{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"timestamp","type":"uint32","value":"1516978304"},{"name":"JackpotWon","type":"uint256","value":"0"}],"type":"function"}
+---
+> methodResult[21,5] = {"inputs":[{"type":"uint256","name":"_betId","value":8}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"0"},{"name":"isWinner","type":"bool","value":"false"},{"name":"player","type":"address","value":"0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d"},{"name":"timestamp","type":"uint32","value":"1516978304"},{"name":"JackpotWon","type":"uint256","value":"609"}],"type":"function"}
+160c160
+< methodResult[22,5] = {"inputs":[{"type":"uint256","name":"_betId","value":5}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"85"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516975542"},{"name":"JackpotWon","type":"uint256","value":"45000000000000000"}],"type":"function"}
+---
+> methodResult[22,5] = {"inputs":[{"type":"uint256","name":"_betId","value":5}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"45000000000000000"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516975542"},{"name":"JackpotWon","type":"uint256","value":"85"}],"type":"function"}
+167c167
+< methodResult[23,5] = {"inputs":[{"type":"uint256","name":"_betId","value":6}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"807"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516976403"},{"name":"JackpotWon","type":"uint256","value":"45000000000000000"}],"type":"function"}
+---
+> methodResult[23,5] = {"inputs":[{"type":"uint256","name":"_betId","value":6}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"45000000000000000"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516976403"},{"name":"JackpotWon","type":"uint256","value":"807"}],"type":"function"}
+174c174
+< methodResult[24,5] = {"inputs":[{"type":"uint256","name":"_betId","value":4}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"19"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516975509"},{"name":"JackpotWon","type":"uint256","value":"45000000000000000"}],"type":"function"}
+---
+> methodResult[24,5] = {"inputs":[{"type":"uint256","name":"_betId","value":4}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"45000000000000000"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516975509"},{"name":"JackpotWon","type":"uint256","value":"19"}],"type":"function"}
+181c181
+< methodResult[25,5] = {"inputs":[{"type":"uint256","name":"_betId","value":6}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"807"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516976403"},{"name":"JackpotWon","type":"uint256","value":"45000000000000000"}],"type":"function"}
+---
+> methodResult[25,5] = {"inputs":[{"type":"uint256","name":"_betId","value":6}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"45000000000000000"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516976403"},{"name":"JackpotWon","type":"uint256","value":"807"}],"type":"function"}
+188c188
+< methodResult[26,5] = {"inputs":[{"type":"uint256","name":"_betId","value":9}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"899"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516979949"},{"name":"JackpotWon","type":"uint256","value":"125000000000000000"}],"type":"function"}
+---
+> methodResult[26,5] = {"inputs":[{"type":"uint256","name":"_betId","value":9}],"name":"GetBet","outputs":[{"name":"number","type":"uint256","value":"125000000000000000"},{"name":"isWinner","type":"bool","value":"true"},{"name":"player","type":"address","value":"0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1"},{"name":"timestamp","type":"uint32","value":"1516979949"},{"name":"JackpotWon","type":"uint256","value":"899"}],"type":"function"}

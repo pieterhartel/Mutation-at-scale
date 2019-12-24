@@ -1,0 +1,22 @@
+Mutation:
++ diff contracts/Vitaluck.sol.original contracts/Vitaluck.sol_46.mut
+90c90
+<         require(msg.value >= minBetValue);
+---
+>         require(msg.value >=  /*mutation*/ currentResetTimer /*noitatum*/ );
+
+Killed:
+ 0 /tmp/Diff_91970/Vitaluck.sol_46.log.eventResult.diff
+ 0 /tmp/Diff_91970/Vitaluck.sol_46.log.fromBalance.diff
+ 0 /tmp/Diff_91970/Vitaluck.sol_46.log.methodResult.diff
+ 0 /tmp/Diff_91970/Vitaluck.sol_46.log.toBalance.diff
+ 0 /tmp/Diff_91970/Vitaluck.sol_46.log.txGasUsed.diff
+ 0 /tmp/Diff_91970/Vitaluck.sol_46.log.txResult.diff
+ 4 /tmp/Diff_91970/Vitaluck.sol_46.log.txTime.diff
+ 4 total
+
+/tmp/Diff_91970/Vitaluck.sol_46.log.txTime.diff
+2c2
+< txTime[1] = 30
+---
+> txTime[1] = 29
