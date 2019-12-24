@@ -57,7 +57,7 @@ do
 done
 
 for HTML
-in V.dir/Vi*.dir/contracts/*.html
+in [A-Z].dir/*.dir/contracts/*.html
 do
 	if [[ $HTML != *"Vitaluck"* ]]
 	then
