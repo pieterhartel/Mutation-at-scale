@@ -9,18 +9,10 @@ We assume the reader to be familiar with `node`, `npm`, and `truffle`.
 See [Node](https://nodejs.org/) and [Truffle](https://www.trufflesuite.com) for the relevant documentation.
 
 # 0. Setup
-Begin by cloning this repository (Mutation-at-scale) and Truffle-tests-for-free, unzipping the smart contract directories and dowloading from etherscan.io the actual sources of the contracts as follows:
+Begin by cloning this repository, Mutation-at-scale:
 ```
 git clone https://github.com/pieterhartel/Mutation-at-scale.git
-cd Mutation-at-scale
-git clone https://github.com/pieterhartel/Truffle-tests-for-free.git
-for dir in *.zip; do unzip $dir; done
-mv *.dir ..
-cd ..
-bash contract_loop.sh
 ```
-You should now have a directory `Mutation-at-scale` with the sources of 1120 contracts. The contents of `Truffle-tests-for-free` will not be needed anymore.
-
 
 # 1. Programs
 There are two main programs in the replication package: `chainsol.js` and `mutasol.js.`
