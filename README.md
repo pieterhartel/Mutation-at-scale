@@ -1,9 +1,10 @@
 # Replication package for "Mutation testing of smart contracts at scale"
 
 This replication package can be used in at least three different ways. The interested reader could:
-1. Re-run all our experiments, but this would take 10-14 weeks and about 0.5 TB of disk space to do.
-2. Inspect our source code (mostly written in JavaScript).
+1. Study `comparison.xslx`, which compares the mutation operators of all related work with the mutation operators that we have implemented.
+2. Inspect our source code `*.js`.
 3. Study an original contract, its mutants, and the main output generated for that contract, which is `Vitaluck_3b400b.dir`.
+4. Re-run all our experiments, but this would take 10-14 weeks on a single machine and about 0.5 TB of disk space to do.
 
 We assume the reader to be familiar with `node`, `npm`, and `truffle`.
 See [Node](https://nodejs.org/) and [Truffle](https://www.trufflesuite.com) for the relevant documentation.
