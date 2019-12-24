@@ -100,7 +100,7 @@ The file `scrapedContractsVerified.json` contains a list of key information abou
 After running all mutants, there will be 1120 directories, with names derived from the name and address of the contract, e.g. `Vitaluck_3b400b.dir`.
 Each directory contains all files and directories needed by `truffle test` and many output files.
 
-## 2.1 Creating the contract subdirectories and the log files
+## 2.1 Creating the contract directories and the log files
 The script `make_loop.sh` makes 1120 calls to `make.sh` with the address of a contract to download, to generate and to execute the mutants.
 For example The following call will create the `Vitaluck_3b400b.dir` directory.
 ```
