@@ -1,1 +1,0 @@
-Vitaluck sample
