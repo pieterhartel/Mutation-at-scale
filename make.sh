@@ -39,7 +39,7 @@ do
 	mkdir $Directory
 	echo "Starting in $Directory"
 	(	cd $Directory
-		cp ../Traces/$Directory/bqtrace.json .
+		cp Traces/$Directory/bqtrace.json .
 
 # Generation: Extract contract sources from Etherscan and generate tests from the transactions of the contract
 		truffle init
