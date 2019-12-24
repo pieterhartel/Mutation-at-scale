@@ -1,6 +1,14 @@
 # Run this script to download the contracts from etherscan.io
 # Please make sure that you abide by the policies of etherscan
 
+for ZIP
+in [A-Z].dir.zip
+do
+	DIR=`basename $ZIP .zip`
+	unzip $ZIP
+	mv $DIR Mutation-at-Scale
+done
+
 cat <<'end' >/tmp/strip.js
 const fs = require( 'fs' ) ;
 
