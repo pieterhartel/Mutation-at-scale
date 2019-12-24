@@ -1,17 +1,31 @@
-# Replication package for "A baseline for mutation testing of smart contracts on Ethereum"
+# Replication package for "Mutation testing of smart contracts at scale"
 
 This replication package can be used in at least three different ways. The interested reader could:
-1. re-run all our experiments, but this would take 10-14 weeks and about 0.5 TB of disk space to do.
-2. inspect our source code (mostly written in JavaScript) and study an original contract, all its mutants and the output generated for that contract, which is `Regression_280_560/mall_7f683d.dir`.
-3. browse the diff files of some of the other contracts.
+1. Re-run all our experiments, but this would take 10-14 weeks and about 0.5 TB of disk space to do.
+2. Inspect our source code (mostly written in JavaScript).
+3. Study an original contract, all its mutants and the output generated for that contract, which is `Vitaluck_3b400b.dir`.
 
 We assume the reader to be familiar with `node`, `npm`, and `truffle`.
 See [Node](https://nodejs.org/) and [Truffle](https://www.trufflesuite.com) for the relevant documentation.
 
+# 0. Setup
+Begin by cloning this repository (Mutation-at-scale) and Truffle-tests-for-free, unzipping the smart contract directories and dowloading from etherscan.io the actual sources of the contracts as follows:
+```
+git clone https://github.com/pieterhartel/Mutation-at-scale.git
+cd Mutation-at-scale
+git clone https://github.com/pieterhartel/Truffle-tests-for-free.git
+for dir in *.zip; do unzip $dir; done
+mv *.dir ..
+cd ..
+bash contract_loop.sh
+```
+You should now have a directory `Mutation-at-scale` with the sources of 1120 contracts. The contents of `Truffle-tests-for-free` will not be needed anymore.
+
+
 # 1. Programs
 There are two main programs in the replication package: `chainsol.js` and `mutasol.js.`
 The first, `chainsol.js` downloads a contract from Etherscan, as described here [Truffle-tests-for-free](https://arxiv.org/abs/1907.09208).
-The second program `mutasol.js` generates mutants, as described in the paper submitted to ICST2020.
+The second program `mutasol.js` generates mutants, as described in the paper submitted to TAP2020.
 These two programs use auxiliary modules: `comments.js`, `prepare.js`, `soljson.js`, and `evm_decoder.js`, all of which are available in the package.
 
 ## 1.1 Dependencies on npm modules
@@ -86,13 +100,12 @@ $ jq --version
 jq-1.5-1-a5b5cbe
 ```
 
-## 1.4 Dependencies on Truffle-tests-for-free
-The program `chainsol.js` originates from Truffle-tests-for-free and it has been integrated in the replication package.
-The file `scrapedContractsVerified.json` contains a list of key information about all verified smart contracts that were available on Etherscan on 1 January 2019. The list includes the smart contracts from Truffle-tests-for-free.
+## 1.4 Dependencies on `Truffle-tests-for-free`
+The program `chainsol.js` originates from `Truffle-tests-for-free` and it has been integrated in the replication package.
+The file `scrapedContractsVerified.json` contains a list of key information about all verified smart contracts that were available on Etherscan on 1 January 2019. The list includes the smart contracts from `Truffle-tests-for-free`.
 
 # 2. Structure of the replication package
-There are 6 main directories with the smart contracts, their mutants and the data: `Regression_000_070` (with 70 subdirectories), `Regression_070_280` (with 210 subdirectories), `Regression_280_560` (with 268 subdirectories), `Regression_560_840`, and `Regression_840_1120` (each with 280 subdirectories), and finally `Regression_run_again` (with 12 subdirectories).
-In total there are 1120 subdirectories.
+In total there are 26 directories `A.dir` ... `Z.dir` and 1120 subsubdirectories, with names derived from the name and address of the contract, e.g. `Vitaluck_3b400b.dir`.
 Each subdirectory contains all files and directories needed by `truffle test` and many output files.
 
 ## 2.1 Creating the contract subdirectories and the log files
@@ -105,6 +118,8 @@ $ bash make.sh 0xef7c7254c290df3d167182356255cdfd8d3b400b
 The `make.sh` script has been run 1120 times, to download a specific smart contract, to generate the replay test and the 50 mutants, and to run `truffle test` for the original and all the mutants, thus creating the 1120 subdirectories with data files.
 We have run `make.sh` in parallel on 14 machines, which took about one week.
 The files `Regression_<from>_<to>/make_<machine>.log` are the logs of running `make.sh` on each of the 14 machines.
+
+The script `make_loop.sh` makes 1120 calls to `make.sh`.
 
 ## 2.2 Structure of the subdirectories
 For each contract there is a subdirectory `<contract>_<address>.dir`, where `<contract>` is the name of the contract, and `<address>` is the last 6 hex digits of the address of the contract.
@@ -196,57 +211,24 @@ Regression_<from>_<to>/diff_loop
 └── <contract>.sol_<mutant>.log.txTime.diff
 ```
 
-## 2.8 Bytecode coverage
-**The coverage data is not actually used in the submitted paper, but some of the scripts refer to it and the description of the coverage data is therefore provided here**
+# 3. Diff files
+The files with ` '.diff` extension provide a summary of the outputs of the original contract and the mutant. The example below shows that for the given mutant 38 events, and 244 method results are different.
 
 ```
-Regression_<from>_<to>/cover_loop.log
-Regression_<from>_<to>/cover_loop
-└── <contract>_<mutant>.bytecode
+Mutation:
++ diff contracts/Vitaluck.sol.original contracts/Vitaluck.sol_25.mut
+149c149
+<             if(_finalRandomNumber >= 900) {
+---
+>             if(_finalRandomNumber >=  /*mutation*/ 1 /*noitatum*/ ) {
+
+Killed:
+   38 /tmp/Diff_91970/Vitaluck.sol_25.log.eventResult.diff
+   56 /tmp/Diff_91970/Vitaluck.sol_25.log.fromBalance.diff
+  244 /tmp/Diff_91970/Vitaluck.sol_25.log.methodResult.diff
+   38 /tmp/Diff_91970/Vitaluck.sol_25.log.toBalance.diff
+   56 /tmp/Diff_91970/Vitaluck.sol_25.log.txGasUsed.diff
+    0 /tmp/Diff_91970/Vitaluck.sol_25.log.txResult.diff
+    0 /tmp/Diff_91970/Vitaluck.sol_25.log.txTime.diff
+  432 total
 ```
-The file `<contract>.cover` in each subdirectory describes for each mutant which transactions are covered by the test.
-This is a summary of the data in the directory `Regression_<from>_<to>/cover_loop`.
-The summary is created by the script `cover_loop.sh`, and the log of running the script is stored in `Regression_<from>_<to>/cover_loop.log`.
-
-The file `<contract>_<mutant>.inspace.gz` shows the instruction space of the contract or mutant and the file `<contract>_<mutant>.histogram.gz` shows a histogram of how often each instruction has been executed by the test.
-These two files are also output by the `cover_loop.sh` script.
-
-# 3. Top level analysis
-The results of all the scripts are collected in a number of csv files in the directory `000_1120`.
-Two of the csv files are then analysed by SPSS scripts `kill_detail.sps` and `kill_summary.sps`. 
-The output of running SPSS is included in `kill_summary.pdf` and `kill_detail.pdf`.
-The two SPSS scripts produce many tables and graphs, a selection of which has been included in the submitted paper.
-For example the graph of Figure 1 from the submitted paper appears on page 6 of `kill_summary.pdf`.
-Table IV of the submitted paper appears on pages 13 and 14 of `kill_detail.pdf`.
-
-```
-000_1120/
-├── kill_detail.pdf
-├── kill_detail.sps
-├── kill_summary.pdf
-├── kill_summary.sps
-├── kill_detail_Limit.csv
-├── kill_detail_Limit.json
-├── kill_detail_TxEvMeth.csv
-├── kill_detail_TxEvMeth.json
-├── kill_detail_TxEvMethLimit.csv
-├── kill_detail_TxEvMethLimit.json
-├── kill_summary_Limit.csv
-├── kill_summary_TxEvMeth.csv
-└── kill_summary_TxEvMethLimit.csv
-```
-
-## 3.1 Intermediate results of the top level analysis
-The `kill_loop.sh` script produces copious intermediate outputs, which are collected in the directory `kill_loop`.
-
-```
-kill_loop.log
-kill_loop
-├── begin_code.js
-├── contract_code.js
-├── contract_info.sed
-├── end_code.js
-├── tx_code.js
-└── tx_info.sed
-```
-
