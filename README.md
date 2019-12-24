@@ -97,21 +97,17 @@ The program `chainsol.js` originates from `Truffle-tests-for-free` and it has be
 The file `scrapedContractsVerified.json` contains a list of key information about all verified smart contracts that were available on Etherscan on 1 January 2019. The list includes the smart contracts from `Truffle-tests-for-free`.
 
 # 2. Structure of the replication package
-In total there are 26 directories `A.dir` ... `Z.dir` and 1120 subsubdirectories, with names derived from the name and address of the contract, e.g. `Vitaluck_3b400b.dir`.
+After running all mutants, there will be 1120 subsubdirectories, with names derived from the name and address of the contract, e.g. `Vitaluck_3b400b.dir`.
 Each subdirectory contains all files and directories needed by `truffle test` and many output files.
 
 ## 2.1 Creating the contract subdirectories and the log files
-The script `make.sh` requires the address of a contract to download, to generate and to execute the mutants.
+The script `make_loop.sh` makes 1120 calls to `make.sh` with the address of a contract to download, to generate and to execute the mutants.
 For example The following call will create the `Vitaluck_3b400b.dir` subdirectory.
 ```
 $ bash make.sh 0xef7c7254c290df3d167182356255cdfd8d3b400b
 ```
-
-The `make.sh` script has been run 1120 times, to download a specific smart contract, to generate the replay test and the 50 mutants, and to run `truffle test` for the original and all the mutants, thus creating the 1120 subdirectories with data files.
 We have run `make.sh` in parallel on 14 machines, which took about one week.
-The files `Regression_<from>_<to>/make_<machine>.log` are the logs of running `make.sh` on each of the 14 machines.
 
-The script `make_loop.sh` makes 1120 calls to `make.sh`.
 
 ## 2.2 Structure of the subdirectories
 For each contract there is a subdirectory `<contract>_<address>.dir`, where `<contract>` is the name of the contract, and `<address>` is the last 6 hex digits of the address of the contract.
