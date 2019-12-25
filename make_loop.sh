@@ -1,7 +1,7 @@
 # Please run this script to generate and run the original and all the mutants
 # Running the whole script takes several weeks...
 
-mv Vitaluck_3b400b.dir Vitaluck_3b400b.dir.bak
+echo "Do not overwrite the existing data";     mv Vitaluck_3b400b.dir Vitaluck_3b400b.dir.bak
 echo "Vitaluck_3b400b";                        bash make.sh 0xef7c7254c290df3d167182356255cdfd8d3b400b
 
 exit
