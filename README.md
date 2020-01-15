@@ -3,7 +3,7 @@
 # 1. How to use this replication package?
 This replication package can be used in at least five different ways.
 The interested reader could:
-1. Inspect the checklist for mutattion research in section 2 below.
+1. Inspect the seven-point checklist for mutation research in section 2. below.
 2. Study `comparison.xslx`, which compares the mutation operators of all related work that we are aware of with the mutation operators that we have implemented.
 3. Inspect our source code `*.js`.
 4. Study an original contract, its mutants, and the main output generated for that contract, which is `Vitaluck_3b400b.dir`.
