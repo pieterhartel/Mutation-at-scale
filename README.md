@@ -9,10 +9,6 @@ The interested reader could:
 4. Study an original contract, its mutants, and the main output generated for that contract, which is `Vitaluck_3b400b.dir`.
 5. Re-run all our experiments, but please note that this would take 10-14 weeks on a single machine and about 0.5 TB of disk space to do.
 
-## 1.1 Assumptions
-We assume the reader to be familiar with `node`, `npm`, and `truffle`.
-See [Node](https://nodejs.org/) and [Truffle](https://www.trufflesuite.com) for the relevant documentation.
-
 # 2. Seven-point Mutation Testing Checklist
 We use the recently proposed checklist [Papadakis2019] for research on mutation testing to analyse our work.
 
@@ -56,11 +52,9 @@ In a second experiment, we have tried to improve the test coverage by downloadin
 The results are presented aggregated over the entire sample of smart contracts, which is larger than in all related research that we are aware of.
 
 ## 2.8 References
-[He2019] Ningyu He, Lei Wu, Haoyu Wang, Yao Guo, and Xuxian Jiang. Characterizing code clones in the ethereum smart contract ecosystem. Technical report, Beijing University of Posts and Telecommunications, May 2019. [URL](https://arxiv.org/abs/1905.00272).
-
-[Kintis2018] Marinos Kintis, Mike Papadakis, Yue Jia, Nicos Malevris, Yves Le Traon, and Mark Harman. Detecting trivial mutant equivalences via compiler optimisations. IEEE Trans. on software engineering, 44(4):308-333, Apr 2018. [URL](https://doi.org/10.1109/TSE.2017.2684805).
-
-[Papadakis2019] Mike Papadakis, Marinos Kintis, Jie Zhang, Yue Jia, Yves Le Traon, and Mark Harman. Mutation testing advances: An analysis and survey. In Advances in Computers, volume 112, pages 275-378. Elsevier, 2019. [URL](https://doi.org/10.1016/bs.adcom.2018.03.015).
+* [He2019] Ningyu He, Lei Wu, Haoyu Wang, Yao Guo, and Xuxian Jiang. Characterizing code clones in the ethereum smart contract ecosystem. Technical report, Beijing University of Posts and Telecommunications, May 2019. [URL](https://arxiv.org/abs/1905.00272).
+* [Kintis2018] Marinos Kintis, Mike Papadakis, Yue Jia, Nicos Malevris, Yves Le Traon, and Mark Harman. Detecting trivial mutant equivalences via compiler optimisations. IEEE Trans. on software engineering, 44(4):308-333, Apr 2018. [URL](https://doi.org/10.1109/TSE.2017.2684805).
+* [Papadakis2019] Mike Papadakis, Marinos Kintis, Jie Zhang, Yue Jia, Yves Le Traon, and Mark Harman. Mutation testing advances: An analysis and survey. In Advances in Computers, volume 112, pages 275-378. Elsevier, 2019. [URL](https://doi.org/10.1016/bs.adcom.2018.03.015).
 
 
 # 3. Setup
@@ -68,6 +62,9 @@ Please start by cloning this repository, `Mutation-at-scale`:
 ```
 git clone https://github.com/pieterhartel/Mutation-at-scale.git
 ```
+## 3.1 Assumptions
+We assume the reader to be familiar with `node`, `npm`, and `truffle`.
+See [Node](https://nodejs.org/) and [Truffle](https://www.trufflesuite.com) for the relevant documentation.
 
 # 4. Programs
 There are two main programs in the replication package: `chainsol.js` and `mutasol.js.`
