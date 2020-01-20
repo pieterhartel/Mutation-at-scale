@@ -1,0 +1,52 @@
+class,comment,contract,mutant,SLOC,line,operator,status,notes,details
+2,1,Base=Regression_*/DBToken_5287BE.dir; for i in 23 38 18 4 37 12 43 34 26 17 28 49 14 35 6 25 45 47 24 1 7 29 27 19 32 10 20 2 40 15 30 46 11 3 9 13 31 41 44 50 33 21 8 5 39 36 48 16 42 22; do vi $Base/contracts/*_${i}.*mut $Base/*_${i}.*diff; done
+2,0,DBToken_5287BE,23,367,9,LR_I,Not killed,New test needed,		replacing 0 by 1 in 'if (a==0)' in the enclosing method mul does not create wrong outputs with the current test because even though mul is called, it is not called with first argument 0 or 1.
+2,0,DBToken_5287BE,38,367,80,ESD,Killed by output,Ok,			replacing 'totalSupply = initialSupply * 10 ** uint256(decimals)' by true leaves the initial token supply un-initialised, which causes many wrong outputs to be produced.
+2,0,DBToken_5287BE,18,367,82,ITSCR,Killed by output,Ok,			replacing name by symbol in 'name = tokenName'. rest as #38.
+2,0,DBToken_5287BE,4,367,83,ITSCR,Killed by output,Ok,			replacing tokenSymbol by tokenName in 'symbol = tokenSymbol'. rest as #38.
+2,0,DBToken_5287BE,37,367,89,VDTSCS,Not killed,New test needed,		swapping _from and _to in 'function _transfer(address _from, address _to, uint _value)' should cause havoc but in DBToken overwrites the _transfer and the transfer method so that DBTBase._transfer is never called.
+2,0,DBToken_5287BE,12,367,91,ITSCR,Not killed,New test needed,		replacing require by assert in 'require(_to != 0x0)'. Rest as #37.
+2,0,DBToken_5287BE,43,367,97,ITSCR,Not killed,New test needed,		replacing the second _to by _from in 'balanceOf[_to] = balanceOf[_to].add(_value)'. Rest as #37.
+2,0,DBToken_5287BE,34,367,98,ITSCR,Not killed,New test needed,		replacing _from by _to in 'emit Transfer(_from, _to, _value)'. rest as #37.
+2,0,DBToken_5287BE,26,367,111,TRD,Killed by output,Ok,			replacing public by private in 'function transfer(address _to, uint256 _value) public' blocks outside access to the transfer method.
+2,0,DBToken_5287BE,17,367,153,TRD,Not killed,New test needed,		replacing public by internal in 'function burn(uint256 _value) public' has no effect because the current test never calls the enclosing method Burn.
+2,0,DBToken_5287BE,28,367,154,RAR,Not killed,New test needed,		replacing msg.sender by tx.origin in 'balanceOf[msg.sender] = balanceOf[msg.sender].sub(_value)'. rest as #17.
+2,0,DBToken_5287BE,49,367,157,JSRD,Not killed,New test needed,		replacing 'return true' by throw. rest as #17.
+2,0,DBToken_5287BE,14,367,172,AOR,Not killed,New test needed,		replacing = by *= in 'allowance[_from][msg.sender] = allowance[_from][msg.sender].sub(_value)' has no effect because the current test never calls the enclosing method BurnFrom.
+2,0,DBToken_5287BE,35,367,175,JSRD,Not killed,New test needed,		replacing 'return true' by throw. Rest as #14.
+2,0,DBToken_5287BE,6,367,192,VDTSCS,Not killed,Semantically equivalent,	swapping balancefrozen and balancefronzenTime creates a semantically equivalent mutant as the two objects have the same type and properties. Declaring one before the other makes no difference.
+2,0,DBToken_5287BE,25,367,219,ITSCR,Not killed,New test needed,		replacing _to by _from in 'require (_to != 0x0)' the current test does not call any method (for example transferFrom) with from=0.
+2,0,DBToken_5287BE,45,367,222,ESD,Not killed,New test needed,		replacing 'require(!frozenAccount[_to])' by true is not triggered by the current test.
+2,0,DBToken_5287BE,47,367,228,ESD,Not killed,New test needed,		replacing 'balanceOf[_from] = balanceOf[_from].sub(_value)' by true should be visible by a test that calls transfer with the address of the contract.
+2,0,DBToken_5287BE,24,367,229,ESD,Killed by output,Ok,			replacing 'balanceOf[_to] = balanceOf[_to].add(_value)' by true is detected.
+2,0,DBToken_5287BE,1,367,230,ITSCR,Killed by output,Ok,			replacing Transfer by Approved in 'emit Transfer(_from, _to, _value)' changes the event emitted.
+2,0,DBToken_5287BE,7,367,234,ESD,Not killed,New test needed,		replacing 'isPausedTransfer = ispause' by true is not detected by the current test because the enclosing method pauseTransfer is never called.
+2,0,DBToken_5287BE,29,367,244,AOR,Not killed,New test needed,		replacing = by *= in 'totalSupply = totalSupply.add(newmint)' is not detected by the current test because the enclosing method mintToken is never called
+2,0,DBToken_5287BE,27,367,257,TRD,Killed by output,Ok,			replacing public by private in 'function freezeAccountTimeAndValue(address target, uint256[] times, uint256[] values) onlyOwner public' blocks access to the menthod freezeAccountTimeAndValue.
+2,0,DBToken_5287BE,19,367,258,ESD,Not killed,New test needed,		replacing 'require(times.length >=1 )' by true is not detected because the current test does not call the enclosing method freezeAccountTimeAndValue with the wrong arguments.
+2,0,DBToken_5287BE,32,367,259,ITSCR,Not killed,New test needed,		replacing require by assert in 'require(times.length == values.length)'. rest as #19.
+2,0,DBToken_5287BE,10,367,259,ITSCR,Not killed,New test needed,		replacing values by times in 'require(times.length == values.length)'. rest as #19.
+2,0,DBToken_5287BE,20,367,262,VDTSCS,Not killed,Semantically equivalent,swapping the L-Values lockedtotal and i in 'uint256 lockedtotal=0; for(uint i=0;i<times.length;i++)' creates a semantically equivalent mutant.
+2,0,DBToken_5287BE,2,367,263,UORD,Not killed,New test needed,		replacing ++ by -- in 'for(uint i=0;i<times.length;i++)' is not detected because the current test provides times and values arrays of length 1 to the enclosing method freezeAccountTimeAndValue. And subtracting 1 from a uint 0 leads to integer underflow and a therefore a very large result. This means that the loop is executed once.
+2,0,DBToken_5287BE,40,367,265,ITSCR,Not killed,New test needed,		replacing i by lockedtotal in 'uint256 value=values[i].mul(10 ** uint256(decimals))'. Same as #2.
+2,0,DBToken_5287BE,15,367,269,ESD,Not killed,New test needed,		replacing 'frozeTimeValue[target] = timevalue' by true should have an effect onaccountNoneFrozenAvailable and hence on transfer but I'm not sure what. This could be a bug. TO DO!
+2,0,DBToken_5287BE,30,367,271,ITSCR,Killed by output,Ok,		replacing FronzeTimeValue by FronzeValue in 'emit FronzeTimeValue(target,lockedtotal)' is detected because the enclosing method freezeAccountTimeAndValue emits the wrong event.
+2,0,DBToken_5287BE,46,367,278,BOR,Not killed,New test needed,		replacing > by < in 'if(lockedTimeAndValue.length>0)' is not detected because the enclosing method unfreezeAccountTimeAndValue is never called by the current test.
+2,0,DBToken_5287BE,11,367,298,BOR,Not killed,New test needed,		replacing > by >= in 'if (newvalue >= oldValue)' stores wrong values in the internal data structures that should eventually produce wrong outputs.
+2,0,DBToken_5287BE,3,367,299,ESD,Not killed,New test needed,		replacing 'balancefrozen[target] = 0' by true . rest as #11.
+2,0,DBToken_5287BE,9,367,301,ITSCR,Not killed,New test needed,		replacing balancefrozen by balancefrozenTime in 'balancefrozen[target] = oldValue.sub(newvalue)'. rest as #11.
+2,0,DBToken_5287BE,13,367,301,ITSCR,Not killed,New test needed,		replacing oldValue by newValue in 'balancefrozen[target] = oldValue.sub(newvalue)'. rest as #11.
+2,0,DBToken_5287BE,31,367,318,LR_I,Not killed,New test needed,		replacing 0 by 1 in 'for(uint i=0;i<lockedTimeAndValue.length;i++)' stores wrong values in the internal data structures that should eventually produce wrong outputs.
+2,0,DBToken_5287BE,41,367,318,ITSCR,Killed by output,Ok,		replacing i++ by now1++ in 'for(uint i=0;i<lockedTimeAndValue.length;i++)' runs out of gas.
+2,0,DBToken_5287BE,44,367,321,LR_I,Not killed,New test needed,		replacing 0 by 1 in 'uint256 unlockTime = lockedTimeAndValue[i][0]'. rest as #31.
+2,0,DBToken_5287BE,50,367,324,LR_I,Not killed,New test needed,		replacing 0 by 1 in 'if(now1>=unlockTime && unlockvalue>0)' . rest as #31.
+2,0,DBToken_5287BE,33,367,326,AOR,Not killed,New test needed,		replacing = by -= in 'unlockedTotal=unlockedTotal.add(unlockvalue)' . rest as #31.
+2,0,DBToken_5287BE,21,367,326,ITSCR,Not killed,New test needed,		replacing unlockedTotal by now1 in 'unlockedTotal=unlockedTotal.add(unlockvalue)' . rest as #31.
+2,0,DBToken_5287BE,8,367,335,ITSCR,Not killed,New test needed,		replacing unlockedTotal by now1 in 'if(lockedTotal > unlockedTotal)' . rest as #31.
+2,0,DBToken_5287BE,5,367,335,ITSCR,Not killed,New test needed,		replacing lockedTotal by i in 'if(lockedTotal > unlockedTotal)' . rest as #31.
+2,0,DBToken_5287BE,39,367,337,ITSCR,Not killed,New test needed,		replacing unlockedTotal by unlockTime in 'balancefrozenTime[target]=lockedTotal.sub(unlockedTotal)'. rest as #31.
+2,0,DBToken_5287BE,36,367,337,ESD,Not killed,New test needed,		replacing 'balancefrozenTime[target]=lockedTotal.sub(unlockedTotal)' by true. rest as #31.
+2,0,DBToken_5287BE,48,367,344,BOR,Not killed,New test needed,		replacing = by <= 'if(balancefrozenTime[target]==0)'. rest as #31.
+2,0,DBToken_5287BE,16,367,354,ESD,Not killed,New test needed,		replacing 'avail=0' by true. rest as #31.
+2,0,DBToken_5287BE,42,367,360,AOR,Not killed,New test needed,		replacing = by -= in 'avail=balanceOf[target]'. rest as #31.
+2,0,DBToken_5287BE,22,367,360,ITSCR,Killed by output,Ok,		replacing avail by unlockTime in 'avail=balanceOf[target]' stores wrong values in the internal data structures.
