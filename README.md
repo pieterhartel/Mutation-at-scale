@@ -299,8 +299,9 @@ The data file `kill_summary_000_1120.csv` contains many columns, of which the fo
 * `mutNotEqCnt` is the number of trivially non-equivalent mutants of the contract.
 * `killCnt` is the number of mutants killed.
 
-The data file `kill_detail_TxEvMethLimit.csv` contains many columns, of which the following are most relevant:
-* `mutant` indicates the mutant number, and column `operator` indicates which mutation operator was applied.
+The data file `kill_detail_TxEvMethLimit.csv` contains 10 columns, of which the following are most relevant:
+* `mutant` indicates the mutant number.
+*  `operator` indicates which mutation operator was applied.
 * `status` indicates whether the test was killed by the mutant before the manual analysis.
 
 ```
@@ -313,7 +314,8 @@ The file `kill_summary.pdf` shows on page 6 how Figure 1 from the paper was gene
 The file `kill_detail.pdf` shows on page 12-14 how table 3 from the paper was generated from the data file `kill_detail_TxEvMethLimit.csv`. 
 The two PDFs also show many of the descriptive statistics and rank correlations that have been used in the paper.
 
-The results of manually analysing the five bootstrapped contracts from the stratified sample of able 4 are included in five different `.csv` files:
+## 6.3 Manually analysing the stratified sample
+The results of manually analysing the five contracts from the stratified sample of table 4 are included in five different `.csv` files:
 
 ```
 DBToken_5287BE.csv
@@ -324,7 +326,9 @@ mall_7f683d.csv
 ```
 
 Each of these `.csv` files contains 10 columns, of which the following are most relevant.
-* `mutant` indicates the mutant number, and column `operator` indicates which mutation operator was applied.
+* `mutant` indicates the mutant number.
+* `operator` indicates which mutation operator was applied.
 * `status` indicates whether the test was killed by the mutant before the manual analysis.
-* `notes` indicates what needs to be done to kill the mutant and column `details` indicates how the test should be updated.
+* `notes` indicates what needs to be done to make the mutant killable.
+* `details` indicates how the test could be updated.
 Note that we have not actually updated any tests, nor have we executed new tests.
