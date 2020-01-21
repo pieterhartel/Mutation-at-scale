@@ -75,7 +75,7 @@ The second program, `mutasol.js`, generates mutants, as described in the paper s
 These two programs use auxiliary modules: `comments.js`, `prepare.js`, `soljson.js`, and `evm_decoder.js`, all of which are available in the package.
 
 ## 4.1 Dependencies on `npm` modules
-The programs `chainsol.js` and `mutasol.js` have a number of dependencies that can be installed in the `$HOME` directory as follows (tested on Ubuntu 18.04.3).
+The programs `chainsol.js` and `mutasol.js` have a number of dependencies that can be installed in the `$HOME` directory as follows (tested on Ubuntu 18.04.3). The software is intended to run on a dedicated VM, hence for convenience everything is installed in the home directory.
 ```
 npm install \
         abi-decoder \
@@ -102,7 +102,7 @@ npm install \
         ganache-cli
 npm install git://github.com/pieterhartel/abi-decoder.git
 ```
-The software is intended to run on a dedicated VM, hence for convenience everything is installed in the home directory.
+
 
 ## 4.2 Dependencies on Solidity compiler versions
 The programs `chainsol.js` and `mutasol.js` also depend on the appropriate version of the solidity compiler.
