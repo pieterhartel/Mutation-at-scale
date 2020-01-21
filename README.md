@@ -66,6 +66,8 @@ git clone https://github.com/pieterhartel/Mutation-at-scale.git
 We assume the reader to be familiar with `node`, `npm`, and `truffle`.
 See [Node](https://nodejs.org/) and [Truffle](https://www.trufflesuite.com) for the relevant documentation.
 
+Some of the scripts use `gsed` rather than the less powerful `sed`.
+
 # 4. Programs
 There are two main programs in the replication package: `chainsol.js` and `mutasol.js.`
 The first, `chainsol.js`, downloads a contract from Etherscan, as described here [Truffle-tests-for-free](https://arxiv.org/abs/1907.09208).
@@ -156,13 +158,37 @@ Each directory contains all files and directories needed by `truffle test` and m
 
 ## 5.1 Creating the contract directories and the log files
 The script `make_loop.sh` makes 1120 calls to `make.sh` with the address of a contract to download, generate and execute the mutants.
-For example, the following call will create the `Vitaluck_3b400b.dir` directory.
+We have run `make_loop.sh` in parallel for all contracts on 14 machines, which took about one week.
+
+The following example call to `make.sh`  will create the `Vitaluck_3b400b.dir` directory.
 ```
 $ bash make.sh 0xef7c7254c290df3d167182356255cdfd8d3b400b
 ```
-Running `make.sh` may generate warnings like this `/bin/rm: cannot remove '/tmp/tmp-5818PkSXWctk5kNI': Operation not permitted`, because the script is trying to remove some debris produced by `truffle`. Such warnings can be ignored.
 
-We have run `make.sh` in parallel on 14 machines, which took about one week.
+The output of `make.sh` should look something like this:
+
+```
+Starting in Vitaluck_3b400b.dir
+
+✔ Preparing to download
+✔ Downloading
+✔ Cleaning up temporary files
+✔ Setting up box
+
+Unbox successful. Sweet!
+
+Commands:
+
+  Compile:        truffle compile
+  Migrate:        truffle migrate
+  Test contracts: truffle test
+
+Starting Mutant Vitaluck.sol_0
+...
+Starting Mutant Vitaluck.sol_9
+Finished in Vitaluck_3b400b.dir
+```
+Running `make.sh` may generate warnings like this `/bin/rm: cannot remove '/tmp/tmp-5818PkSXWctk5kNI': Operation not permitted`, because the script is trying to remove some debris produced by `truffle`. Such warnings can be ignored.
 
 
 ## 5.2 Structure of the directories
@@ -232,7 +258,7 @@ Please run the following script to perform a basic analysis:
 ```
 $ bash diff_loop.sh
 ```
-This script should generate in each contract directory `<contract>_<address>.dir` 50 files with the extension `.diff`, i.e. one per mutant.
+This script processes the data in all diractories named `<contract>_<address>.dir`. For each directory it should generate 50 files with the extension `.diff`, i.e. one per mutant. It echoes the name of the dirotories processed.
 
 ## 6.1 The output of the basic analysis explained
 The files with a `.diff` extension provide a basic analysis of the differences between the outputs of the original contract and a specific mutant. 
@@ -301,7 +327,7 @@ The data file `kill_summary_000_1120.csv` contains many columns, of which the fo
 
 The data file `kill_detail_TxEvMethLimit.csv` contains 10 columns, of which the following are most relevant:
 * `mutant` indicates the mutant number.
-*  `operator` indicates which mutation operator was applied.
+* `operator` indicates which mutation operator was applied.
 * `status` indicates whether the test was killed by the mutant before the manual analysis.
 
 ```
