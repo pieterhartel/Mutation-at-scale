@@ -66,8 +66,6 @@ git clone https://github.com/pieterhartel/Mutation-at-scale.git
 We assume the reader to be familiar with `node`, `npm`, and `truffle`.
 See [Node](https://nodejs.org/) and [Truffle](https://www.trufflesuite.com) for the relevant documentation.
 
-Some of the scripts use `gsed` rather than the less powerful `sed`.
-
 # 4. Programs
 There are two main programs in the replication package: `chainsol.js` and `mutasol.js.`
 The first, `chainsol.js`, downloads a contract from Etherscan, as described here [Truffle-tests-for-free](https://arxiv.org/abs/1907.09208).
@@ -145,6 +143,9 @@ $ truffle -v
 Truffle v5.0.2 - a development framework for Ethereum
 $ jq --version
 jq-1.5-1-a5b5cbe
+$ sed --version
+sed (GNU sed) 4.7
+...
 ```
 
 ## 4.4 Dependencies on `Truffle-tests-for-free`
