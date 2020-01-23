@@ -3,8 +3,8 @@
 # 1. How to use this replication package?
 This replication package can be used in at least five different ways.
 The interested reader could:
-1. Read the paper and inspect the seven-point checklist for mutation research in section 2. below.
-2. Study `comparison.xslx`, which compares the mutation operators of all related work that we are aware of with the mutation operators that we have implemented.
+1. Read the paper and nspect the seven-point checklist for mutation research in section 2. below.
+2. Study [comparison.xlsx](comparison.xlsx), which compares the mutation operators of all related work that we are aware of with the mutation operators that we have implemented.
 3. Inspect our source code `*.js`.
 4. Study an original contract, its mutants, and the main output generated for that contract, which is `Vitaluck_3b400b.dir`.
 5. Re-run all our experiments, but please note that this would take 10-14 weeks on a single machine and about 0.5 TB of disk space to do.
@@ -18,7 +18,7 @@ We have provided a few examples in the background section of the paper to motiva
 
 ## 2.2 Mutation testing tool
 We have implemented a bespoke mutation tool in JavaScript and the source is available in this replication package.
-The file `comparison.xlsx` in this replication package provides a detailed specification of the mutation operators.
+The file [comparison.xlsx](comparison.xlsx) in this replication package provides a detailed specification of the mutation operators.
 
 The mutation generation tool uses uniform random selection of mutation operators and operands.
 
@@ -73,7 +73,7 @@ The second program, `mutasol.js`, generates mutants, as described in the paper.
 These two programs use auxiliary modules: `comments.js`, `prepare.js`, `soljson.js`, and `evm_decoder.js`, all of which are available in the package.
 
 ## 4.1 Dependencies on `npm` modules
-The programs `chainsol.js` and `mutasol.js` have a number of dependencies that can be installed in the `$HOME` directory as follows (tested on Ubuntu 18.04.3).
+The programs `chainsol.js` and `mutasol.js` have a number of dependencies that can be installed in the `$HOME` directory as follows (tested on Ubuntu 18.04.3). The software is intended to run on a dedicated VM, hence for convenience everything is installed in the home directory.
 ```
 npm install \
         abi-decoder \
@@ -100,7 +100,7 @@ npm install \
         ganache-cli
 npm install git://github.com/pieterhartel/abi-decoder.git
 ```
-The software is intended to run on a dedicated VM, hence for convenience everything is installed in the home directory.
+
 
 ## 4.2 Dependencies on Solidity compiler versions
 The programs `chainsol.js` and `mutasol.js` also depend on the appropriate version of the solidity compiler.
@@ -143,6 +143,9 @@ $ truffle -v
 Truffle v5.0.2 - a development framework for Ethereum
 $ jq --version
 jq-1.5-1-a5b5cbe
+$ sed --version
+sed (GNU sed) 4.7
+...
 ```
 
 ## 4.4 Dependencies on `Truffle-tests-for-free`
@@ -156,13 +159,37 @@ Each directory contains all files and directories needed by `truffle test` and m
 
 ## 5.1 Creating the contract directories and the log files
 The script `make_loop.sh` makes 1120 calls to `make.sh` with the address of a contract to download, generate and execute the mutants.
-For example, the following call will create the `Vitaluck_3b400b.dir` directory.
+We have run `make_loop.sh` in parallel for all contracts on 14 machines, which took about one week.
+
+The following example call to `make.sh`  will create the `Vitaluck_3b400b.dir` directory.
 ```
 $ bash make.sh 0xef7c7254c290df3d167182356255cdfd8d3b400b
 ```
-Running `make.sh` may generate warnings like this `/bin/rm: cannot remove '/tmp/tmp-5818PkSXWctk5kNI': Operation not permitted`, because the script is trying to remove some debris produced by `truffle`. Such warnings can be ignored.
 
-We have run `make.sh` in parallel on 14 machines, which took about one week.
+The output of `make.sh` should look something like this:
+
+```
+Starting in Vitaluck_3b400b.dir
+
+✔ Preparing to download
+✔ Downloading
+✔ Cleaning up temporary files
+✔ Setting up box
+
+Unbox successful. Sweet!
+
+Commands:
+
+  Compile:        truffle compile
+  Migrate:        truffle migrate
+  Test contracts: truffle test
+
+Starting Mutant Vitaluck.sol_0
+...
+Starting Mutant Vitaluck.sol_9
+Finished in Vitaluck_3b400b.dir
+```
+Running `make.sh` may generate warnings like this `/bin/rm: cannot remove '/tmp/tmp-5818PkSXWctk5kNI': Operation not permitted`, because the script is trying to remove some debris produced by `truffle`. Such warnings can be ignored.
 
 
 ## 5.2 Structure of the directories
@@ -232,7 +259,7 @@ Please run the following script to perform a basic analysis:
 ```
 $ bash diff_loop.sh
 ```
-This script should generate in each contract directory `<contract>_<address>.dir` 50 files with the extension `.diff`, i.e. one per mutant.
+This script processes the data in all diractories named `<contract>_<address>.dir`. For each directory it should generate 50 files with the extension `.diff`, i.e. one per mutant. It echoes the name of the dirotories processed.
 
 ## 6.1 The output of the basic analysis explained
 The files with a `.diff` extension provide a basic analysis of the differences between the outputs of the original contract and a specific mutant. 
@@ -301,7 +328,7 @@ The data file `kill_summary_000_1120.csv` contains many columns, of which the fo
 
 The data file `kill_detail_TxEvMethLimit.csv` contains 10 columns, of which the following are most relevant:
 * `mutant` indicates the mutant number.
-*  `operator` indicates which mutation operator was applied.
+* `operator` indicates which mutation operator was applied.
 * `status` indicates whether the test was killed by the mutant before the manual analysis.
 
 ```
@@ -309,13 +336,13 @@ kill_detail.pdf
 kill_summary.pdf
 ```
 
-The file `kill_summary.pdf` shows on page 6 how Figure 1 from the paper was generated by SPSS from the data file `kill_summary_000_1120.csv`.
+The file [kill_summary.pdf](kill_summary.pdf) shows on page 6 how Figure 1 from the paper was generated by SPSS from the data file `kill_summary_000_1120.csv`.
 
-The file `kill_detail.pdf` shows on page 12-14 how table 3 from the paper was generated from the data file `kill_detail_TxEvMethLimit.csv`. 
+The file [kill_detail.pdf](kill_detail.pdf) shows on page 12-14 how Table 3 from the paper was generated from the data file `kill_detail_TxEvMethLimit.csv`. 
 The two PDFs also show many of the descriptive statistics and rank correlations that have been used in the paper.
 
 ## 6.3 Manually analysing the stratified sample
-The results of manually analysing the five contracts from the stratified sample of table 4 are included in five different `.csv` files:
+The results of manually analysing the five contracts from the stratified sample of Table 4 are included in five different `.csv` files:
 
 ```
 DBToken_5287BE.csv

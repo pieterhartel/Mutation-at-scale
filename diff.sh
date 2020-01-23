@@ -1047,8 +1047,8 @@ s/"0x7F88dc64d68F25255106266969Ce0EbeAAE6d7d3"/<address_1000>/gi
 s/"0xaAe5545F428C9CD4878a23842e8bEfBCd07f3061"/<address_1001>/gi
 s/"0x46C465bCD2A90D42453D594D550993704d96Dd85"/<address_1002>/gi
 end
-gsed -f $Sed <$Left >$Dir/$Left
-gsed -f $Sed <$Right >$Dir/$Right
+sed -f $Sed <$Left >$Dir/$Left
+sed -f $Sed <$Right >$Dir/$Right
 
 for var
 in \
