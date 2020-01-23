@@ -3,9 +3,9 @@
 # 1. How to use this replication package?
 This replication package can be used in at least five different ways.
 The interested reader could:
-1. Read the paper and nspect the seven-point checklist for mutation research in section 2. below.
+1. Read the paper and inspect the seven-point checklist for mutation research in section 2. below.
 2. Study [comparison.xlsx](comparison.xlsx), which compares the mutation operators of all related work that we are aware of with the mutation operators that we have implemented.
-3. Inspect our source code `*.js`.
+3. Inspect the source code of our tools [chainsol.js](chainsol.js) and [mutasol.js](mutasol.js).
 4. Study an original contract, its mutants, and the main output generated for that contract, which is `Vitaluck_3b400b.dir`.
 5. Re-run all our experiments, but please note that this would take 10-14 weeks on a single machine and about 0.5 TB of disk space to do.
 
