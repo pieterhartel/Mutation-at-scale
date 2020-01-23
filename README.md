@@ -1,9 +1,9 @@
-# Replication package for "Mutation testing of smart contracts at scale"
+# Replication package for the paper [Mutation testing of smart contracts at scale](https://arxiv.org/abs/1909.12563).
 
 # 1. How to use this replication package?
 This replication package can be used in at least five different ways.
 The interested reader could:
-1. Inspect the seven-point checklist for mutation research in section 2. below.
+1. Read the paper and inspect the seven-point checklist for mutation research in section 2. below.
 2. Study `comparison.xslx`, which compares the mutation operators of all related work that we are aware of with the mutation operators that we have implemented.
 3. Inspect our source code `*.js`.
 4. Study an original contract, its mutants, and the main output generated for that contract, which is `Vitaluck_3b400b.dir`.
@@ -69,7 +69,7 @@ See [Node](https://nodejs.org/) and [Truffle](https://www.trufflesuite.com) for 
 # 4. Programs
 There are two main programs in the replication package: `chainsol.js` and `mutasol.js.`
 The first, `chainsol.js`, downloads a contract from Etherscan, as described here [Truffle-tests-for-free](https://arxiv.org/abs/1907.09208).
-The second program, `mutasol.js`, generates mutants, as described in the paper submitted to TAP2020.
+The second program, `mutasol.js`, generates mutants, as described in the paper.
 These two programs use auxiliary modules: `comments.js`, `prepare.js`, `soljson.js`, and `evm_decoder.js`, all of which are available in the package.
 
 ## 4.1 Dependencies on `npm` modules
