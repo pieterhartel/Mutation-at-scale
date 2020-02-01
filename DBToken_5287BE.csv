@@ -1,5 +1,5 @@
 class,comment,contract,mutant,SLOC,line,operator,status,notes,details
-2,1,,,,,,,,'Base=Regression_*/DBToken_5287BE.dir; for i in 23 38 18 4 37 12 43 34 26 17 28 49 14 35 6 25 45 47 24 1 7 29 27 19 32 10 20 2 40 15 30 46 11 3 9 13 31 41 44 50 33 21 8 5 39 36 48 16 42 22; do vi $Base/contracts/*_${i}.*mut $Base/*_${i}.*diff; done'
+2,1,x,x,x,x,x,x,x,'Base=Regression_*/DBToken_5287BE.dir; for i in 23 38 18 4 37 12 43 34 26 17 28 49 14 35 6 25 45 47 24 1 7 29 27 19 32 10 20 2 40 15 30 46 11 3 9 13 31 41 44 50 33 21 8 5 39 36 48 16 42 22; do vi $Base/contracts/*_${i}.*mut $Base/*_${i}.*diff; done'
 2,0,DBToken_5287BE,23,367,9,LR_I,Not killed,New test needed,		'replacing 0 by 1 in ''if (a==0)'' in the enclosing method mul does not create wrong outputs with the current test because even though mul is called, it is not called with first argument 0 or 1.'
 2,0,DBToken_5287BE,38,367,80,ESD,Killed by output,Ok,			'replacing ''totalSupply = initialSupply * 10 ** uint256(decimals)'' by true leaves the initial token supply un-initialised, which causes many wrong outputs to be produced.'
 2,0,DBToken_5287BE,18,367,82,ITSCR,Killed by output,Ok,			'replacing name by symbol in ''name = tokenName''. rest as #38.'
