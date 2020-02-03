@@ -1,52 +1,52 @@
 class,comment,contract,mutant,SLOC,line,operator,status,notes,details
-3,1,Base=Regression_*/NumberBoard_9E7505.dir; for i in 44 1 12 25 2 5 33 13 38 27 22 32 11 30 50 9 39 29 7 18 28 8 35 49 23 3 48 15 4 21 14 40 20 24 17 43 10 47 34 41 46 36 16 26 6 45 31 42 37 19; do vi $Base/contracts/*_${i}.*mut $Base/*_${i}.*diff; done
-3,0,NumberBoard_9E7505,44,213,22,TRD,Killed by output,Ok,removing public in 'public minPrice = 1 finney' blocks access to the getter.
-3,0,NumberBoard_9E7505,1,213,31,VDTSCS,Killed by output,Ok,swapping number and price in 'event BidPlaced(uint indexed number, uint price)' generates the wrong event outputs.
-3,0,NumberBoard_9E7505,12,213,40,TRD,Killed by output,Ok,replacing constant by private in 'function isOwner(address addr, uint theNum) constant' blocks access to the method.
-3,0,NumberBoard_9E7505,25,213,41,BOR,Killed by output and gas,Ok,replacing == by >= in 'return ownership[theNum].owner == addr' generates the wrong output of the isOwner method.
-3,0,NumberBoard_9E7505,2,213,50,ITSCR,Not killed,New test needed,replacing l by i in 'uint[] memory ret = new uint[](l)' initialises the ret array with the wrong number of elements. This should given an exception if there is data in ownershipLookup, which with the current tests is not the case.
-3,0,NumberBoard_9E7505,5,213,51,ITSCR,Not killed,New test needed,replacing l bi in in 'for (uint i = 0; i < l; i++)' does not initialise the array. This should give wrong values for a proper test.
-3,0,NumberBoard_9E7505,33,213,51,VDTSCS,Not killed,New test needed,swapping L-Value i and L-Value l in 'uint l = ownershipLookup[addr].length; for (uint i = 0; i < l; i++) {' also does not initialise the array. Rest as #5
-3,0,NumberBoard_9E7505,13,213,61,LR_I,Not killed,Semantically equivalent,"replacing the first 0 by a 1 in 'ownership[theNum] = ANumberCard(msg.sender, 0, '', false, 0, 0, 0)' has no effect as two lines later the value is overwritten."
-3,0,NumberBoard_9E7505,38,213,63,BOR,Killed by output and gas,Ok,replacing + by - in 'ownership[theNum].lookupIdx = ownershipLookup[msg.sender].length - 1' sets the wrong lookup index. This causes the wrong output for the ownership getter.
-3,0,NumberBoard_9E7505,27,213,63,RAR,Killed by output and gas,Ok,replacing msg.sender by address(this) in 'ownership[theNum].lookupIdx = ownershipLookup[msg.sender].length - 1'. rest as #38
-3,0,NumberBoard_9E7505,22,213,71,TRD,Not killed,New test needed,replacing storage by memory in 'ANumberCard storage card = ownership[theNum]' makes a copy of the ANumberCard in memory. This is updated on the next line but never written back to storage.
-3,0,NumberBoard_9E7505,32,213,73,ESD,Not killed,New test needed,replacing 'card.owner = to' by true leaves the owner property unintialised. rest as #38
-3,0,NumberBoard_9E7505,11,213,75,BOR,Not killed,New test needed,replacing - into + in 'ownershipLookup[from][card.lookupIdx] = ownershipLookup[from][len - 1]' causes wrong data to be stored. rest as #38.
-3,0,NumberBoard_9E7505,30,213,79,ESD,Not killed,New test needed,replacing 'ownership[theNum].lookupIdx = ownershipLookup[to].length - 1' by true causes the lookup index to remain unintialised. rest as #38.
-3,0,NumberBoard_9E7505,50,213,79,ITSCR,Not killed,New test needed,replacing to by from in 'ownership[theNum].lookupIdx = ownershipLookup[to].length - 1' causes the lookup index to remain unintialised. rest as #38.
-3,0,NumberBoard_9E7505,9,213,83,RAR,Killed by output,Ok,"replacing msg.sender by address(0) in 'require(isOwner(msg.sender, theNum))' causes transactions with updateMessage to throw an exception."
-3,0,NumberBoard_9E7505,39,213,102,BOR,Not killed,New test needed,replacing >= by != in 'require(price >= minPrice)' is not caught because all tests carry a price that is greater than minPrice.
-3,0,NumberBoard_9E7505,29,213,102,ITSCR,Killed by output,Ok,replacing price by theNum in 'require(price >= minPrice)' throws an exception because theNum in the four available tests is in the range of 0 .. 100. This is much less than 1 finney.
-3,0,NumberBoard_9E7505,7,213,105,AOR,Killed by gas,New test needed,replacing = by -= in 'numCard.buyNowPrice = price' stores the negative of the data. This requires more gas than the assignment. A test should pick up the wrong value.
-3,0,NumberBoard_9E7505,18,213,105,ITSCR,Not killed,New test needed,replacing price by theNum in 'numCard.buyNowPrice = price' stores the wrong data. A test should be able to pick this up.
-3,0,NumberBoard_9E7505,28,213,108,ESD,Killed by output,Ok,"replacing 'PriceSet(theNum, price)' by true supresses an event."
-3,0,NumberBoard_9E7505,8,213,116,TRD,Not killed,New test needed,removing payable in 'function acceptBuyNowOffer(uint theNum)' blocks receiving money on this method. The method is not called in the current test.
-3,0,NumberBoard_9E7505,35,213,121,ESD,Not killed,New test needed,"replacing 'addEarnings(msg.value, numCard.owner)' by true does not update the earnings data structure. rest as #8"
-3,0,NumberBoard_9E7505,49,213,131,LR_I,Not killed,New test needed,replacing 0 by 1 in 'numCard.buyNowPrice = 0' stores the wrong data. The current test does not call the method cancelBuyNowOffer.
-3,0,NumberBoard_9E7505,23,213,141,ESD,Not killed,New test needed,"replacing 'require(!isOwner(msg.sender, theNum))' by true supresses a check for wrong inputs, but the current tests only provide correct inputs to placeNewBid."
-3,0,NumberBoard_9E7505,3,213,142,ESD,Not killed,New test needed,replacing 'require(msg.value >= minPrice)' by true. rest as #23.
-3,0,NumberBoard_9E7505,48,213,157,ESD,Not killed,New test needed,replacing 'require(msg.sender == numCard.currentBidder)' by true supresses a check for wrong inputs. The current tests only provide correct inputs to cancelBid.
-3,0,NumberBoard_9E7505,15,213,159,VDTSCS,Killed by output,Ok,swapping parameter theNum ands L-Value amount in 'function cancelBid(uint theNum) { uint amount = numCard.currentBid' leaves theNum initialised to 0 and causes the wrong data to be tested in a require. This throws an exception.
-3,0,NumberBoard_9E7505,4,213,160,ESD,Killed by output,Ok,replacing 'cancelBidInternal(theNum)' by true creates an inconsistency in the internal data structures. This causes an exception in the next call to placeNewBid.
-3,0,NumberBoard_9E7505,21,213,161,ITSCR,Killed by output,Ok,"replacing amount by theNum in 'BidCanceled(theNum, amount)' generates an event with the wrong parameters."
-3,0,NumberBoard_9E7505,14,213,165,TRD,Killed by output,Ok,replacing storage by memory in 'ANumberCard storage numCard = ownership[theNum]' causes changes to be made to a copy of the data structure. These are lost when the method exits. 
-3,0,NumberBoard_9E7505,40,213,166,AOR,Not killed,New test needed,replacing += by = in 'deadbids[numCard.currentBidder] += numCard.currentBid' causes wrong data to be stored.
-3,0,NumberBoard_9E7505,20,213,168,ESD,Not killed,New test needed,replacing 'numCard.currentBidder = 0' by true does not fully cancel the bid.
-3,0,NumberBoard_9E7505,24,213,172,ITSCR,Not killed,New test needed,"replacing theNum by amount in 'require(isOwner(msg.sender, theNum))' runs the wrong check in acceptBid but in the current test this method is never called."
-3,0,NumberBoard_9E7505,17,213,175,LR_I,Not killed,New test needed,replacing 0 by 1 in 'require(numCard.currentBid > 0)'. rest as #24.
-3,0,NumberBoard_9E7505,43,213,176,BOR,Not killed,New test needed,replacing != by > in 'require(numCard.currentBidder != 0)'. rest as #24.
-3,0,NumberBoard_9E7505,10,213,179,ITSCR,Not killed,New test needed,"replacing amount by theNum in 'addEarnings(amount, numCard.owner)'. rest as #24."
-3,0,NumberBoard_9E7505,47,213,183,LR_I,Not killed,New test needed,replacing 0 by 1 in 'numCard.currentBid = 0'. rest as #24.
-3,0,NumberBoard_9E7505,34,213,183,AOR,Not killed,New test needed,replacing = by -= in 'numCard.currentBid = 0'. rest as #24.
-3,0,NumberBoard_9E7505,41,213,185,ESD,Not killed,New test needed,"replacing 'BidAccepted(theNum, amount)' by true. rest as #24."
-3,0,NumberBoard_9E7505,46,213,190,ITSCR,Not killed,New test needed,replacing interest by amount in 'earnings[to] += amount - interest' causes the wrong data to be stored. The enclosing private method addEarnings is never called by the current test.
-3,0,NumberBoard_9E7505,36,213,190,AOR,Not killed,New test needed,replacing += by = in 'earnings[to] += amount - interest'. rest as #46.
-3,0,NumberBoard_9E7505,16,213,190,ITSCR,Not killed,New test needed,replacing L-Value earnings by deadbids in 'earnings[to] += amount - interest'. rest as #46.
-3,0,NumberBoard_9E7505,26,213,195,RAR,Not killed,Tracking internal transfers needed,replacing msg.sender by address(0) in 'uint amount = deadbids[msg.sender]' causes an internal transfer to send Ether to the wrong address. This is not tracked by our software. The call uses a lot less gas so perhaps instead of just an upper limit on the amount of gas a lower limit might also help?
-3,0,NumberBoard_9E7505,6,213,197,RAR,Not killed,New test needed,replacing msg.sender by tx.origin in 'msg.sender.transfer(amount)'. Rest as #26.
-3,0,NumberBoard_9E7505,45,213,201,ITSCR,Not killed,New test needed,replacing earnings by deadbids in 'uint amount = earnings[msg.sender]' causes wrong data to be stored. The enclosing method withdrawEarnings is never called by the current test.
-3,0,NumberBoard_9E7505,31,213,201,RAR,Not killed,New test needed,replacing msg.sender by address(0) in 'uint amount = earnings[msg.sender]'. Rest as #26.
-3,0,NumberBoard_9E7505,42,213,202,RAR,Not killed,New test needed,replacing msg.sender by address(0) in 'earnings[msg.sender] = 0'. rest as #26.
-3,0,NumberBoard_9E7505,37,213,210,LR_I,Not killed,New test needed,replacing 0 by 1 in 'houseEarnings = 0'. rest as #26.
-3,0,NumberBoard_9E7505,19,213,211,ESD,Not killed,New test needed,replacing 'msg.sender.transfer(amount)' by true. rest as #26.
+3,1,,,,,,,,Base=Regression_*/NumberBoard_9E7505.dir; for i in 44 1 12 25 2 5 33 13 38 27 22 32 11 30 50 9 39 29 7 18 28 8 35 49 23 3 48 15 4 21 14 40 20 24 17 43 10 47 34 41 46 36 16 26 6 45 31 42 37 19; do vi $Base/contracts/*_${i}.*mut $Base/*_${i}.*diff; done"
+3,0,NumberBoard_9E7505,44,213,22,TRD,Killed by output,Ok,"removing public in 'public minPrice = 1 finney' blocks access to the getter."
+3,0,NumberBoard_9E7505,1,213,31,VDTSCS,Killed by output,Ok,"swapping number and price in 'event BidPlaced(uint indexed number, uint price)' generates the wrong event outputs."
+3,0,NumberBoard_9E7505,12,213,40,TRD,Killed by output,Ok,"replacing constant by private in 'function isOwner(address addr, uint theNum) constant' blocks access to the method."
+3,0,NumberBoard_9E7505,25,213,41,BOR,Killed by output and gas,Ok,"replacing == by >= in 'return ownership[theNum].owner == addr' generates the wrong output of the isOwner method."
+3,0,NumberBoard_9E7505,2,213,50,ITSCR,Not killed,New test needed,"replacing l by i in 'uint[] memory ret = new uint[](l)' initialises the ret array with the wrong number of elements. This should given an exception if there is data in ownershipLookup, which with the current tests is not the case."
+3,0,NumberBoard_9E7505,5,213,51,ITSCR,Not killed,New test needed,"replacing l bi in in 'for (uint i = 0; i < l; i++)' does not initialise the array. This should give wrong values for a proper test."
+3,0,NumberBoard_9E7505,33,213,51,VDTSCS,Not killed,New test needed,swapping L-Value i and L-Value l in 'uint l = ownershipLookup[addr].length; for (uint i = 0; i < l; i++) {' also does not initialise the array. Rest as #5"
+3,0,NumberBoard_9E7505,13,213,61,LR_I,Not killed,Semantically equivalent,"replacing the first 0 by a 1 in 'ownership[theNum] = ANumberCard(msg.sender, 0, '', false, 0, 0, 0)' has no effect as two lines later the value is overwritten.""
+3,0,NumberBoard_9E7505,38,213,63,BOR,Killed by output and gas,Ok,"replacing + by - in 'ownership[theNum].lookupIdx = ownershipLookup[msg.sender].length - 1' sets the wrong lookup index. This causes the wrong output for the ownership getter."
+3,0,NumberBoard_9E7505,27,213,63,RAR,Killed by output and gas,Ok,"replacing msg.sender by address(this) in 'ownership[theNum].lookupIdx = ownershipLookup[msg.sender].length - 1'. rest as #38"
+3,0,NumberBoard_9E7505,22,213,71,TRD,Not killed,New test needed,"replacing storage by memory in 'ANumberCard storage card = ownership[theNum]' makes a copy of the ANumberCard in memory. This is updated on the next line but never written back to storage."
+3,0,NumberBoard_9E7505,32,213,73,ESD,Not killed,New test needed,"replacing 'card.owner = to' by true leaves the owner property unintialised. rest as #38"
+3,0,NumberBoard_9E7505,11,213,75,BOR,Not killed,New test needed,"replacing - into + in 'ownershipLookup[from][card.lookupIdx] = ownershipLookup[from][len - 1]' causes wrong data to be stored. rest as #38."
+3,0,NumberBoard_9E7505,30,213,79,ESD,Not killed,New test needed,"replacing 'ownership[theNum].lookupIdx = ownershipLookup[to].length - 1' by true causes the lookup index to remain unintialised. rest as #38."
+3,0,NumberBoard_9E7505,50,213,79,ITSCR,Not killed,New test needed,"replacing to by from in 'ownership[theNum].lookupIdx = ownershipLookup[to].length - 1' causes the lookup index to remain unintialised. rest as #38."
+3,0,NumberBoard_9E7505,9,213,83,RAR,Killed by output,Ok,"replacing msg.sender by address(0) in 'require(isOwner(msg.sender, theNum))' causes transactions with updateMessage to throw an exception.""
+3,0,NumberBoard_9E7505,39,213,102,BOR,Not killed,New test needed,"replacing >= by != in 'require(price >= minPrice)' is not caught because all tests carry a price that is greater than minPrice."
+3,0,NumberBoard_9E7505,29,213,102,ITSCR,Killed by output,Ok,"replacing price by theNum in 'require(price >= minPrice)' throws an exception because theNum in the four available tests is in the range of 0 .. 100. This is much less than 1 finney."
+3,0,NumberBoard_9E7505,7,213,105,AOR,Killed by gas,New test needed,"replacing = by -= in 'numCard.buyNowPrice = price' stores the negative of the data. This requires more gas than the assignment. A test should pick up the wrong value."
+3,0,NumberBoard_9E7505,18,213,105,ITSCR,Not killed,New test needed,"replacing price by theNum in 'numCard.buyNowPrice = price' stores the wrong data. A test should be able to pick this up."
+3,0,NumberBoard_9E7505,28,213,108,ESD,Killed by output,Ok,"replacing 'PriceSet(theNum, price)' by true supresses an event.""
+3,0,NumberBoard_9E7505,8,213,116,TRD,Not killed,New test needed,"removing payable in 'function acceptBuyNowOffer(uint theNum)' blocks receiving money on this method. The method is not called in the current test."
+3,0,NumberBoard_9E7505,35,213,121,ESD,Not killed,New test needed,"replacing 'addEarnings(msg.value, numCard.owner)' by true does not update the earnings data structure. rest as #8""
+3,0,NumberBoard_9E7505,49,213,131,LR_I,Not killed,New test needed,"replacing 0 by 1 in 'numCard.buyNowPrice = 0' stores the wrong data. The current test does not call the method cancelBuyNowOffer."
+3,0,NumberBoard_9E7505,23,213,141,ESD,Not killed,New test needed,"replacing 'require(!isOwner(msg.sender, theNum))' by true supresses a check for wrong inputs, but the current tests only provide correct inputs to placeNewBid.""
+3,0,NumberBoard_9E7505,3,213,142,ESD,Not killed,New test needed,"replacing 'require(msg.value >= minPrice)' by true. rest as #23."
+3,0,NumberBoard_9E7505,48,213,157,ESD,Not killed,New test needed,"replacing 'require(msg.sender == numCard.currentBidder)' by true supresses a check for wrong inputs. The current tests only provide correct inputs to cancelBid."
+3,0,NumberBoard_9E7505,15,213,159,VDTSCS,Killed by output,Ok,swapping parameter theNum ands L-Value amount in 'function cancelBid(uint theNum) { uint amount = numCard.currentBid' leaves theNum initialised to 0 and causes the wrong data to be tested in a require. This throws an exception."
+3,0,NumberBoard_9E7505,4,213,160,ESD,Killed by output,Ok,"replacing 'cancelBidInternal(theNum)' by true creates an inconsistency in the internal data structures. This causes an exception in the next call to placeNewBid."
+3,0,NumberBoard_9E7505,21,213,161,ITSCR,Killed by output,Ok,"replacing amount by theNum in 'BidCanceled(theNum, amount)' generates an event with the wrong parameters.""
+3,0,NumberBoard_9E7505,14,213,165,TRD,Killed by output,Ok,"replacing storage by memory in 'ANumberCard storage numCard = ownership[theNum]' causes changes to be made to a copy of the data structure. These are lost when the method exits. "
+3,0,NumberBoard_9E7505,40,213,166,AOR,Not killed,New test needed,"replacing += by = in 'deadbids[numCard.currentBidder] += numCard.currentBid' causes wrong data to be stored."
+3,0,NumberBoard_9E7505,20,213,168,ESD,Not killed,New test needed,"replacing 'numCard.currentBidder = 0' by true does not fully cancel the bid."
+3,0,NumberBoard_9E7505,24,213,172,ITSCR,Not killed,New test needed,"replacing theNum by amount in 'require(isOwner(msg.sender, theNum))' runs the wrong check in acceptBid but in the current test this method is never called.""
+3,0,NumberBoard_9E7505,17,213,175,LR_I,Not killed,New test needed,"replacing 0 by 1 in 'require(numCard.currentBid > 0)'. rest as #24."
+3,0,NumberBoard_9E7505,43,213,176,BOR,Not killed,New test needed,"replacing != by > in 'require(numCard.currentBidder != 0)'. rest as #24."
+3,0,NumberBoard_9E7505,10,213,179,ITSCR,Not killed,New test needed,"replacing amount by theNum in 'addEarnings(amount, numCard.owner)'. rest as #24.""
+3,0,NumberBoard_9E7505,47,213,183,LR_I,Not killed,New test needed,"replacing 0 by 1 in 'numCard.currentBid = 0'. rest as #24."
+3,0,NumberBoard_9E7505,34,213,183,AOR,Not killed,New test needed,"replacing = by -= in 'numCard.currentBid = 0'. rest as #24."
+3,0,NumberBoard_9E7505,41,213,185,ESD,Not killed,New test needed,"replacing 'BidAccepted(theNum, amount)' by true. rest as #24.""
+3,0,NumberBoard_9E7505,46,213,190,ITSCR,Not killed,New test needed,"replacing interest by amount in 'earnings[to] += amount - interest' causes the wrong data to be stored. The enclosing private method addEarnings is never called by the current test."
+3,0,NumberBoard_9E7505,36,213,190,AOR,Not killed,New test needed,"replacing += by = in 'earnings[to] += amount - interest'. rest as #46."
+3,0,NumberBoard_9E7505,16,213,190,ITSCR,Not killed,New test needed,"replacing L-Value earnings by deadbids in 'earnings[to] += amount - interest'. rest as #46."
+3,0,NumberBoard_9E7505,26,213,195,RAR,Not killed,Tracking internal transfers needed,"replacing msg.sender by address(0) in 'uint amount = deadbids[msg.sender]' causes an internal transfer to send Ether to the wrong address. This is not tracked by our software. The call uses a lot less gas so perhaps instead of just an upper limit on the amount of gas a lower limit might also help?"
+3,0,NumberBoard_9E7505,6,213,197,RAR,Not killed,New test needed,"replacing msg.sender by tx.origin in 'msg.sender.transfer(amount)'. Rest as #26."
+3,0,NumberBoard_9E7505,45,213,201,ITSCR,Not killed,New test needed,"replacing earnings by deadbids in 'uint amount = earnings[msg.sender]' causes wrong data to be stored. The enclosing method withdrawEarnings is never called by the current test."
+3,0,NumberBoard_9E7505,31,213,201,RAR,Not killed,New test needed,"replacing msg.sender by address(0) in 'uint amount = earnings[msg.sender]'. Rest as #26."
+3,0,NumberBoard_9E7505,42,213,202,RAR,Not killed,New test needed,"replacing msg.sender by address(0) in 'earnings[msg.sender] = 0'. rest as #26."
+3,0,NumberBoard_9E7505,37,213,210,LR_I,Not killed,New test needed,"replacing 0 by 1 in 'houseEarnings = 0'. rest as #26."
+3,0,NumberBoard_9E7505,19,213,211,ESD,Not killed,New test needed,"replacing 'msg.sender.transfer(amount)' by true. rest as #26."

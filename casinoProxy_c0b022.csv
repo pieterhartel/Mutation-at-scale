@@ -1,59 +1,57 @@
-class,comment,contract,mutant,SLOC,line,operator,status,notes,details
-1,1,Increasing the number of transactions to 100 and the number of mutants improves the performance a bit because the tests have more coverage.
-1,1,    96 Killed by gas
-1,1,    61 Killed by output
-1,1,     5 Killed by output and gas
-1,1,   338 Not killed
-1,1,
-1,1,Base=Regression_[0-9]*/casinoProxy_c0b022.dir; for i in 42 33 7 2 5 29 37 14 13 22 32 16 40 15 49 21 36 27 38 25 8 46 6 1 44 34 4 39 23 11 24 30 17 31 35 18 26 47 28 3 12 10 43 45 9 50 48 41 20 19; do vi $Base/contracts/*_${i}.*mut $Base/*_${i}.*diff; done
-1,1,
-1,0,casinoProxy_c0b022,42,297,049,JSRD,Not killed,New test needed,replacing 'return c' by true in a function that is never called by any test has no effect. The only method called is authorize.
-1,0,casinoProxy_c0b022,33,297,049,ITSCR,Not killed,New test needed,as #42.
-1,0,casinoProxy_c0b022,07,297,052,VDTSCS,Not killed,New test needed,as #42.
-1,0,casinoProxy_c0b022,02,297,052,VDTSCS,Not killed,New test needed,as #42.
-1,0,casinoProxy_c0b022,05,297,054,ESD,Not killed,New test needed,as #42.
-1,0,casinoProxy_c0b022,29,297,054,ITSCR,Not killed,New test needed,as #42.
-1,0,casinoProxy_c0b022,37,297,092,ITSCR,Not killed,New test needed,as #42.
-1,0,casinoProxy_c0b022,14,297,092,ITSCR,Not killed,New test needed,as #42.
-1,0,casinoProxy_c0b022,13,297,094,ITSCR,Not killed,New test needed,as #42.
+class,comment,contract,mutant,SLOC,line,operator,status,notes,details"
+1,1,,,,,,,,"Increasing the number of transactions to 100 and the number of mutants improves the performance a bit because the tests have more coverage."
+1,1,,,,,,,,"    96 Killed by gas"
+1,1,,,,,,,,"    61 Killed by output"
+1,1,,,,,,,,"     5 Killed by output and gas"
+1,1,,,,,,,,"   338 Not killed"
+1,1,,,,,,,,"Base=Regression_[0-9]*/casinoProxy_c0b022.dir; for i in 42 33 7 2 5 29 37 14 13 22 32 16 40 15 49 21 36 27 38 25 8 46 6 1 44 34 4 39 23 11 24 30 17 31 35 18 26 47 28 3 12 10 43 45 9 50 48 41 20 19; do vi $Base/contracts/*_${i}.*mut $Base/*_${i}.*diff; done"
+1,0,casinoProxy_c0b022,42,297,049,JSRD,Not killed,New test needed,replacing 'return c' by true in a function that is never called by any test has no effect. The only method called is authorize."
+1,0,casinoProxy_c0b022,33,297,049,ITSCR,Not killed,New test needed,"as #42."
+1,0,casinoProxy_c0b022,07,297,052,VDTSCS,Not killed,New test needed,"as #42."
+1,0,casinoProxy_c0b022,02,297,052,VDTSCS,Not killed,New test needed,"as #42."
+1,0,casinoProxy_c0b022,05,297,054,ESD,Not killed,New test needed,"as #42."
+1,0,casinoProxy_c0b022,29,297,054,ITSCR,Not killed,New test needed,"as #42."
+1,0,casinoProxy_c0b022,37,297,092,ITSCR,Not killed,New test needed,"as #42."
+1,0,casinoProxy_c0b022,14,297,092,ITSCR,Not killed,New test needed,"as #42."
+1,0,casinoProxy_c0b022,13,297,094,ITSCR,Not killed,New test needed,"as #42."
 1,0,casinoProxy_c0b022,22,297,094,AOR,Killed by gas,Ok,"replacing = by += in 'balanceOf[receiver] = safeAdd(balanceOf[receiver], value)' requires 2412 more gas during deployment which kills the deployment. Other changes also require more gas for the deployment but not enough to kill by gas."
-1,0,casinoProxy_c0b022,32,297,094,ESD,Not killed,New test needed,as #42.
-1,0,casinoProxy_c0b022,16,297,095,ITSCR,Not killed,New test needed,as #42.
-1,0,casinoProxy_c0b022,40,297,113,RAR,Not killed,New test needed,as #42.
-1,0,casinoProxy_c0b022,15,297,121,RAR,Not killed,New test needed,as #42.
-1,0,casinoProxy_c0b022,49,297,121,RAR,Not killed,New test needed,as #42.
-1,0,casinoProxy_c0b022,21,297,122,ESD,Not killed,New test needed,as #42.
-1,0,casinoProxy_c0b022,36,297,123,LR_I,Not killed,New test needed,as #42.
-1,0,casinoProxy_c0b022,27,297,124,RAR,Not killed,New test needed,as #42.
-1,0,casinoProxy_c0b022,38,297,127,RAR,Not killed,New test needed,as #42.
-1,0,casinoProxy_c0b022,25,297,135,BOR,Not killed,New test needed,as #42.
-1,0,casinoProxy_c0b022,08,297,151,AOR,Killed by gas,Ok,as #22.
-1,0,casinoProxy_c0b022,46,297,151,BOR,Not killed,New test needed,as #42.
-1,0,casinoProxy_c0b022,06,297,166,LR_I,Killed by gas,Ok,as #22.
-1,0,casinoProxy_c0b022,01,297,174,ITSCR,Not killed,New test needed,as #42.
-1,0,casinoProxy_c0b022,44,297,194,LR_I,Killed by gas,Ok,as #22.
-1,0,casinoProxy_c0b022,34,297,195,BOR,Killed by gas,Ok,as #22.
-1,0,casinoProxy_c0b022,04,297,196,LR_B,Not killed,New test needed,as #42.
-1,0,casinoProxy_c0b022,39,297,196,ESD,Not killed,New test needed,as #42.
-1,0,casinoProxy_c0b022,23,297,212,ESD,Killed by output,Ok,as #22.
-1,0,casinoProxy_c0b022,11,297,222,ESD,Not killed,New test needed,as #42.
-1,0,casinoProxy_c0b022,24,297,223,ESD,Not killed,New test needed,as #42.
-1,0,casinoProxy_c0b022,30,297,223,ITSCR,Not killed,New test needed,as #42.
-1,0,casinoProxy_c0b022,17,297,232,ITSCR,Not killed,New test needed,as #42.
-1,0,casinoProxy_c0b022,31,297,234,ITSCR,Not killed,New test needed,as #42.
-1,0,casinoProxy_c0b022,35,297,235,ESD,Not killed,New test needed,as #42.
-1,0,casinoProxy_c0b022,18,297,236,VDTSCS,Not killed,New test needed,as #42.
-1,0,casinoProxy_c0b022,26,297,236,ITSCR,Not killed,New test needed,as #42.
-1,0,casinoProxy_c0b022,47,297,236,LR_I,Not killed,New test needed,as #42.
-1,0,casinoProxy_c0b022,28,297,237,ITSCR,Not killed,New test needed,as #42.
-1,0,casinoProxy_c0b022,03,297,240,ITSCR,Not killed,New test needed,as #42.
-1,0,casinoProxy_c0b022,12,297,258,ESD,Not killed,New test needed,as #42.
-1,0,casinoProxy_c0b022,10,297,266,ESD,Not killed,New test needed,as #42.
-1,0,casinoProxy_c0b022,43,297,274,AOR,Killed by gas,Ok,as #22.
-1,0,casinoProxy_c0b022,45,297,287,BOR,Killed by gas,Ok,as #22.
-1,0,casinoProxy_c0b022,09,297,289,LR_I,Killed by gas,Ok,as #22.
-1,0,casinoProxy_c0b022,50,297,289,ITSCR,Not killed,New test needed,as #42.
-1,0,casinoProxy_c0b022,48,297,290,BOR,Not killed,New test needed,as #42.
-1,0,casinoProxy_c0b022,41,297,290,ESD,Not killed,New test needed,as #42.
-1,0,casinoProxy_c0b022,20,297,292,ITSCR,Not killed,New test needed,as #42.
-1,0,casinoProxy_c0b022,19,297,292,ITSCR,Not killed,New test needed,as #42.
+1,0,casinoProxy_c0b022,32,297,094,ESD,Not killed,New test needed,"as #42."
+1,0,casinoProxy_c0b022,16,297,095,ITSCR,Not killed,New test needed,"as #42."
+1,0,casinoProxy_c0b022,40,297,113,RAR,Not killed,New test needed,"as #42."
+1,0,casinoProxy_c0b022,15,297,121,RAR,Not killed,New test needed,"as #42."
+1,0,casinoProxy_c0b022,49,297,121,RAR,Not killed,New test needed,"as #42."
+1,0,casinoProxy_c0b022,21,297,122,ESD,Not killed,New test needed,"as #42."
+1,0,casinoProxy_c0b022,36,297,123,LR_I,Not killed,New test needed,"as #42."
+1,0,casinoProxy_c0b022,27,297,124,RAR,Not killed,New test needed,"as #42."
+1,0,casinoProxy_c0b022,38,297,127,RAR,Not killed,New test needed,"as #42."
+1,0,casinoProxy_c0b022,25,297,135,BOR,Not killed,New test needed,"as #42."
+1,0,casinoProxy_c0b022,08,297,151,AOR,Killed by gas,Ok,"as #22."
+1,0,casinoProxy_c0b022,46,297,151,BOR,Not killed,New test needed,"as #42."
+1,0,casinoProxy_c0b022,06,297,166,LR_I,Killed by gas,Ok,"as #22."
+1,0,casinoProxy_c0b022,01,297,174,ITSCR,Not killed,New test needed,"as #42."
+1,0,casinoProxy_c0b022,44,297,194,LR_I,Killed by gas,Ok,"as #22."
+1,0,casinoProxy_c0b022,34,297,195,BOR,Killed by gas,Ok,"as #22."
+1,0,casinoProxy_c0b022,04,297,196,LR_B,Not killed,New test needed,"as #42."
+1,0,casinoProxy_c0b022,39,297,196,ESD,Not killed,New test needed,"as #42."
+1,0,casinoProxy_c0b022,23,297,212,ESD,Killed by output,Ok,"as #22."
+1,0,casinoProxy_c0b022,11,297,222,ESD,Not killed,New test needed,"as #42."
+1,0,casinoProxy_c0b022,24,297,223,ESD,Not killed,New test needed,"as #42."
+1,0,casinoProxy_c0b022,30,297,223,ITSCR,Not killed,New test needed,"as #42."
+1,0,casinoProxy_c0b022,17,297,232,ITSCR,Not killed,New test needed,"as #42."
+1,0,casinoProxy_c0b022,31,297,234,ITSCR,Not killed,New test needed,"as #42."
+1,0,casinoProxy_c0b022,35,297,235,ESD,Not killed,New test needed,"as #42."
+1,0,casinoProxy_c0b022,18,297,236,VDTSCS,Not killed,New test needed,"as #42."
+1,0,casinoProxy_c0b022,26,297,236,ITSCR,Not killed,New test needed,"as #42."
+1,0,casinoProxy_c0b022,47,297,236,LR_I,Not killed,New test needed,"as #42."
+1,0,casinoProxy_c0b022,28,297,237,ITSCR,Not killed,New test needed,"as #42."
+1,0,casinoProxy_c0b022,03,297,240,ITSCR,Not killed,New test needed,"as #42."
+1,0,casinoProxy_c0b022,12,297,258,ESD,Not killed,New test needed,"as #42."
+1,0,casinoProxy_c0b022,10,297,266,ESD,Not killed,New test needed,"as #42."
+1,0,casinoProxy_c0b022,43,297,274,AOR,Killed by gas,Ok,"as #22."
+1,0,casinoProxy_c0b022,45,297,287,BOR,Killed by gas,Ok,"as #22."
+1,0,casinoProxy_c0b022,09,297,289,LR_I,Killed by gas,Ok,"as #22."
+1,0,casinoProxy_c0b022,50,297,289,ITSCR,Not killed,New test needed,"as #42."
+1,0,casinoProxy_c0b022,48,297,290,BOR,Not killed,New test needed,"as #42."
+1,0,casinoProxy_c0b022,41,297,290,ESD,Not killed,New test needed,"as #42."
+1,0,casinoProxy_c0b022,20,297,292,ITSCR,Not killed,New test needed,"as #42."
+1,0,casinoProxy_c0b022,19,297,292,ITSCR,Not killed,New test needed,"as #42."

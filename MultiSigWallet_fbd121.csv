@@ -1,51 +1,51 @@
 class,comment,contract,mutant,SLOC,line,operator,status,notes,details
-4,0,MultiSigWallet_fbd121,26,366,8,TRD,Killed by output,Ok,replacing public by constant in 'uint constant public MAX_OWNER_COUNT = 50' suppressed the getter so that the call to the getter fails.
-4,0,MultiSigWallet_fbd121,41,366,48,JSRD,Not killed,New test needed,replacing throw by true in the modifier ownerExists that is never called with an invalid owner is not caught by the current test.
-4,0,MultiSigWallet_fbd121,49,366,59,ITSCR,Not killed,New test needed,replacing transactionId by required in 'if (!confirmations[transactionId][owner])' in the modifier confirmed that is never called by the current test.
-4,0,MultiSigWallet_fbd121,37,366,59,UORD,Not killed,New test needed,removing ! in 'if (!confirmations[transactionId][owner])'. Rest as #37.
-4,0,MultiSigWallet_fbd121,21,366,71,ITSCR,Killed by gas,Ok,replacing transactionId by transactionCount in 'if (transactions[transactionId].executed)' consumers more gas that was budgeted for in transactions 4-7.
-4,0,MultiSigWallet_fbd121,44,366,77,BOR,Not killed,New test needed,replacing == by < in 'if (_address == 0)' will never execute the then branch because an address is never negative.
-4,0,MultiSigWallet_fbd121,48,366,95,BOR,Killed by output,Ok,replacing > by == in 'if (msg.value > 0)' blocks all normal (i.e. non-zero) deposits.
-4,0,MultiSigWallet_fbd121,16,366,107,ITSCR,Killed by output,Ok,replacing  _required by i in 'validRequirement(_owners.length, _required)' causes the constructor to throw an exception.
-4,0,MultiSigWallet_fbd121,1,366,109,ESD,Killed by output,Ok,replacing i++ by true in 'for (uint i=0; i<_owners.length; i++)' causes an end-less loop in the constructor, which therefore runs out of gas.
-4,0,MultiSigWallet_fbd121,27,366,109,ITSCR,Killed by output,Ok,replacing i by _required in 'for (uint i=0; i<_owners.length; i++)'. rest as #1.
-4,0,MultiSigWallet_fbd121,31,366,115,AOR,Not killed,Semantically equivalent,replacing = by += in 'required = _required' generates a semantically equivalent mutant.
-4,0,MultiSigWallet_fbd121,24,366,128,ESD,Not killed,New test needed,replacing 'owners.push(owner)' by true omits storage of relevant data but the enclosing method addOwner is never called by the current test.
-4,0,MultiSigWallet_fbd121,29,366,129,ESD,Not killed,New test needed,replacing 'OwnerAddition(owner)' by true suppresses an event. rest as #24.
-4,0,MultiSigWallet_fbd121,5,366,140,BOR,Not killed,Semantically equivalent,replacing < by != in 'for (uint i=0; i<owners.length - 1; i++)' creates a semantically equivalent mutation.
-4,0,MultiSigWallet_fbd121,22,366,146,BOR,Not killed,New test needed,replacing > by <= in 'if (required > owners.length)' should have an effect but the enclosing method is never called in the current test.
-4,0,MultiSigWallet_fbd121,7,366,147,ITSCR,Not killed,New test needed,replacing changeRequirement by confirmTransaction in 'changeRequirement(owners.length)'. rest as #22.
-4,0,MultiSigWallet_fbd121,12,366,157,ITSCR,Not killed,New test needed,replacing owner by newOwner in 'ownerExists(owner)' should have an effect but the enclosing method replaceOwner is never called by the current test.
-4,0,MultiSigWallet_fbd121,35,366,160,UORD,Not killed,New test needed,replacing ++ by -- in 'for (uint i=0; i<owners.length; i++)' should cause an end-less loop and therefore an out of gas exception. Rest as #12.
-4,0,MultiSigWallet_fbd121,9,366,165,ESD,Not killed,New test needed,replacing 'isOwner[owner] = false' by true suppressing storing valuable data. rest as @#12.
-4,0,MultiSigWallet_fbd121,34,366,167,ITSCR,Not killed,New test needed,replacing OwnerRemoval by OwnerAddition in 'OwnerRemoval(owner)' should emit the wrong event. rest as #12.
-4,0,MultiSigWallet_fbd121,25,366,168,ITSCR,Not killed,New test needed,replacing OwnerAddition by OwnerRemoval in 'OwnerAddition(newOwner)'. rest as #34.
-4,0,MultiSigWallet_fbd121,3,366,178,AOR,Not killed,New test needed,replacing = by -= in 'required = _required' stores the wrong data but the enclosing function changeRequirement is never called by the current test.
-4,0,MultiSigWallet_fbd121,15,366,179,ESD,Not killed,New test needed,replacing 'RequirementChange(_required)' by true suppressed the emission of an event. rest as #3.
-4,0,MultiSigWallet_fbd121,19,366,200,ITSCR,Not killed,New test needed,replacing transactionExists by notExecuted in 'transactionExists(transactionId)' in the enclosing method confirmTransaction is not detected because the executed flag is set after the modifier notExecuted has run.
-4,0,MultiSigWallet_fbd121,50,366,205,ESD,Killed by output,Ok,replacing 'executeTransaction(transactionId)' by true causes the current transaction to remain un-executed.
-4,0,MultiSigWallet_fbd121,6,366,205,ITSCR,Killed by output,Ok,replacing executeTransaction by confirmTransaction in 'executeTransaction(transactionId)'. rest as #50.
-4,0,MultiSigWallet_fbd121,30,366,217,ITSCR,Not killed,New test needed,replacing Revocation by Confirmation in 'Revocation(msg.sender, transactionId)' suppresses an event from a method revokeConfirmation that is never executed by the current test.
-4,0,MultiSigWallet_fbd121,4,366,224,ITSCR,Not killed,Semantically equivalent,replacing notExecuted by transactionExists in 'notExecuted(transactionId)' leads to a semantically equivalent mutation because for every transaction there is verification that it exists before it is executed.
-4,0,MultiSigWallet_fbd121,45,366,230,ESD,Killed by output,Ok,replacing 'Execution(transactionId)' by true suppresses an event.
-4,0,MultiSigWallet_fbd121,23,366,232,ITSCR,Not killed,New test needed,replacing transactionId by transactionCount in 'ExecutionFailure(transactionId)' suppresses an event but the emit statement is located in a branch of a conditional that is never executed by the current test.
-4,0,MultiSigWallet_fbd121,42,366,249,AOR,Killed by output,Ok,replacing += by -= in 'count += 1' causes the wrong value to be returned by the isConfirmed method, which in turn causes executeTransaction to emit the wrong event.
-4,0,MultiSigWallet_fbd121,13,366,250,BOR,Killed by output and gas,Ok,replacing == by <= in 'if (count == required)'. Rest as #42.
-4,0,MultiSigWallet_fbd121,14,366,269,ESD,Killed by output,Ok,replacing 'transactions[transactionId] = Transaction({ destination: destination, value: value, data: data, executed: false })' by true breaks the administration of the transactions.
-4,0,MultiSigWallet_fbd121,40,366,275,ESD,Killed by output,Ok,replacing 'transactionCount += 1' by true. Rest a #14.
-4,0,MultiSigWallet_fbd121,8,366,276,ESD,Killed by output,Ok,replacing 'Submission(transactionId)' by true suppresses an event.
-4,0,MultiSigWallet_fbd121,32,366,290,ESD,Killed by output,Ok,replacing i++ by true in 'for (uint i=0; i<owners.length; i++)' causes an end-less loop and raises an exception.
-4,0,MultiSigWallet_fbd121,33,366,304,BOR,Killed by output,Ok,replacing < by > in 'for (uint i=0; i<transactionCount; i++)' causes getTransactionCount to return the wrong value.
-4,0,MultiSigWallet_fbd121,18,366,305,BOR,Killed by output,Ok,replacing || by && in ' if (   pending && !transactions[i].executed || executed && transactions[i].executed)'. rest as #33.
-4,0,MultiSigWallet_fbd121,39,366,334,ITSCR,Killed by output,Ok,replacing L-Value count by transactionId in 'count += 1' causes getConfirmations to return the wrong value.
-4,0,MultiSigWallet_fbd121,47,366,334,ESD,Killed by output,Ok,replacing 'count += 1' by true. rest as #39.
-4,0,MultiSigWallet_fbd121,36,366,337,BOR,Killed by output,Ok,replacing < by <= in 'for (i=0; i<count; i++)'. rest as #39.
-4,0,MultiSigWallet_fbd121,43,366,338,ITSCR,Killed by output,Ok,replacing L-Value _confirmations by confirmationsTemp in '_confirmations[i] = confirmationsTemp[i]'. rest as #39.
-4,0,MultiSigWallet_fbd121,46,366,338,ITSCR,Killed by output,Ok,replacing i in the L-Value by MAX_OWNER_COUNT in '_confirmations[i] = confirmationsTemp[i]'. rest as #39.
-4,0,MultiSigWallet_fbd121,11,366,347,VDTSCS,Not killed,New test needed,swapping pending and executed in 'function getTransactionIds(uint from, uint to, bool pending, bool executed)' should change the output of the enclosing function getTransactionIds but with the current test that does not happen.
-4,0,MultiSigWallet_fbd121,2,366,357,BOR,Not killed,New test needed,replacing || by && in '|| executed && transactions[i].executed'. rest as #11.
-4,0,MultiSigWallet_fbd121,28,366,359,ITSCR,Killed by output,Ok,replacing  L-Value transactionIdsTemp by _transactionIds in 'transactionIdsTemp[count] = i' changes the output of getTransactionIds.
-4,0,MultiSigWallet_fbd121,10,366,364,ESD,Killed by output,Ok,replacing '_transactionIds[i - from] = transactionIdsTemp[i]' by true. rest as #28.
-4,0,MultiSigWallet_fbd121,38,366,364,BOR,Not killed,New test needed,replacing - by * in '_transactionIds[i - from] = transactionIdsTemp[i]' should change the output of the enclosing function getTransactionIds but with the current test this does not happen.
-4,0,MultiSigWallet_fbd121,17,366,364,ITSCR,Not killed,New test needed,replacing from by i in '_transactionIds[i - from] = transactionIdsTemp[i]'. As #38.
-4,0,MultiSigWallet_fbd121,20,366,364,ITSCR,Killed by output,Ok,replacing x by y in '_transactionIds[i - from] = transactionIdsTemp[i]' changes the output of the enclosing function getTransactionIds.
+4,0,MultiSigWallet_fbd121,26,366,8,TRD,Killed by output,Ok,"replacing public by constant in 'uint constant public MAX_OWNER_COUNT = 50' suppressed the getter so that the call to the getter fails."
+4,0,MultiSigWallet_fbd121,41,366,48,JSRD,Not killed,New test needed,"replacing throw by true in the modifier ownerExists that is never called with an invalid owner is not caught by the current test."
+4,0,MultiSigWallet_fbd121,49,366,59,ITSCR,Not killed,New test needed,"replacing transactionId by required in 'if (!confirmations[transactionId][owner])' in the modifier confirmed that is never called by the current test."
+4,0,MultiSigWallet_fbd121,37,366,59,UORD,Not killed,New test needed,"removing ! in 'if (!confirmations[transactionId][owner])'. Rest as #37."
+4,0,MultiSigWallet_fbd121,21,366,71,ITSCR,Killed by gas,Ok,"replacing transactionId by transactionCount in 'if (transactions[transactionId].executed)' consumers more gas that was budgeted for in transactions 4-7."
+4,0,MultiSigWallet_fbd121,44,366,77,BOR,Not killed,New test needed,"replacing == by < in 'if (_address == 0)' will never execute the then branch because an address is never negative."
+4,0,MultiSigWallet_fbd121,48,366,95,BOR,Killed by output,Ok,"replacing > by == in 'if (msg.value > 0)' blocks all normal (i.e. non-zero) deposits."
+4,0,MultiSigWallet_fbd121,16,366,107,ITSCR,Killed by output,Ok,"replacing  _required by i in 'validRequirement(_owners.length, _required)' causes the constructor to throw an exception."
+4,0,MultiSigWallet_fbd121,1,366,109,ESD,Killed by output,Ok,"replacing i++ by true in 'for (uint i=0; i<_owners.length; i++)' causes an end-less loop in the constructor, which therefore runs out of gas."
+4,0,MultiSigWallet_fbd121,27,366,109,ITSCR,Killed by output,Ok,"replacing i by _required in 'for (uint i=0; i<_owners.length; i++)'. rest as #1."
+4,0,MultiSigWallet_fbd121,31,366,115,AOR,Not killed,Semantically equivalent,"replacing = by += in 'required = _required' generates a semantically equivalent mutant."
+4,0,MultiSigWallet_fbd121,24,366,128,ESD,Not killed,New test needed,"replacing 'owners.push(owner)' by true omits storage of relevant data but the enclosing method addOwner is never called by the current test."
+4,0,MultiSigWallet_fbd121,29,366,129,ESD,Not killed,New test needed,"replacing 'OwnerAddition(owner)' by true suppresses an event. rest as #24."
+4,0,MultiSigWallet_fbd121,5,366,140,BOR,Not killed,Semantically equivalent,"replacing < by != in 'for (uint i=0; i<owners.length - 1; i++)' creates a semantically equivalent mutation."
+4,0,MultiSigWallet_fbd121,22,366,146,BOR,Not killed,New test needed,"replacing > by <= in 'if (required > owners.length)' should have an effect but the enclosing method is never called in the current test."
+4,0,MultiSigWallet_fbd121,7,366,147,ITSCR,Not killed,New test needed,"replacing changeRequirement by confirmTransaction in 'changeRequirement(owners.length)'. rest as #22."
+4,0,MultiSigWallet_fbd121,12,366,157,ITSCR,Not killed,New test needed,"replacing owner by newOwner in 'ownerExists(owner)' should have an effect but the enclosing method replaceOwner is never called by the current test."
+4,0,MultiSigWallet_fbd121,35,366,160,UORD,Not killed,New test needed,"replacing ++ by -- in 'for (uint i=0; i<owners.length; i++)' should cause an end-less loop and therefore an out of gas exception. Rest as #12."
+4,0,MultiSigWallet_fbd121,9,366,165,ESD,Not killed,New test needed,"replacing 'isOwner[owner] = false' by true suppressing storing valuable data. rest as @#12."
+4,0,MultiSigWallet_fbd121,34,366,167,ITSCR,Not killed,New test needed,"replacing OwnerRemoval by OwnerAddition in 'OwnerRemoval(owner)' should emit the wrong event. rest as #12."
+4,0,MultiSigWallet_fbd121,25,366,168,ITSCR,Not killed,New test needed,"replacing OwnerAddition by OwnerRemoval in 'OwnerAddition(newOwner)'. rest as #34."
+4,0,MultiSigWallet_fbd121,3,366,178,AOR,Not killed,New test needed,"replacing = by -= in 'required = _required' stores the wrong data but the enclosing function changeRequirement is never called by the current test."
+4,0,MultiSigWallet_fbd121,15,366,179,ESD,Not killed,New test needed,"replacing 'RequirementChange(_required)' by true suppressed the emission of an event. rest as #3."
+4,0,MultiSigWallet_fbd121,19,366,200,ITSCR,Not killed,New test needed,"replacing transactionExists by notExecuted in 'transactionExists(transactionId)' in the enclosing method confirmTransaction is not detected because the executed flag is set after the modifier notExecuted has run."
+4,0,MultiSigWallet_fbd121,50,366,205,ESD,Killed by output,Ok,"replacing 'executeTransaction(transactionId)' by true causes the current transaction to remain un-executed."
+4,0,MultiSigWallet_fbd121,6,366,205,ITSCR,Killed by output,Ok,"replacing executeTransaction by confirmTransaction in 'executeTransaction(transactionId)'. rest as #50."
+4,0,MultiSigWallet_fbd121,30,366,217,ITSCR,Not killed,New test needed,"replacing Revocation by Confirmation in 'Revocation(msg.sender, transactionId)' suppresses an event from a method revokeConfirmation that is never executed by the current test."
+4,0,MultiSigWallet_fbd121,4,366,224,ITSCR,Not killed,Semantically equivalent,"replacing notExecuted by transactionExists in 'notExecuted(transactionId)' leads to a semantically equivalent mutation because for every transaction there is verification that it exists before it is executed."
+4,0,MultiSigWallet_fbd121,45,366,230,ESD,Killed by output,Ok,"replacing 'Execution(transactionId)' by true suppresses an event."
+4,0,MultiSigWallet_fbd121,23,366,232,ITSCR,Not killed,New test needed,"replacing transactionId by transactionCount in 'ExecutionFailure(transactionId)' suppresses an event but the emit statement is located in a branch of a conditional that is never executed by the current test."
+4,0,MultiSigWallet_fbd121,42,366,249,AOR,Killed by output,Ok,"replacing += by -= in 'count += 1' causes the wrong value to be returned by the isConfirmed method, which in turn causes executeTransaction to emit the wrong event."
+4,0,MultiSigWallet_fbd121,13,366,250,BOR,Killed by output and gas,Ok,"replacing == by <= in 'if (count == required)'. Rest as #42."
+4,0,MultiSigWallet_fbd121,14,366,269,ESD,Killed by output,Ok,"replacing 'transactions[transactionId] = Transaction({ destination: destination, value: value, data: data, executed: false })' by true breaks the administration of the transactions."
+4,0,MultiSigWallet_fbd121,40,366,275,ESD,Killed by output,Ok,"replacing 'transactionCount += 1' by true. Rest a #14."
+4,0,MultiSigWallet_fbd121,8,366,276,ESD,Killed by output,Ok,"replacing 'Submission(transactionId)' by true suppresses an event."
+4,0,MultiSigWallet_fbd121,32,366,290,ESD,Killed by output,Ok,"replacing i++ by true in 'for (uint i=0; i<owners.length; i++)' causes an end-less loop and raises an exception."
+4,0,MultiSigWallet_fbd121,33,366,304,BOR,Killed by output,Ok,"replacing < by > in 'for (uint i=0; i<transactionCount; i++)' causes getTransactionCount to return the wrong value."
+4,0,MultiSigWallet_fbd121,18,366,305,BOR,Killed by output,Ok,"replacing || by && in ' if (   pending && !transactions[i].executed || executed && transactions[i].executed)'. rest as #33."
+4,0,MultiSigWallet_fbd121,39,366,334,ITSCR,Killed by output,Ok,"replacing L-Value count by transactionId in 'count += 1' causes getConfirmations to return the wrong value."
+4,0,MultiSigWallet_fbd121,47,366,334,ESD,Killed by output,Ok,"replacing 'count += 1' by true. rest as #39."
+4,0,MultiSigWallet_fbd121,36,366,337,BOR,Killed by output,Ok,"replacing < by <= in 'for (i=0; i<count; i++)'. rest as #39."
+4,0,MultiSigWallet_fbd121,43,366,338,ITSCR,Killed by output,Ok,"replacing L-Value _confirmations by confirmationsTemp in '_confirmations[i] = confirmationsTemp[i]'. rest as #39."
+4,0,MultiSigWallet_fbd121,46,366,338,ITSCR,Killed by output,Ok,"replacing i in the L-Value by MAX_OWNER_COUNT in '_confirmations[i] = confirmationsTemp[i]'. rest as #39."
+4,0,MultiSigWallet_fbd121,11,366,347,VDTSCS,Not killed,New test needed,"swapping pending and executed in 'function getTransactionIds(uint from, uint to, bool pending, bool executed)' should change the output of the enclosing function getTransactionIds but with the current test that does not happen."
+4,0,MultiSigWallet_fbd121,2,366,357,BOR,Not killed,New test needed,"replacing || by && in '|| executed && transactions[i].executed'. rest as #11."
+4,0,MultiSigWallet_fbd121,28,366,359,ITSCR,Killed by output,Ok,"replacing  L-Value transactionIdsTemp by _transactionIds in 'transactionIdsTemp[count] = i' changes the output of getTransactionIds."
+4,0,MultiSigWallet_fbd121,10,366,364,ESD,Killed by output,Ok,"replacing '_transactionIds[i - from] = transactionIdsTemp[i]' by true. rest as #28."
+4,0,MultiSigWallet_fbd121,38,366,364,BOR,Not killed,New test needed,"replacing - by * in '_transactionIds[i - from] = transactionIdsTemp[i]' should change the output of the enclosing function getTransactionIds but with the current test this does not happen."
+4,0,MultiSigWallet_fbd121,17,366,364,ITSCR,Not killed,New test needed,"replacing from by i in '_transactionIds[i - from] = transactionIdsTemp[i]'. As #38."
+4,0,MultiSigWallet_fbd121,20,366,364,ITSCR,Killed by output,Ok,"replacing x by y in '_transactionIds[i - from] = transactionIdsTemp[i]' changes the output of the enclosing function getTransactionIds."
