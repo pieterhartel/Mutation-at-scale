@@ -1,5 +1,5 @@
 class,comment,contract,mutant,SLOC,line,operator,status,notes,details
-3,1,,,,,,,,Base=Regression_*/NumberBoard_9E7505.dir; for i in 44 1 12 25 2 5 33 13 38 27 22 32 11 30 50 9 39 29 7 18 28 8 35 49 23 3 48 15 4 21 14 40 20 24 17 43 10 47 34 41 46 36 16 26 6 45 31 42 37 19; do vi $Base/contracts/*_${i}.*mut $Base/*_${i}.*diff; done"
+3,1,,,,,,,,"Base=Regression_*/NumberBoard_9E7505.dir; for i in 44 1 12 25 2 5 33 13 38 27 22 32 11 30 50 9 39 29 7 18 28 8 35 49 23 3 48 15 4 21 14 40 20 24 17 43 10 47 34 41 46 36 16 26 6 45 31 42 37 19; do vi $Base/contracts/*_${i}.*mut $Base/*_${i}.*diff; done"
 3,0,NumberBoard_9E7505,44,213,22,TRD,Killed by output,Ok,"removing public in 'public minPrice = 1 finney' blocks access to the getter."
 3,0,NumberBoard_9E7505,1,213,31,VDTSCS,Killed by output,Ok,"swapping number and price in 'event BidPlaced(uint indexed number, uint price)' generates the wrong event outputs."
 3,0,NumberBoard_9E7505,12,213,40,TRD,Killed by output,Ok,"replacing constant by private in 'function isOwner(address addr, uint theNum) constant' blocks access to the method."

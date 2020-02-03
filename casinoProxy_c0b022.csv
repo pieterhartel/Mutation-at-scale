@@ -1,4 +1,4 @@
-class,comment,contract,mutant,SLOC,line,operator,status,notes,details"
+class,comment,contract,mutant,SLOC,line,operator,status,notes,details
 1,1,,,,,,,,"Increasing the number of transactions to 100 and the number of mutants improves the performance a bit because the tests have more coverage."
 1,1,,,,,,,,"    96 Killed by gas"
 1,1,,,,,,,,"    61 Killed by output"
