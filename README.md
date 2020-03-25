@@ -1,5 +1,7 @@
 # Replication package for the paper [Mutation testing of smart contracts at scale](https://arxiv.org/abs/1909.12563).
 
+[![DOI](https://zenodo.org/badge/229952409.svg)](https://zenodo.org/badge/latestdoi/229952409)
+
 # 1. How to use this replication package?
 This replication package can be used in at least five different ways.
 The interested reader could:
