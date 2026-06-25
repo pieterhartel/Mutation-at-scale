@@ -103,7 +103,7 @@ Limitations & assumptions:
 */
 
 // Replace this etherscan.io API key by your own please
-const APIKey = "WN33WGJ36CAIDWAAJG6J6ZXF1BPIRYV6CQ" ;
+const APIKey = "WN...Q" ;
 const randomSeed = 0 ;
 const maxRandom = 10 ;
 
